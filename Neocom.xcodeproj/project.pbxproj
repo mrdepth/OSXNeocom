@@ -7,6 +7,143 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12440B181C73BF1800F04393 /* NCDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12440B161C73BF1800F04393 /* NCDatabase.xcdatamodeld */; };
+		12440B1A1C73BF2A00F04393 /* NCDatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 12440B191C73BF2A00F04393 /* NCDatabase.sqlite */; };
+		12440B1E1C73BF3600F04393 /* NCStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12440B1B1C73BF3600F04393 /* NCStorage.xcdatamodeld */; };
+		12440B591C73BF6800F04393 /* NCLoadoutData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B221C73BF6800F04393 /* NCLoadoutData+CoreDataProperties.m */; };
+		12440B5A1C73BF6800F04393 /* NCLoadoutData.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B241C73BF6800F04393 /* NCLoadoutData.m */; };
+		12440B5B1C73BF6800F04393 /* NCMailBox+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B261C73BF6800F04393 /* NCMailBox+CoreDataProperties.m */; };
+		12440B5C1C73BF6800F04393 /* NCMailBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B281C73BF6800F04393 /* NCMailBox.m */; };
+		12440B5D1C73BF6800F04393 /* NCImplantSet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B2A1C73BF6800F04393 /* NCImplantSet+CoreDataProperties.m */; };
+		12440B5E1C73BF6800F04393 /* NCImplantSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B2C1C73BF6800F04393 /* NCImplantSet.m */; };
+		12440B5F1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B2E1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.m */; };
+		12440B601C73BF6800F04393 /* NCSkillPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B301C73BF6800F04393 /* NCSkillPlan.m */; };
+		12440B611C73BF6800F04393 /* NCAPIKey+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B321C73BF6800F04393 /* NCAPIKey+CoreDataProperties.m */; };
+		12440B621C73BF6800F04393 /* NCAPIKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B341C73BF6800F04393 /* NCAPIKey.m */; };
+		12440B631C73BF6800F04393 /* NCFitCharacter+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B361C73BF6800F04393 /* NCFitCharacter+CoreDataProperties.m */; };
+		12440B641C73BF6800F04393 /* NCFitCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B381C73BF6800F04393 /* NCFitCharacter.m */; };
+		12440B651C73BF6800F04393 /* NCShoppingItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B3A1C73BF6800F04393 /* NCShoppingItem+CoreDataProperties.m */; };
+		12440B661C73BF6800F04393 /* NCShoppingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B3C1C73BF6800F04393 /* NCShoppingItem.m */; };
+		12440B671C73BF6800F04393 /* NCShoppingList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B3E1C73BF6800F04393 /* NCShoppingList+CoreDataProperties.m */; };
+		12440B681C73BF6800F04393 /* NCShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B401C73BF6800F04393 /* NCShoppingList.m */; };
+		12440B691C73BF6800F04393 /* NCDamagePattern+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B421C73BF6800F04393 /* NCDamagePattern+CoreDataProperties.m */; };
+		12440B6A1C73BF6800F04393 /* NCDamagePattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B441C73BF6800F04393 /* NCDamagePattern.m */; };
+		12440B6B1C73BF6800F04393 /* NCShoppingGroup+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B461C73BF6800F04393 /* NCShoppingGroup+CoreDataProperties.m */; };
+		12440B6C1C73BF6800F04393 /* NCShoppingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B481C73BF6800F04393 /* NCShoppingGroup.m */; };
+		12440B6D1C73BF6800F04393 /* NCLoadout+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B4A1C73BF6800F04393 /* NCLoadout+CoreDataProperties.m */; };
+		12440B6E1C73BF6800F04393 /* NCLoadout.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B4C1C73BF6800F04393 /* NCLoadout.m */; };
+		12440B6F1C73BF6800F04393 /* NCDronesSet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B4E1C73BF6800F04393 /* NCDronesSet+CoreDataProperties.m */; };
+		12440B701C73BF6800F04393 /* NCDronesSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B501C73BF6800F04393 /* NCDronesSet.m */; };
+		12440B711C73BF6800F04393 /* NCSetting+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B521C73BF6800F04393 /* NCSetting+CoreDataProperties.m */; };
+		12440B721C73BF6800F04393 /* NCSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B541C73BF6800F04393 /* NCSetting.m */; };
+		12440B731C73BF6800F04393 /* NCAccount+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B561C73BF6800F04393 /* NCAccount+CoreDataProperties.m */; };
+		12440B741C73BF6800F04393 /* NCAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B581C73BF6800F04393 /* NCAccount.m */; };
+		12440B771C73BF7D00F04393 /* NCStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B761C73BF7D00F04393 /* NCStorage.m */; };
+		12440B7D1C73BF9F00F04393 /* NSManagedObjectContext+NCStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B7B1C73BF9F00F04393 /* NSManagedObjectContext+NCStorage.m */; };
+		12440B811C73BFC100F04393 /* NSManagedObjectContext+NCDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B801C73BFC100F04393 /* NSManagedObjectContext+NCDatabase.m */; };
+		12440B841C73BFCE00F04393 /* NCDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B831C73BFCE00F04393 /* NCDatabase.m */; };
+		12440C3A1C73BFFE00F04393 /* NCDBDgmppItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B871C73BFFE00F04393 /* NCDBDgmppItem+CoreDataProperties.m */; };
+		12440C3B1C73BFFE00F04393 /* NCDBDgmppItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B891C73BFFE00F04393 /* NCDBDgmppItem.m */; };
+		12440C3C1C73BFFE00F04393 /* NCDBDgmEffect+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B8B1C73BFFE00F04393 /* NCDBDgmEffect+CoreDataProperties.m */; };
+		12440C3D1C73BFFE00F04393 /* NCDBDgmEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B8D1C73BFFE00F04393 /* NCDBDgmEffect.m */; };
+		12440C3E1C73BFFE00F04393 /* NCDBIndProduct+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B8F1C73BFFE00F04393 /* NCDBIndProduct+CoreDataProperties.m */; };
+		12440C3F1C73BFFE00F04393 /* NCDBIndProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B911C73BFFE00F04393 /* NCDBIndProduct.m */; };
+		12440C401C73BFFE00F04393 /* NCDBRamAssemblyLineType+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B931C73BFFE00F04393 /* NCDBRamAssemblyLineType+CoreDataProperties.m */; };
+		12440C411C73BFFE00F04393 /* NCDBRamAssemblyLineType.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B951C73BFFE00F04393 /* NCDBRamAssemblyLineType.m */; };
+		12440C421C73BFFE00F04393 /* NCDBCertCertificate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B971C73BFFE00F04393 /* NCDBCertCertificate+CoreDataProperties.m */; };
+		12440C431C73BFFE00F04393 /* NCDBCertCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B991C73BFFE00F04393 /* NCDBCertCertificate.m */; };
+		12440C441C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B9B1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose+CoreDataProperties.m */; };
+		12440C451C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B9D1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose.m */; };
+		12440C461C73BFFE00F04393 /* NCDBInvMarketGroup+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440B9F1C73BFFE00F04393 /* NCDBInvMarketGroup+CoreDataProperties.m */; };
+		12440C471C73BFFE00F04393 /* NCDBInvMarketGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BA11C73BFFE00F04393 /* NCDBInvMarketGroup.m */; };
+		12440C481C73BFFE00F04393 /* NCDBEveUnit+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BA31C73BFFE00F04393 /* NCDBEveUnit+CoreDataProperties.m */; };
+		12440C491C73BFFE00F04393 /* NCDBEveUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BA51C73BFFE00F04393 /* NCDBEveUnit.m */; };
+		12440C4A1C73BFFE00F04393 /* NCDBEveIconImage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BA71C73BFFE00F04393 /* NCDBEveIconImage+CoreDataProperties.m */; };
+		12440C4B1C73BFFE00F04393 /* NCDBEveIconImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BA91C73BFFE00F04393 /* NCDBEveIconImage.m */; };
+		12440C4C1C73BFFE00F04393 /* NCDBInvGroup+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BAB1C73BFFE00F04393 /* NCDBInvGroup+CoreDataProperties.m */; };
+		12440C4D1C73BFFE00F04393 /* NCDBInvGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BAD1C73BFFE00F04393 /* NCDBInvGroup.m */; };
+		12440C4E1C73BFFE00F04393 /* NCDBIndRequiredMaterial+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BAF1C73BFFE00F04393 /* NCDBIndRequiredMaterial+CoreDataProperties.m */; };
+		12440C4F1C73BFFE00F04393 /* NCDBIndRequiredMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BB11C73BFFE00F04393 /* NCDBIndRequiredMaterial.m */; };
+		12440C501C73BFFE00F04393 /* NCDBIndBlueprintType+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BB31C73BFFE00F04393 /* NCDBIndBlueprintType+CoreDataProperties.m */; };
+		12440C511C73BFFE00F04393 /* NCDBIndBlueprintType.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BB51C73BFFE00F04393 /* NCDBIndBlueprintType.m */; };
+		12440C521C73BFFE00F04393 /* NCDBCertSkill+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BB71C73BFFE00F04393 /* NCDBCertSkill+CoreDataProperties.m */; };
+		12440C531C73BFFE00F04393 /* NCDBCertSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BB91C73BFFE00F04393 /* NCDBCertSkill.m */; };
+		12440C541C73BFFE00F04393 /* NCDBInvCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BBB1C73BFFE00F04393 /* NCDBInvCategory+CoreDataProperties.m */; };
+		12440C551C73BFFE00F04393 /* NCDBInvCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BBD1C73BFFE00F04393 /* NCDBInvCategory.m */; };
+		12440C561C73BFFE00F04393 /* NCDBEveIcon+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BBF1C73BFFE00F04393 /* NCDBEveIcon+CoreDataProperties.m */; };
+		12440C571C73BFFE00F04393 /* NCDBEveIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BC11C73BFFE00F04393 /* NCDBEveIcon.m */; };
+		12440C581C73BFFE00F04393 /* NCDBCertMasteryLevel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BC31C73BFFE00F04393 /* NCDBCertMasteryLevel+CoreDataProperties.m */; };
+		12440C591C73BFFE00F04393 /* NCDBCertMasteryLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BC51C73BFFE00F04393 /* NCDBCertMasteryLevel.m */; };
+		12440C5A1C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BC71C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.m */; };
+		12440C5B1C73BFFE00F04393 /* NCDBInvControlTowerResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BC91C73BFFE00F04393 /* NCDBInvControlTowerResource.m */; };
+		12440C5C1C73BFFE00F04393 /* NCDBDgmppItemDamage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BCB1C73BFFE00F04393 /* NCDBDgmppItemDamage+CoreDataProperties.m */; };
+		12440C5D1C73BFFE00F04393 /* NCDBDgmppItemDamage.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BCD1C73BFFE00F04393 /* NCDBDgmppItemDamage.m */; };
+		12440C5E1C73BFFE00F04393 /* NCDBInvType+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BCF1C73BFFE00F04393 /* NCDBInvType+CoreDataProperties.m */; };
+		12440C5F1C73BFFE00F04393 /* NCDBInvType.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BD11C73BFFE00F04393 /* NCDBInvType.m */; };
+		12440C601C73BFFE00F04393 /* NCDBMapConstellation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BD31C73BFFE00F04393 /* NCDBMapConstellation+CoreDataProperties.m */; };
+		12440C611C73BFFE00F04393 /* NCDBMapConstellation.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BD51C73BFFE00F04393 /* NCDBMapConstellation.m */; };
+		12440C621C73BFFE00F04393 /* NCDBTxtDescription+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BD71C73BFFE00F04393 /* NCDBTxtDescription+CoreDataProperties.m */; };
+		12440C631C73BFFE00F04393 /* NCDBTxtDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BD91C73BFFE00F04393 /* NCDBTxtDescription.m */; };
+		12440C641C73BFFE00F04393 /* NCDBVersion+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BDB1C73BFFE00F04393 /* NCDBVersion+CoreDataProperties.m */; };
+		12440C651C73BFFE00F04393 /* NCDBVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BDD1C73BFFE00F04393 /* NCDBVersion.m */; };
+		12440C661C73BFFE00F04393 /* NCDBMapSolarSystem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BDF1C73BFFE00F04393 /* NCDBMapSolarSystem+CoreDataProperties.m */; };
+		12440C671C73BFFE00F04393 /* NCDBMapSolarSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BE11C73BFFE00F04393 /* NCDBMapSolarSystem.m */; };
+		12440C681C73BFFE00F04393 /* NCDBWhType+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BE31C73BFFE00F04393 /* NCDBWhType+CoreDataProperties.m */; };
+		12440C691C73BFFE00F04393 /* NCDBWhType.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BE51C73BFFE00F04393 /* NCDBWhType.m */; };
+		12440C6A1C73BFFE00F04393 /* NCDBChrRace+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BE71C73BFFE00F04393 /* NCDBChrRace+CoreDataProperties.m */; };
+		12440C6B1C73BFFE00F04393 /* NCDBChrRace.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BE91C73BFFE00F04393 /* NCDBChrRace.m */; };
+		12440C6C1C73BFFE00F04393 /* NCDBIndActivity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BEB1C73BFFE00F04393 /* NCDBIndActivity+CoreDataProperties.m */; };
+		12440C6D1C73BFFE00F04393 /* NCDBIndActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BED1C73BFFE00F04393 /* NCDBIndActivity.m */; };
+		12440C6E1C73BFFE00F04393 /* NCDBDgmppItemGroup+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BEF1C73BFFE00F04393 /* NCDBDgmppItemGroup+CoreDataProperties.m */; };
+		12440C6F1C73BFFE00F04393 /* NCDBDgmppItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BF11C73BFFE00F04393 /* NCDBDgmppItemGroup.m */; };
+		12440C701C73BFFE00F04393 /* NCDBStaStation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BF31C73BFFE00F04393 /* NCDBStaStation+CoreDataProperties.m */; };
+		12440C711C73BFFE00F04393 /* NCDBStaStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BF51C73BFFE00F04393 /* NCDBStaStation.m */; };
+		12440C721C73BFFE00F04393 /* NCDBRamInstallationTypeContent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BF71C73BFFE00F04393 /* NCDBRamInstallationTypeContent+CoreDataProperties.m */; };
+		12440C731C73BFFE00F04393 /* NCDBRamInstallationTypeContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BF91C73BFFE00F04393 /* NCDBRamInstallationTypeContent.m */; };
+		12440C741C73BFFE00F04393 /* NCDBDgmAttributeCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BFB1C73BFFE00F04393 /* NCDBDgmAttributeCategory+CoreDataProperties.m */; };
+		12440C751C73BFFE00F04393 /* NCDBDgmAttributeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BFD1C73BFFE00F04393 /* NCDBDgmAttributeCategory.m */; };
+		12440C761C73BFFE00F04393 /* NCDBDgmppHullType+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440BFF1C73BFFE00F04393 /* NCDBDgmppHullType+CoreDataProperties.m */; };
+		12440C771C73BFFE00F04393 /* NCDBDgmppHullType.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C011C73BFFE00F04393 /* NCDBDgmppHullType.m */; };
+		12440C781C73BFFE00F04393 /* NCDBIndRequiredSkill+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C031C73BFFE00F04393 /* NCDBIndRequiredSkill+CoreDataProperties.m */; };
+		12440C791C73BFFE00F04393 /* NCDBIndRequiredSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C051C73BFFE00F04393 /* NCDBIndRequiredSkill.m */; };
+		12440C7A1C73BFFE00F04393 /* NCDBInvTypeRequiredSkill+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C071C73BFFE00F04393 /* NCDBInvTypeRequiredSkill+CoreDataProperties.m */; };
+		12440C7B1C73BFFE00F04393 /* NCDBInvTypeRequiredSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C091C73BFFE00F04393 /* NCDBInvTypeRequiredSkill.m */; };
+		12440C7C1C73BFFE00F04393 /* NCDBDgmppItemCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C0B1C73BFFE00F04393 /* NCDBDgmppItemCategory+CoreDataProperties.m */; };
+		12440C7D1C73BFFE00F04393 /* NCDBDgmppItemCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C0D1C73BFFE00F04393 /* NCDBDgmppItemCategory.m */; };
+		12440C7E1C73BFFE00F04393 /* NCDBDgmAttributeType+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C0F1C73BFFE00F04393 /* NCDBDgmAttributeType+CoreDataProperties.m */; };
+		12440C7F1C73BFFE00F04393 /* NCDBDgmAttributeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C111C73BFFE00F04393 /* NCDBDgmAttributeType.m */; };
+		12440C801C73BFFE00F04393 /* NCDBDgmppItemShipResources+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C131C73BFFE00F04393 /* NCDBDgmppItemShipResources+CoreDataProperties.m */; };
+		12440C811C73BFFE00F04393 /* NCDBDgmppItemShipResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C151C73BFFE00F04393 /* NCDBDgmppItemShipResources.m */; };
+		12440C821C73BFFE00F04393 /* NCDBMapRegion+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C171C73BFFE00F04393 /* NCDBMapRegion+CoreDataProperties.m */; };
+		12440C831C73BFFE00F04393 /* NCDBMapRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C191C73BFFE00F04393 /* NCDBMapRegion.m */; };
+		12440C841C73BFFE00F04393 /* NCDBRamActivity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C1B1C73BFFE00F04393 /* NCDBRamActivity+CoreDataProperties.m */; };
+		12440C851C73BFFE00F04393 /* NCDBRamActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C1D1C73BFFE00F04393 /* NCDBRamActivity.m */; };
+		12440C861C73BFFE00F04393 /* NCDBNpcGroup+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C1F1C73BFFE00F04393 /* NCDBNpcGroup+CoreDataProperties.m */; };
+		12440C871C73BFFE00F04393 /* NCDBNpcGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C211C73BFFE00F04393 /* NCDBNpcGroup.m */; };
+		12440C881C73BFFE00F04393 /* NCDBMapDenormalize+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C231C73BFFE00F04393 /* NCDBMapDenormalize+CoreDataProperties.m */; };
+		12440C891C73BFFE00F04393 /* NCDBMapDenormalize.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C251C73BFFE00F04393 /* NCDBMapDenormalize.m */; };
+		12440C8A1C73BFFE00F04393 /* NCDBInvMetaGroup+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C271C73BFFE00F04393 /* NCDBInvMetaGroup+CoreDataProperties.m */; };
+		12440C8B1C73BFFE00F04393 /* NCDBInvMetaGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C291C73BFFE00F04393 /* NCDBInvMetaGroup.m */; };
+		12440C8C1C73BFFE00F04393 /* NCDBDgmTypeAttribute+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C2B1C73BFFE00F04393 /* NCDBDgmTypeAttribute+CoreDataProperties.m */; };
+		12440C8D1C73BFFE00F04393 /* NCDBDgmTypeAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C2D1C73BFFE00F04393 /* NCDBDgmTypeAttribute.m */; };
+		12440C8E1C73BFFE00F04393 /* NCDBCertMastery+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C2F1C73BFFE00F04393 /* NCDBCertMastery+CoreDataProperties.m */; };
+		12440C8F1C73BFFE00F04393 /* NCDBCertMastery.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C311C73BFFE00F04393 /* NCDBCertMastery.m */; };
+		12440C901C73BFFE00F04393 /* NCDBDgmppItemRequirements+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C331C73BFFE00F04393 /* NCDBDgmppItemRequirements+CoreDataProperties.m */; };
+		12440C911C73BFFE00F04393 /* NCDBDgmppItemRequirements.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C351C73BFFE00F04393 /* NCDBDgmppItemRequirements.m */; };
+		12440C921C73BFFE00F04393 /* NCDBInvControlTower+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C371C73BFFE00F04393 /* NCDBInvControlTower+CoreDataProperties.m */; };
+		12440C931C73BFFE00F04393 /* NCDBInvControlTower.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C391C73BFFE00F04393 /* NCDBInvControlTower.m */; };
+		12440C9B1C73C57600F04393 /* NCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C961C73C57600F04393 /* NCCache.m */; };
+		12440C9C1C73C57600F04393 /* NCCache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12440C971C73C57600F04393 /* NCCache.xcdatamodeld */; };
+		12440C9D1C73C57600F04393 /* NSManagedObjectContext+NCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440C9A1C73C57600F04393 /* NSManagedObjectContext+NCCache.m */; };
+		12440CAB1C73C59700F04393 /* NCCachePrice+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CA01C73C59700F04393 /* NCCachePrice+CoreDataProperties.m */; };
+		12440CAC1C73C59700F04393 /* NCCachePrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CA21C73C59700F04393 /* NCCachePrice.m */; };
+		12440CAD1C73C59700F04393 /* NCCacheRecordData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CA41C73C59700F04393 /* NCCacheRecordData+CoreDataProperties.m */; };
+		12440CAE1C73C59700F04393 /* NCCacheRecordData.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CA61C73C59700F04393 /* NCCacheRecordData.m */; };
+		12440CAF1C73C59700F04393 /* NCCacheRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CA81C73C59700F04393 /* NCCacheRecord+CoreDataProperties.m */; };
+		12440CB01C73C59700F04393 /* NCCacheRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CAA1C73C59700F04393 /* NCCacheRecord.m */; };
+		12440CB51C73C7DF00F04393 /* NCAddAPIKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CB41C73C7DF00F04393 /* NCAddAPIKeyViewController.m */; };
+		12440CF11C73CCA100F04393 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12440CF01C73CCA100F04393 /* AFNetworking.framework */; };
+		12440CF31C73CCAC00F04393 /* EVEAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12440CF21C73CCAC00F04393 /* EVEAPI.framework */; };
 		1268CBD71C73053800319951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBD61C73053800319951 /* AppDelegate.m */; };
 		1268CBDA1C73053800319951 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBD91C73053800319951 /* main.m */; };
 		1268CBDD1C73053800319951 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBDC1C73053800319951 /* ViewController.m */; };
@@ -17,6 +154,275 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12440B171C73BF1800F04393 /* NCDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NCDatabase.xcdatamodel; sourceTree = "<group>"; };
+		12440B191C73BF2A00F04393 /* NCDatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NCDatabase.sqlite; sourceTree = "<group>"; };
+		12440B1C1C73BF3600F04393 /* NCStorage 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "NCStorage 2.xcdatamodel"; sourceTree = "<group>"; };
+		12440B1D1C73BF3600F04393 /* NCStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NCStorage.xcdatamodel; sourceTree = "<group>"; };
+		12440B211C73BF6800F04393 /* NCLoadoutData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCLoadoutData+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B221C73BF6800F04393 /* NCLoadoutData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCLoadoutData+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B231C73BF6800F04393 /* NCLoadoutData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLoadoutData.h; sourceTree = "<group>"; };
+		12440B241C73BF6800F04393 /* NCLoadoutData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCLoadoutData.m; sourceTree = "<group>"; };
+		12440B251C73BF6800F04393 /* NCMailBox+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCMailBox+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B261C73BF6800F04393 /* NCMailBox+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCMailBox+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B271C73BF6800F04393 /* NCMailBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMailBox.h; sourceTree = "<group>"; };
+		12440B281C73BF6800F04393 /* NCMailBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMailBox.m; sourceTree = "<group>"; };
+		12440B291C73BF6800F04393 /* NCImplantSet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCImplantSet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B2A1C73BF6800F04393 /* NCImplantSet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCImplantSet+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B2B1C73BF6800F04393 /* NCImplantSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCImplantSet.h; sourceTree = "<group>"; };
+		12440B2C1C73BF6800F04393 /* NCImplantSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCImplantSet.m; sourceTree = "<group>"; };
+		12440B2D1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCSkillPlan+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B2E1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCSkillPlan+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B2F1C73BF6800F04393 /* NCSkillPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSkillPlan.h; sourceTree = "<group>"; };
+		12440B301C73BF6800F04393 /* NCSkillPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSkillPlan.m; sourceTree = "<group>"; };
+		12440B311C73BF6800F04393 /* NCAPIKey+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCAPIKey+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B321C73BF6800F04393 /* NCAPIKey+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCAPIKey+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B331C73BF6800F04393 /* NCAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAPIKey.h; sourceTree = "<group>"; };
+		12440B341C73BF6800F04393 /* NCAPIKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAPIKey.m; sourceTree = "<group>"; };
+		12440B351C73BF6800F04393 /* NCFitCharacter+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCFitCharacter+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B361C73BF6800F04393 /* NCFitCharacter+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCFitCharacter+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B371C73BF6800F04393 /* NCFitCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCFitCharacter.h; sourceTree = "<group>"; };
+		12440B381C73BF6800F04393 /* NCFitCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCFitCharacter.m; sourceTree = "<group>"; };
+		12440B391C73BF6800F04393 /* NCShoppingItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCShoppingItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B3A1C73BF6800F04393 /* NCShoppingItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCShoppingItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B3B1C73BF6800F04393 /* NCShoppingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCShoppingItem.h; sourceTree = "<group>"; };
+		12440B3C1C73BF6800F04393 /* NCShoppingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCShoppingItem.m; sourceTree = "<group>"; };
+		12440B3D1C73BF6800F04393 /* NCShoppingList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCShoppingList+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B3E1C73BF6800F04393 /* NCShoppingList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCShoppingList+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B3F1C73BF6800F04393 /* NCShoppingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCShoppingList.h; sourceTree = "<group>"; };
+		12440B401C73BF6800F04393 /* NCShoppingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCShoppingList.m; sourceTree = "<group>"; };
+		12440B411C73BF6800F04393 /* NCDamagePattern+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDamagePattern+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B421C73BF6800F04393 /* NCDamagePattern+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDamagePattern+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B431C73BF6800F04393 /* NCDamagePattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDamagePattern.h; sourceTree = "<group>"; };
+		12440B441C73BF6800F04393 /* NCDamagePattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDamagePattern.m; sourceTree = "<group>"; };
+		12440B451C73BF6800F04393 /* NCShoppingGroup+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCShoppingGroup+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B461C73BF6800F04393 /* NCShoppingGroup+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCShoppingGroup+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B471C73BF6800F04393 /* NCShoppingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCShoppingGroup.h; sourceTree = "<group>"; };
+		12440B481C73BF6800F04393 /* NCShoppingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCShoppingGroup.m; sourceTree = "<group>"; };
+		12440B491C73BF6800F04393 /* NCLoadout+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCLoadout+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B4A1C73BF6800F04393 /* NCLoadout+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCLoadout+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B4B1C73BF6800F04393 /* NCLoadout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLoadout.h; sourceTree = "<group>"; };
+		12440B4C1C73BF6800F04393 /* NCLoadout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCLoadout.m; sourceTree = "<group>"; };
+		12440B4D1C73BF6800F04393 /* NCDronesSet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDronesSet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B4E1C73BF6800F04393 /* NCDronesSet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDronesSet+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B4F1C73BF6800F04393 /* NCDronesSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDronesSet.h; sourceTree = "<group>"; };
+		12440B501C73BF6800F04393 /* NCDronesSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDronesSet.m; sourceTree = "<group>"; };
+		12440B511C73BF6800F04393 /* NCSetting+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCSetting+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B521C73BF6800F04393 /* NCSetting+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCSetting+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B531C73BF6800F04393 /* NCSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSetting.h; sourceTree = "<group>"; };
+		12440B541C73BF6800F04393 /* NCSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSetting.m; sourceTree = "<group>"; };
+		12440B551C73BF6800F04393 /* NCAccount+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCAccount+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B561C73BF6800F04393 /* NCAccount+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCAccount+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B571C73BF6800F04393 /* NCAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAccount.h; sourceTree = "<group>"; };
+		12440B581C73BF6800F04393 /* NCAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAccount.m; sourceTree = "<group>"; };
+		12440B751C73BF7D00F04393 /* NCStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCStorage.h; sourceTree = "<group>"; };
+		12440B761C73BF7D00F04393 /* NCStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCStorage.m; sourceTree = "<group>"; };
+		12440B7A1C73BF9F00F04393 /* NSManagedObjectContext+NCStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+NCStorage.h"; sourceTree = "<group>"; };
+		12440B7B1C73BF9F00F04393 /* NSManagedObjectContext+NCStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+NCStorage.m"; sourceTree = "<group>"; };
+		12440B7F1C73BFC100F04393 /* NSManagedObjectContext+NCDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+NCDatabase.h"; sourceTree = "<group>"; };
+		12440B801C73BFC100F04393 /* NSManagedObjectContext+NCDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+NCDatabase.m"; sourceTree = "<group>"; };
+		12440B821C73BFCE00F04393 /* NCDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDatabase.h; sourceTree = "<group>"; };
+		12440B831C73BFCE00F04393 /* NCDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDatabase.m; sourceTree = "<group>"; };
+		12440B861C73BFFE00F04393 /* NCDBDgmppItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmppItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B871C73BFFE00F04393 /* NCDBDgmppItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmppItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B881C73BFFE00F04393 /* NCDBDgmppItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmppItem.h; sourceTree = "<group>"; };
+		12440B891C73BFFE00F04393 /* NCDBDgmppItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmppItem.m; sourceTree = "<group>"; };
+		12440B8A1C73BFFE00F04393 /* NCDBDgmEffect+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmEffect+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B8B1C73BFFE00F04393 /* NCDBDgmEffect+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmEffect+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B8C1C73BFFE00F04393 /* NCDBDgmEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmEffect.h; sourceTree = "<group>"; };
+		12440B8D1C73BFFE00F04393 /* NCDBDgmEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmEffect.m; sourceTree = "<group>"; };
+		12440B8E1C73BFFE00F04393 /* NCDBIndProduct+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBIndProduct+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B8F1C73BFFE00F04393 /* NCDBIndProduct+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBIndProduct+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B901C73BFFE00F04393 /* NCDBIndProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBIndProduct.h; sourceTree = "<group>"; };
+		12440B911C73BFFE00F04393 /* NCDBIndProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBIndProduct.m; sourceTree = "<group>"; };
+		12440B921C73BFFE00F04393 /* NCDBRamAssemblyLineType+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBRamAssemblyLineType+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B931C73BFFE00F04393 /* NCDBRamAssemblyLineType+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBRamAssemblyLineType+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B941C73BFFE00F04393 /* NCDBRamAssemblyLineType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBRamAssemblyLineType.h; sourceTree = "<group>"; };
+		12440B951C73BFFE00F04393 /* NCDBRamAssemblyLineType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBRamAssemblyLineType.m; sourceTree = "<group>"; };
+		12440B961C73BFFE00F04393 /* NCDBCertCertificate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBCertCertificate+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B971C73BFFE00F04393 /* NCDBCertCertificate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBCertCertificate+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B981C73BFFE00F04393 /* NCDBCertCertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBCertCertificate.h; sourceTree = "<group>"; };
+		12440B991C73BFFE00F04393 /* NCDBCertCertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBCertCertificate.m; sourceTree = "<group>"; };
+		12440B9A1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBInvControlTowerResourcePurpose+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B9B1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBInvControlTowerResourcePurpose+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440B9C1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBInvControlTowerResourcePurpose.h; sourceTree = "<group>"; };
+		12440B9D1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBInvControlTowerResourcePurpose.m; sourceTree = "<group>"; };
+		12440B9E1C73BFFE00F04393 /* NCDBInvMarketGroup+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBInvMarketGroup+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440B9F1C73BFFE00F04393 /* NCDBInvMarketGroup+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBInvMarketGroup+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BA01C73BFFE00F04393 /* NCDBInvMarketGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBInvMarketGroup.h; sourceTree = "<group>"; };
+		12440BA11C73BFFE00F04393 /* NCDBInvMarketGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBInvMarketGroup.m; sourceTree = "<group>"; };
+		12440BA21C73BFFE00F04393 /* NCDBEveUnit+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBEveUnit+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BA31C73BFFE00F04393 /* NCDBEveUnit+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBEveUnit+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BA41C73BFFE00F04393 /* NCDBEveUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBEveUnit.h; sourceTree = "<group>"; };
+		12440BA51C73BFFE00F04393 /* NCDBEveUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBEveUnit.m; sourceTree = "<group>"; };
+		12440BA61C73BFFE00F04393 /* NCDBEveIconImage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBEveIconImage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BA71C73BFFE00F04393 /* NCDBEveIconImage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBEveIconImage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BA81C73BFFE00F04393 /* NCDBEveIconImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBEveIconImage.h; sourceTree = "<group>"; };
+		12440BA91C73BFFE00F04393 /* NCDBEveIconImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBEveIconImage.m; sourceTree = "<group>"; };
+		12440BAA1C73BFFE00F04393 /* NCDBInvGroup+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBInvGroup+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BAB1C73BFFE00F04393 /* NCDBInvGroup+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBInvGroup+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BAC1C73BFFE00F04393 /* NCDBInvGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBInvGroup.h; sourceTree = "<group>"; };
+		12440BAD1C73BFFE00F04393 /* NCDBInvGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBInvGroup.m; sourceTree = "<group>"; };
+		12440BAE1C73BFFE00F04393 /* NCDBIndRequiredMaterial+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBIndRequiredMaterial+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BAF1C73BFFE00F04393 /* NCDBIndRequiredMaterial+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBIndRequiredMaterial+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BB01C73BFFE00F04393 /* NCDBIndRequiredMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBIndRequiredMaterial.h; sourceTree = "<group>"; };
+		12440BB11C73BFFE00F04393 /* NCDBIndRequiredMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBIndRequiredMaterial.m; sourceTree = "<group>"; };
+		12440BB21C73BFFE00F04393 /* NCDBIndBlueprintType+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBIndBlueprintType+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BB31C73BFFE00F04393 /* NCDBIndBlueprintType+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBIndBlueprintType+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BB41C73BFFE00F04393 /* NCDBIndBlueprintType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBIndBlueprintType.h; sourceTree = "<group>"; };
+		12440BB51C73BFFE00F04393 /* NCDBIndBlueprintType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBIndBlueprintType.m; sourceTree = "<group>"; };
+		12440BB61C73BFFE00F04393 /* NCDBCertSkill+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBCertSkill+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BB71C73BFFE00F04393 /* NCDBCertSkill+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBCertSkill+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BB81C73BFFE00F04393 /* NCDBCertSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBCertSkill.h; sourceTree = "<group>"; };
+		12440BB91C73BFFE00F04393 /* NCDBCertSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBCertSkill.m; sourceTree = "<group>"; };
+		12440BBA1C73BFFE00F04393 /* NCDBInvCategory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBInvCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BBB1C73BFFE00F04393 /* NCDBInvCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBInvCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BBC1C73BFFE00F04393 /* NCDBInvCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBInvCategory.h; sourceTree = "<group>"; };
+		12440BBD1C73BFFE00F04393 /* NCDBInvCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBInvCategory.m; sourceTree = "<group>"; };
+		12440BBE1C73BFFE00F04393 /* NCDBEveIcon+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBEveIcon+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BBF1C73BFFE00F04393 /* NCDBEveIcon+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBEveIcon+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BC01C73BFFE00F04393 /* NCDBEveIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBEveIcon.h; sourceTree = "<group>"; };
+		12440BC11C73BFFE00F04393 /* NCDBEveIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBEveIcon.m; sourceTree = "<group>"; };
+		12440BC21C73BFFE00F04393 /* NCDBCertMasteryLevel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBCertMasteryLevel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BC31C73BFFE00F04393 /* NCDBCertMasteryLevel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBCertMasteryLevel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BC41C73BFFE00F04393 /* NCDBCertMasteryLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBCertMasteryLevel.h; sourceTree = "<group>"; };
+		12440BC51C73BFFE00F04393 /* NCDBCertMasteryLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBCertMasteryLevel.m; sourceTree = "<group>"; };
+		12440BC61C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBInvControlTowerResource+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BC71C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBInvControlTowerResource+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BC81C73BFFE00F04393 /* NCDBInvControlTowerResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBInvControlTowerResource.h; sourceTree = "<group>"; };
+		12440BC91C73BFFE00F04393 /* NCDBInvControlTowerResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBInvControlTowerResource.m; sourceTree = "<group>"; };
+		12440BCA1C73BFFE00F04393 /* NCDBDgmppItemDamage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmppItemDamage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BCB1C73BFFE00F04393 /* NCDBDgmppItemDamage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmppItemDamage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BCC1C73BFFE00F04393 /* NCDBDgmppItemDamage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmppItemDamage.h; sourceTree = "<group>"; };
+		12440BCD1C73BFFE00F04393 /* NCDBDgmppItemDamage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmppItemDamage.m; sourceTree = "<group>"; };
+		12440BCE1C73BFFE00F04393 /* NCDBInvType+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBInvType+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BCF1C73BFFE00F04393 /* NCDBInvType+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBInvType+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BD01C73BFFE00F04393 /* NCDBInvType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBInvType.h; sourceTree = "<group>"; };
+		12440BD11C73BFFE00F04393 /* NCDBInvType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBInvType.m; sourceTree = "<group>"; };
+		12440BD21C73BFFE00F04393 /* NCDBMapConstellation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBMapConstellation+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BD31C73BFFE00F04393 /* NCDBMapConstellation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBMapConstellation+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BD41C73BFFE00F04393 /* NCDBMapConstellation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBMapConstellation.h; sourceTree = "<group>"; };
+		12440BD51C73BFFE00F04393 /* NCDBMapConstellation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBMapConstellation.m; sourceTree = "<group>"; };
+		12440BD61C73BFFE00F04393 /* NCDBTxtDescription+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBTxtDescription+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BD71C73BFFE00F04393 /* NCDBTxtDescription+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBTxtDescription+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BD81C73BFFE00F04393 /* NCDBTxtDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBTxtDescription.h; sourceTree = "<group>"; };
+		12440BD91C73BFFE00F04393 /* NCDBTxtDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBTxtDescription.m; sourceTree = "<group>"; };
+		12440BDA1C73BFFE00F04393 /* NCDBVersion+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBVersion+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BDB1C73BFFE00F04393 /* NCDBVersion+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBVersion+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BDC1C73BFFE00F04393 /* NCDBVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBVersion.h; sourceTree = "<group>"; };
+		12440BDD1C73BFFE00F04393 /* NCDBVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBVersion.m; sourceTree = "<group>"; };
+		12440BDE1C73BFFE00F04393 /* NCDBMapSolarSystem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBMapSolarSystem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BDF1C73BFFE00F04393 /* NCDBMapSolarSystem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBMapSolarSystem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BE01C73BFFE00F04393 /* NCDBMapSolarSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBMapSolarSystem.h; sourceTree = "<group>"; };
+		12440BE11C73BFFE00F04393 /* NCDBMapSolarSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBMapSolarSystem.m; sourceTree = "<group>"; };
+		12440BE21C73BFFE00F04393 /* NCDBWhType+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBWhType+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BE31C73BFFE00F04393 /* NCDBWhType+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBWhType+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BE41C73BFFE00F04393 /* NCDBWhType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBWhType.h; sourceTree = "<group>"; };
+		12440BE51C73BFFE00F04393 /* NCDBWhType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBWhType.m; sourceTree = "<group>"; };
+		12440BE61C73BFFE00F04393 /* NCDBChrRace+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBChrRace+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BE71C73BFFE00F04393 /* NCDBChrRace+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBChrRace+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BE81C73BFFE00F04393 /* NCDBChrRace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBChrRace.h; sourceTree = "<group>"; };
+		12440BE91C73BFFE00F04393 /* NCDBChrRace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBChrRace.m; sourceTree = "<group>"; };
+		12440BEA1C73BFFE00F04393 /* NCDBIndActivity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBIndActivity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BEB1C73BFFE00F04393 /* NCDBIndActivity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBIndActivity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BEC1C73BFFE00F04393 /* NCDBIndActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBIndActivity.h; sourceTree = "<group>"; };
+		12440BED1C73BFFE00F04393 /* NCDBIndActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBIndActivity.m; sourceTree = "<group>"; };
+		12440BEE1C73BFFE00F04393 /* NCDBDgmppItemGroup+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmppItemGroup+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BEF1C73BFFE00F04393 /* NCDBDgmppItemGroup+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmppItemGroup+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BF01C73BFFE00F04393 /* NCDBDgmppItemGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmppItemGroup.h; sourceTree = "<group>"; };
+		12440BF11C73BFFE00F04393 /* NCDBDgmppItemGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmppItemGroup.m; sourceTree = "<group>"; };
+		12440BF21C73BFFE00F04393 /* NCDBStaStation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBStaStation+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BF31C73BFFE00F04393 /* NCDBStaStation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBStaStation+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BF41C73BFFE00F04393 /* NCDBStaStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBStaStation.h; sourceTree = "<group>"; };
+		12440BF51C73BFFE00F04393 /* NCDBStaStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBStaStation.m; sourceTree = "<group>"; };
+		12440BF61C73BFFE00F04393 /* NCDBRamInstallationTypeContent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBRamInstallationTypeContent+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BF71C73BFFE00F04393 /* NCDBRamInstallationTypeContent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBRamInstallationTypeContent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BF81C73BFFE00F04393 /* NCDBRamInstallationTypeContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBRamInstallationTypeContent.h; sourceTree = "<group>"; };
+		12440BF91C73BFFE00F04393 /* NCDBRamInstallationTypeContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBRamInstallationTypeContent.m; sourceTree = "<group>"; };
+		12440BFA1C73BFFE00F04393 /* NCDBDgmAttributeCategory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmAttributeCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BFB1C73BFFE00F04393 /* NCDBDgmAttributeCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmAttributeCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440BFC1C73BFFE00F04393 /* NCDBDgmAttributeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmAttributeCategory.h; sourceTree = "<group>"; };
+		12440BFD1C73BFFE00F04393 /* NCDBDgmAttributeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmAttributeCategory.m; sourceTree = "<group>"; };
+		12440BFE1C73BFFE00F04393 /* NCDBDgmppHullType+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmppHullType+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440BFF1C73BFFE00F04393 /* NCDBDgmppHullType+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmppHullType+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C001C73BFFE00F04393 /* NCDBDgmppHullType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmppHullType.h; sourceTree = "<group>"; };
+		12440C011C73BFFE00F04393 /* NCDBDgmppHullType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmppHullType.m; sourceTree = "<group>"; };
+		12440C021C73BFFE00F04393 /* NCDBIndRequiredSkill+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBIndRequiredSkill+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C031C73BFFE00F04393 /* NCDBIndRequiredSkill+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBIndRequiredSkill+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C041C73BFFE00F04393 /* NCDBIndRequiredSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBIndRequiredSkill.h; sourceTree = "<group>"; };
+		12440C051C73BFFE00F04393 /* NCDBIndRequiredSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBIndRequiredSkill.m; sourceTree = "<group>"; };
+		12440C061C73BFFE00F04393 /* NCDBInvTypeRequiredSkill+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBInvTypeRequiredSkill+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C071C73BFFE00F04393 /* NCDBInvTypeRequiredSkill+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBInvTypeRequiredSkill+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C081C73BFFE00F04393 /* NCDBInvTypeRequiredSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBInvTypeRequiredSkill.h; sourceTree = "<group>"; };
+		12440C091C73BFFE00F04393 /* NCDBInvTypeRequiredSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBInvTypeRequiredSkill.m; sourceTree = "<group>"; };
+		12440C0A1C73BFFE00F04393 /* NCDBDgmppItemCategory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmppItemCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C0B1C73BFFE00F04393 /* NCDBDgmppItemCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmppItemCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C0C1C73BFFE00F04393 /* NCDBDgmppItemCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmppItemCategory.h; sourceTree = "<group>"; };
+		12440C0D1C73BFFE00F04393 /* NCDBDgmppItemCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmppItemCategory.m; sourceTree = "<group>"; };
+		12440C0E1C73BFFE00F04393 /* NCDBDgmAttributeType+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmAttributeType+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C0F1C73BFFE00F04393 /* NCDBDgmAttributeType+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmAttributeType+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C101C73BFFE00F04393 /* NCDBDgmAttributeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmAttributeType.h; sourceTree = "<group>"; };
+		12440C111C73BFFE00F04393 /* NCDBDgmAttributeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmAttributeType.m; sourceTree = "<group>"; };
+		12440C121C73BFFE00F04393 /* NCDBDgmppItemShipResources+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmppItemShipResources+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C131C73BFFE00F04393 /* NCDBDgmppItemShipResources+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmppItemShipResources+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C141C73BFFE00F04393 /* NCDBDgmppItemShipResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmppItemShipResources.h; sourceTree = "<group>"; };
+		12440C151C73BFFE00F04393 /* NCDBDgmppItemShipResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmppItemShipResources.m; sourceTree = "<group>"; };
+		12440C161C73BFFE00F04393 /* NCDBMapRegion+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBMapRegion+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C171C73BFFE00F04393 /* NCDBMapRegion+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBMapRegion+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C181C73BFFE00F04393 /* NCDBMapRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBMapRegion.h; sourceTree = "<group>"; };
+		12440C191C73BFFE00F04393 /* NCDBMapRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBMapRegion.m; sourceTree = "<group>"; };
+		12440C1A1C73BFFE00F04393 /* NCDBRamActivity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBRamActivity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C1B1C73BFFE00F04393 /* NCDBRamActivity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBRamActivity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C1C1C73BFFE00F04393 /* NCDBRamActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBRamActivity.h; sourceTree = "<group>"; };
+		12440C1D1C73BFFE00F04393 /* NCDBRamActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBRamActivity.m; sourceTree = "<group>"; };
+		12440C1E1C73BFFE00F04393 /* NCDBNpcGroup+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBNpcGroup+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C1F1C73BFFE00F04393 /* NCDBNpcGroup+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBNpcGroup+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C201C73BFFE00F04393 /* NCDBNpcGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBNpcGroup.h; sourceTree = "<group>"; };
+		12440C211C73BFFE00F04393 /* NCDBNpcGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBNpcGroup.m; sourceTree = "<group>"; };
+		12440C221C73BFFE00F04393 /* NCDBMapDenormalize+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBMapDenormalize+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C231C73BFFE00F04393 /* NCDBMapDenormalize+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBMapDenormalize+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C241C73BFFE00F04393 /* NCDBMapDenormalize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBMapDenormalize.h; sourceTree = "<group>"; };
+		12440C251C73BFFE00F04393 /* NCDBMapDenormalize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBMapDenormalize.m; sourceTree = "<group>"; };
+		12440C261C73BFFE00F04393 /* NCDBInvMetaGroup+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBInvMetaGroup+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C271C73BFFE00F04393 /* NCDBInvMetaGroup+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBInvMetaGroup+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C281C73BFFE00F04393 /* NCDBInvMetaGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBInvMetaGroup.h; sourceTree = "<group>"; };
+		12440C291C73BFFE00F04393 /* NCDBInvMetaGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBInvMetaGroup.m; sourceTree = "<group>"; };
+		12440C2A1C73BFFE00F04393 /* NCDBDgmTypeAttribute+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmTypeAttribute+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C2B1C73BFFE00F04393 /* NCDBDgmTypeAttribute+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmTypeAttribute+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C2C1C73BFFE00F04393 /* NCDBDgmTypeAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmTypeAttribute.h; sourceTree = "<group>"; };
+		12440C2D1C73BFFE00F04393 /* NCDBDgmTypeAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmTypeAttribute.m; sourceTree = "<group>"; };
+		12440C2E1C73BFFE00F04393 /* NCDBCertMastery+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBCertMastery+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C2F1C73BFFE00F04393 /* NCDBCertMastery+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBCertMastery+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C301C73BFFE00F04393 /* NCDBCertMastery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBCertMastery.h; sourceTree = "<group>"; };
+		12440C311C73BFFE00F04393 /* NCDBCertMastery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBCertMastery.m; sourceTree = "<group>"; };
+		12440C321C73BFFE00F04393 /* NCDBDgmppItemRequirements+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBDgmppItemRequirements+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C331C73BFFE00F04393 /* NCDBDgmppItemRequirements+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBDgmppItemRequirements+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C341C73BFFE00F04393 /* NCDBDgmppItemRequirements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBDgmppItemRequirements.h; sourceTree = "<group>"; };
+		12440C351C73BFFE00F04393 /* NCDBDgmppItemRequirements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBDgmppItemRequirements.m; sourceTree = "<group>"; };
+		12440C361C73BFFE00F04393 /* NCDBInvControlTower+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCDBInvControlTower+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440C371C73BFFE00F04393 /* NCDBInvControlTower+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCDBInvControlTower+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440C381C73BFFE00F04393 /* NCDBInvControlTower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBInvControlTower.h; sourceTree = "<group>"; };
+		12440C391C73BFFE00F04393 /* NCDBInvControlTower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBInvControlTower.m; sourceTree = "<group>"; };
+		12440C951C73C57600F04393 /* NCCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCache.h; sourceTree = "<group>"; };
+		12440C961C73C57600F04393 /* NCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCache.m; sourceTree = "<group>"; };
+		12440C981C73C57600F04393 /* NCCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NCCache.xcdatamodel; sourceTree = "<group>"; };
+		12440C991C73C57600F04393 /* NSManagedObjectContext+NCCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+NCCache.h"; sourceTree = "<group>"; };
+		12440C9A1C73C57600F04393 /* NSManagedObjectContext+NCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+NCCache.m"; sourceTree = "<group>"; };
+		12440C9F1C73C59700F04393 /* NCCachePrice+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCCachePrice+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440CA01C73C59700F04393 /* NCCachePrice+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCCachePrice+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440CA11C73C59700F04393 /* NCCachePrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCachePrice.h; sourceTree = "<group>"; };
+		12440CA21C73C59700F04393 /* NCCachePrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCachePrice.m; sourceTree = "<group>"; };
+		12440CA31C73C59700F04393 /* NCCacheRecordData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCCacheRecordData+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440CA41C73C59700F04393 /* NCCacheRecordData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCCacheRecordData+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440CA51C73C59700F04393 /* NCCacheRecordData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCacheRecordData.h; sourceTree = "<group>"; };
+		12440CA61C73C59700F04393 /* NCCacheRecordData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCacheRecordData.m; sourceTree = "<group>"; };
+		12440CA71C73C59700F04393 /* NCCacheRecord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCCacheRecord+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12440CA81C73C59700F04393 /* NCCacheRecord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NCCacheRecord+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12440CA91C73C59700F04393 /* NCCacheRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCacheRecord.h; sourceTree = "<group>"; };
+		12440CAA1C73C59700F04393 /* NCCacheRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCacheRecord.m; sourceTree = "<group>"; };
+		12440CB31C73C7DF00F04393 /* NCAddAPIKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAddAPIKeyViewController.h; sourceTree = "<group>"; };
+		12440CB41C73C7DF00F04393 /* NCAddAPIKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAddAPIKeyViewController.m; sourceTree = "<group>"; };
+		12440CF01C73CCA100F04393 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../Library/Developer/Xcode/DerivedData/Neocom-ebjleyayiawwixdpembhfjqwppwl/Build/Products/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
+		12440CF21C73CCAC00F04393 /* EVEAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EVEAPI.framework; path = ThirdParty/EVEOnlineAPI/build/Debug/EVEAPI.framework; sourceTree = "<group>"; };
 		1268CBD21C73053800319951 /* Neocom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neocom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1268CBD51C73053800319951 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1268CBD61C73053800319951 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,15 +442,334 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12440CF31C73CCAC00F04393 /* EVEAPI.framework in Frameworks */,
+				12440CF11C73CCA100F04393 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12440B1F1C73BF5200F04393 /* NCStorage */ = {
+			isa = PBXGroup;
+			children = (
+				12440B201C73BF5800F04393 /* Generated */,
+				12440B7A1C73BF9F00F04393 /* NSManagedObjectContext+NCStorage.h */,
+				12440B7B1C73BF9F00F04393 /* NSManagedObjectContext+NCStorage.m */,
+				12440B751C73BF7D00F04393 /* NCStorage.h */,
+				12440B761C73BF7D00F04393 /* NCStorage.m */,
+			);
+			name = NCStorage;
+			sourceTree = "<group>";
+		};
+		12440B201C73BF5800F04393 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				12440B571C73BF6800F04393 /* NCAccount.h */,
+				12440B581C73BF6800F04393 /* NCAccount.m */,
+				12440B551C73BF6800F04393 /* NCAccount+CoreDataProperties.h */,
+				12440B561C73BF6800F04393 /* NCAccount+CoreDataProperties.m */,
+				12440B331C73BF6800F04393 /* NCAPIKey.h */,
+				12440B341C73BF6800F04393 /* NCAPIKey.m */,
+				12440B311C73BF6800F04393 /* NCAPIKey+CoreDataProperties.h */,
+				12440B321C73BF6800F04393 /* NCAPIKey+CoreDataProperties.m */,
+				12440B431C73BF6800F04393 /* NCDamagePattern.h */,
+				12440B441C73BF6800F04393 /* NCDamagePattern.m */,
+				12440B411C73BF6800F04393 /* NCDamagePattern+CoreDataProperties.h */,
+				12440B421C73BF6800F04393 /* NCDamagePattern+CoreDataProperties.m */,
+				12440B4F1C73BF6800F04393 /* NCDronesSet.h */,
+				12440B501C73BF6800F04393 /* NCDronesSet.m */,
+				12440B4D1C73BF6800F04393 /* NCDronesSet+CoreDataProperties.h */,
+				12440B4E1C73BF6800F04393 /* NCDronesSet+CoreDataProperties.m */,
+				12440B371C73BF6800F04393 /* NCFitCharacter.h */,
+				12440B381C73BF6800F04393 /* NCFitCharacter.m */,
+				12440B351C73BF6800F04393 /* NCFitCharacter+CoreDataProperties.h */,
+				12440B361C73BF6800F04393 /* NCFitCharacter+CoreDataProperties.m */,
+				12440B2B1C73BF6800F04393 /* NCImplantSet.h */,
+				12440B2C1C73BF6800F04393 /* NCImplantSet.m */,
+				12440B291C73BF6800F04393 /* NCImplantSet+CoreDataProperties.h */,
+				12440B2A1C73BF6800F04393 /* NCImplantSet+CoreDataProperties.m */,
+				12440B4B1C73BF6800F04393 /* NCLoadout.h */,
+				12440B4C1C73BF6800F04393 /* NCLoadout.m */,
+				12440B491C73BF6800F04393 /* NCLoadout+CoreDataProperties.h */,
+				12440B4A1C73BF6800F04393 /* NCLoadout+CoreDataProperties.m */,
+				12440B231C73BF6800F04393 /* NCLoadoutData.h */,
+				12440B241C73BF6800F04393 /* NCLoadoutData.m */,
+				12440B211C73BF6800F04393 /* NCLoadoutData+CoreDataProperties.h */,
+				12440B221C73BF6800F04393 /* NCLoadoutData+CoreDataProperties.m */,
+				12440B271C73BF6800F04393 /* NCMailBox.h */,
+				12440B281C73BF6800F04393 /* NCMailBox.m */,
+				12440B251C73BF6800F04393 /* NCMailBox+CoreDataProperties.h */,
+				12440B261C73BF6800F04393 /* NCMailBox+CoreDataProperties.m */,
+				12440B531C73BF6800F04393 /* NCSetting.h */,
+				12440B541C73BF6800F04393 /* NCSetting.m */,
+				12440B511C73BF6800F04393 /* NCSetting+CoreDataProperties.h */,
+				12440B521C73BF6800F04393 /* NCSetting+CoreDataProperties.m */,
+				12440B471C73BF6800F04393 /* NCShoppingGroup.h */,
+				12440B481C73BF6800F04393 /* NCShoppingGroup.m */,
+				12440B451C73BF6800F04393 /* NCShoppingGroup+CoreDataProperties.h */,
+				12440B461C73BF6800F04393 /* NCShoppingGroup+CoreDataProperties.m */,
+				12440B3B1C73BF6800F04393 /* NCShoppingItem.h */,
+				12440B3C1C73BF6800F04393 /* NCShoppingItem.m */,
+				12440B391C73BF6800F04393 /* NCShoppingItem+CoreDataProperties.h */,
+				12440B3A1C73BF6800F04393 /* NCShoppingItem+CoreDataProperties.m */,
+				12440B3F1C73BF6800F04393 /* NCShoppingList.h */,
+				12440B401C73BF6800F04393 /* NCShoppingList.m */,
+				12440B3D1C73BF6800F04393 /* NCShoppingList+CoreDataProperties.h */,
+				12440B3E1C73BF6800F04393 /* NCShoppingList+CoreDataProperties.m */,
+				12440B2F1C73BF6800F04393 /* NCSkillPlan.h */,
+				12440B301C73BF6800F04393 /* NCSkillPlan.m */,
+				12440B2D1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.h */,
+				12440B2E1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.m */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
+		12440B7E1C73BFBA00F04393 /* NCDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				12440B851C73BFDF00F04393 /* Generated */,
+				12440B7F1C73BFC100F04393 /* NSManagedObjectContext+NCDatabase.h */,
+				12440B801C73BFC100F04393 /* NSManagedObjectContext+NCDatabase.m */,
+				12440B821C73BFCE00F04393 /* NCDatabase.h */,
+				12440B831C73BFCE00F04393 /* NCDatabase.m */,
+			);
+			name = NCDatabase;
+			sourceTree = "<group>";
+		};
+		12440B851C73BFDF00F04393 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				12440B861C73BFFE00F04393 /* NCDBDgmppItem+CoreDataProperties.h */,
+				12440B871C73BFFE00F04393 /* NCDBDgmppItem+CoreDataProperties.m */,
+				12440B881C73BFFE00F04393 /* NCDBDgmppItem.h */,
+				12440B891C73BFFE00F04393 /* NCDBDgmppItem.m */,
+				12440B8A1C73BFFE00F04393 /* NCDBDgmEffect+CoreDataProperties.h */,
+				12440B8B1C73BFFE00F04393 /* NCDBDgmEffect+CoreDataProperties.m */,
+				12440B8C1C73BFFE00F04393 /* NCDBDgmEffect.h */,
+				12440B8D1C73BFFE00F04393 /* NCDBDgmEffect.m */,
+				12440B8E1C73BFFE00F04393 /* NCDBIndProduct+CoreDataProperties.h */,
+				12440B8F1C73BFFE00F04393 /* NCDBIndProduct+CoreDataProperties.m */,
+				12440B901C73BFFE00F04393 /* NCDBIndProduct.h */,
+				12440B911C73BFFE00F04393 /* NCDBIndProduct.m */,
+				12440B921C73BFFE00F04393 /* NCDBRamAssemblyLineType+CoreDataProperties.h */,
+				12440B931C73BFFE00F04393 /* NCDBRamAssemblyLineType+CoreDataProperties.m */,
+				12440B941C73BFFE00F04393 /* NCDBRamAssemblyLineType.h */,
+				12440B951C73BFFE00F04393 /* NCDBRamAssemblyLineType.m */,
+				12440B961C73BFFE00F04393 /* NCDBCertCertificate+CoreDataProperties.h */,
+				12440B971C73BFFE00F04393 /* NCDBCertCertificate+CoreDataProperties.m */,
+				12440B981C73BFFE00F04393 /* NCDBCertCertificate.h */,
+				12440B991C73BFFE00F04393 /* NCDBCertCertificate.m */,
+				12440B9A1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose+CoreDataProperties.h */,
+				12440B9B1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose+CoreDataProperties.m */,
+				12440B9C1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose.h */,
+				12440B9D1C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose.m */,
+				12440B9E1C73BFFE00F04393 /* NCDBInvMarketGroup+CoreDataProperties.h */,
+				12440B9F1C73BFFE00F04393 /* NCDBInvMarketGroup+CoreDataProperties.m */,
+				12440BA01C73BFFE00F04393 /* NCDBInvMarketGroup.h */,
+				12440BA11C73BFFE00F04393 /* NCDBInvMarketGroup.m */,
+				12440BA21C73BFFE00F04393 /* NCDBEveUnit+CoreDataProperties.h */,
+				12440BA31C73BFFE00F04393 /* NCDBEveUnit+CoreDataProperties.m */,
+				12440BA41C73BFFE00F04393 /* NCDBEveUnit.h */,
+				12440BA51C73BFFE00F04393 /* NCDBEveUnit.m */,
+				12440BA61C73BFFE00F04393 /* NCDBEveIconImage+CoreDataProperties.h */,
+				12440BA71C73BFFE00F04393 /* NCDBEveIconImage+CoreDataProperties.m */,
+				12440BA81C73BFFE00F04393 /* NCDBEveIconImage.h */,
+				12440BA91C73BFFE00F04393 /* NCDBEveIconImage.m */,
+				12440BAA1C73BFFE00F04393 /* NCDBInvGroup+CoreDataProperties.h */,
+				12440BAB1C73BFFE00F04393 /* NCDBInvGroup+CoreDataProperties.m */,
+				12440BAC1C73BFFE00F04393 /* NCDBInvGroup.h */,
+				12440BAD1C73BFFE00F04393 /* NCDBInvGroup.m */,
+				12440BAE1C73BFFE00F04393 /* NCDBIndRequiredMaterial+CoreDataProperties.h */,
+				12440BAF1C73BFFE00F04393 /* NCDBIndRequiredMaterial+CoreDataProperties.m */,
+				12440BB01C73BFFE00F04393 /* NCDBIndRequiredMaterial.h */,
+				12440BB11C73BFFE00F04393 /* NCDBIndRequiredMaterial.m */,
+				12440BB21C73BFFE00F04393 /* NCDBIndBlueprintType+CoreDataProperties.h */,
+				12440BB31C73BFFE00F04393 /* NCDBIndBlueprintType+CoreDataProperties.m */,
+				12440BB41C73BFFE00F04393 /* NCDBIndBlueprintType.h */,
+				12440BB51C73BFFE00F04393 /* NCDBIndBlueprintType.m */,
+				12440BB61C73BFFE00F04393 /* NCDBCertSkill+CoreDataProperties.h */,
+				12440BB71C73BFFE00F04393 /* NCDBCertSkill+CoreDataProperties.m */,
+				12440BB81C73BFFE00F04393 /* NCDBCertSkill.h */,
+				12440BB91C73BFFE00F04393 /* NCDBCertSkill.m */,
+				12440BBA1C73BFFE00F04393 /* NCDBInvCategory+CoreDataProperties.h */,
+				12440BBB1C73BFFE00F04393 /* NCDBInvCategory+CoreDataProperties.m */,
+				12440BBC1C73BFFE00F04393 /* NCDBInvCategory.h */,
+				12440BBD1C73BFFE00F04393 /* NCDBInvCategory.m */,
+				12440BBE1C73BFFE00F04393 /* NCDBEveIcon+CoreDataProperties.h */,
+				12440BBF1C73BFFE00F04393 /* NCDBEveIcon+CoreDataProperties.m */,
+				12440BC01C73BFFE00F04393 /* NCDBEveIcon.h */,
+				12440BC11C73BFFE00F04393 /* NCDBEveIcon.m */,
+				12440BC21C73BFFE00F04393 /* NCDBCertMasteryLevel+CoreDataProperties.h */,
+				12440BC31C73BFFE00F04393 /* NCDBCertMasteryLevel+CoreDataProperties.m */,
+				12440BC41C73BFFE00F04393 /* NCDBCertMasteryLevel.h */,
+				12440BC51C73BFFE00F04393 /* NCDBCertMasteryLevel.m */,
+				12440BC61C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.h */,
+				12440BC71C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.m */,
+				12440BC81C73BFFE00F04393 /* NCDBInvControlTowerResource.h */,
+				12440BC91C73BFFE00F04393 /* NCDBInvControlTowerResource.m */,
+				12440BCA1C73BFFE00F04393 /* NCDBDgmppItemDamage+CoreDataProperties.h */,
+				12440BCB1C73BFFE00F04393 /* NCDBDgmppItemDamage+CoreDataProperties.m */,
+				12440BCC1C73BFFE00F04393 /* NCDBDgmppItemDamage.h */,
+				12440BCD1C73BFFE00F04393 /* NCDBDgmppItemDamage.m */,
+				12440BCE1C73BFFE00F04393 /* NCDBInvType+CoreDataProperties.h */,
+				12440BCF1C73BFFE00F04393 /* NCDBInvType+CoreDataProperties.m */,
+				12440BD01C73BFFE00F04393 /* NCDBInvType.h */,
+				12440BD11C73BFFE00F04393 /* NCDBInvType.m */,
+				12440BD21C73BFFE00F04393 /* NCDBMapConstellation+CoreDataProperties.h */,
+				12440BD31C73BFFE00F04393 /* NCDBMapConstellation+CoreDataProperties.m */,
+				12440BD41C73BFFE00F04393 /* NCDBMapConstellation.h */,
+				12440BD51C73BFFE00F04393 /* NCDBMapConstellation.m */,
+				12440BD61C73BFFE00F04393 /* NCDBTxtDescription+CoreDataProperties.h */,
+				12440BD71C73BFFE00F04393 /* NCDBTxtDescription+CoreDataProperties.m */,
+				12440BD81C73BFFE00F04393 /* NCDBTxtDescription.h */,
+				12440BD91C73BFFE00F04393 /* NCDBTxtDescription.m */,
+				12440BDA1C73BFFE00F04393 /* NCDBVersion+CoreDataProperties.h */,
+				12440BDB1C73BFFE00F04393 /* NCDBVersion+CoreDataProperties.m */,
+				12440BDC1C73BFFE00F04393 /* NCDBVersion.h */,
+				12440BDD1C73BFFE00F04393 /* NCDBVersion.m */,
+				12440BDE1C73BFFE00F04393 /* NCDBMapSolarSystem+CoreDataProperties.h */,
+				12440BDF1C73BFFE00F04393 /* NCDBMapSolarSystem+CoreDataProperties.m */,
+				12440BE01C73BFFE00F04393 /* NCDBMapSolarSystem.h */,
+				12440BE11C73BFFE00F04393 /* NCDBMapSolarSystem.m */,
+				12440BE21C73BFFE00F04393 /* NCDBWhType+CoreDataProperties.h */,
+				12440BE31C73BFFE00F04393 /* NCDBWhType+CoreDataProperties.m */,
+				12440BE41C73BFFE00F04393 /* NCDBWhType.h */,
+				12440BE51C73BFFE00F04393 /* NCDBWhType.m */,
+				12440BE61C73BFFE00F04393 /* NCDBChrRace+CoreDataProperties.h */,
+				12440BE71C73BFFE00F04393 /* NCDBChrRace+CoreDataProperties.m */,
+				12440BE81C73BFFE00F04393 /* NCDBChrRace.h */,
+				12440BE91C73BFFE00F04393 /* NCDBChrRace.m */,
+				12440BEA1C73BFFE00F04393 /* NCDBIndActivity+CoreDataProperties.h */,
+				12440BEB1C73BFFE00F04393 /* NCDBIndActivity+CoreDataProperties.m */,
+				12440BEC1C73BFFE00F04393 /* NCDBIndActivity.h */,
+				12440BED1C73BFFE00F04393 /* NCDBIndActivity.m */,
+				12440BEE1C73BFFE00F04393 /* NCDBDgmppItemGroup+CoreDataProperties.h */,
+				12440BEF1C73BFFE00F04393 /* NCDBDgmppItemGroup+CoreDataProperties.m */,
+				12440BF01C73BFFE00F04393 /* NCDBDgmppItemGroup.h */,
+				12440BF11C73BFFE00F04393 /* NCDBDgmppItemGroup.m */,
+				12440BF21C73BFFE00F04393 /* NCDBStaStation+CoreDataProperties.h */,
+				12440BF31C73BFFE00F04393 /* NCDBStaStation+CoreDataProperties.m */,
+				12440BF41C73BFFE00F04393 /* NCDBStaStation.h */,
+				12440BF51C73BFFE00F04393 /* NCDBStaStation.m */,
+				12440BF61C73BFFE00F04393 /* NCDBRamInstallationTypeContent+CoreDataProperties.h */,
+				12440BF71C73BFFE00F04393 /* NCDBRamInstallationTypeContent+CoreDataProperties.m */,
+				12440BF81C73BFFE00F04393 /* NCDBRamInstallationTypeContent.h */,
+				12440BF91C73BFFE00F04393 /* NCDBRamInstallationTypeContent.m */,
+				12440BFA1C73BFFE00F04393 /* NCDBDgmAttributeCategory+CoreDataProperties.h */,
+				12440BFB1C73BFFE00F04393 /* NCDBDgmAttributeCategory+CoreDataProperties.m */,
+				12440BFC1C73BFFE00F04393 /* NCDBDgmAttributeCategory.h */,
+				12440BFD1C73BFFE00F04393 /* NCDBDgmAttributeCategory.m */,
+				12440BFE1C73BFFE00F04393 /* NCDBDgmppHullType+CoreDataProperties.h */,
+				12440BFF1C73BFFE00F04393 /* NCDBDgmppHullType+CoreDataProperties.m */,
+				12440C001C73BFFE00F04393 /* NCDBDgmppHullType.h */,
+				12440C011C73BFFE00F04393 /* NCDBDgmppHullType.m */,
+				12440C021C73BFFE00F04393 /* NCDBIndRequiredSkill+CoreDataProperties.h */,
+				12440C031C73BFFE00F04393 /* NCDBIndRequiredSkill+CoreDataProperties.m */,
+				12440C041C73BFFE00F04393 /* NCDBIndRequiredSkill.h */,
+				12440C051C73BFFE00F04393 /* NCDBIndRequiredSkill.m */,
+				12440C061C73BFFE00F04393 /* NCDBInvTypeRequiredSkill+CoreDataProperties.h */,
+				12440C071C73BFFE00F04393 /* NCDBInvTypeRequiredSkill+CoreDataProperties.m */,
+				12440C081C73BFFE00F04393 /* NCDBInvTypeRequiredSkill.h */,
+				12440C091C73BFFE00F04393 /* NCDBInvTypeRequiredSkill.m */,
+				12440C0A1C73BFFE00F04393 /* NCDBDgmppItemCategory+CoreDataProperties.h */,
+				12440C0B1C73BFFE00F04393 /* NCDBDgmppItemCategory+CoreDataProperties.m */,
+				12440C0C1C73BFFE00F04393 /* NCDBDgmppItemCategory.h */,
+				12440C0D1C73BFFE00F04393 /* NCDBDgmppItemCategory.m */,
+				12440C0E1C73BFFE00F04393 /* NCDBDgmAttributeType+CoreDataProperties.h */,
+				12440C0F1C73BFFE00F04393 /* NCDBDgmAttributeType+CoreDataProperties.m */,
+				12440C101C73BFFE00F04393 /* NCDBDgmAttributeType.h */,
+				12440C111C73BFFE00F04393 /* NCDBDgmAttributeType.m */,
+				12440C121C73BFFE00F04393 /* NCDBDgmppItemShipResources+CoreDataProperties.h */,
+				12440C131C73BFFE00F04393 /* NCDBDgmppItemShipResources+CoreDataProperties.m */,
+				12440C141C73BFFE00F04393 /* NCDBDgmppItemShipResources.h */,
+				12440C151C73BFFE00F04393 /* NCDBDgmppItemShipResources.m */,
+				12440C161C73BFFE00F04393 /* NCDBMapRegion+CoreDataProperties.h */,
+				12440C171C73BFFE00F04393 /* NCDBMapRegion+CoreDataProperties.m */,
+				12440C181C73BFFE00F04393 /* NCDBMapRegion.h */,
+				12440C191C73BFFE00F04393 /* NCDBMapRegion.m */,
+				12440C1A1C73BFFE00F04393 /* NCDBRamActivity+CoreDataProperties.h */,
+				12440C1B1C73BFFE00F04393 /* NCDBRamActivity+CoreDataProperties.m */,
+				12440C1C1C73BFFE00F04393 /* NCDBRamActivity.h */,
+				12440C1D1C73BFFE00F04393 /* NCDBRamActivity.m */,
+				12440C1E1C73BFFE00F04393 /* NCDBNpcGroup+CoreDataProperties.h */,
+				12440C1F1C73BFFE00F04393 /* NCDBNpcGroup+CoreDataProperties.m */,
+				12440C201C73BFFE00F04393 /* NCDBNpcGroup.h */,
+				12440C211C73BFFE00F04393 /* NCDBNpcGroup.m */,
+				12440C221C73BFFE00F04393 /* NCDBMapDenormalize+CoreDataProperties.h */,
+				12440C231C73BFFE00F04393 /* NCDBMapDenormalize+CoreDataProperties.m */,
+				12440C241C73BFFE00F04393 /* NCDBMapDenormalize.h */,
+				12440C251C73BFFE00F04393 /* NCDBMapDenormalize.m */,
+				12440C261C73BFFE00F04393 /* NCDBInvMetaGroup+CoreDataProperties.h */,
+				12440C271C73BFFE00F04393 /* NCDBInvMetaGroup+CoreDataProperties.m */,
+				12440C281C73BFFE00F04393 /* NCDBInvMetaGroup.h */,
+				12440C291C73BFFE00F04393 /* NCDBInvMetaGroup.m */,
+				12440C2A1C73BFFE00F04393 /* NCDBDgmTypeAttribute+CoreDataProperties.h */,
+				12440C2B1C73BFFE00F04393 /* NCDBDgmTypeAttribute+CoreDataProperties.m */,
+				12440C2C1C73BFFE00F04393 /* NCDBDgmTypeAttribute.h */,
+				12440C2D1C73BFFE00F04393 /* NCDBDgmTypeAttribute.m */,
+				12440C2E1C73BFFE00F04393 /* NCDBCertMastery+CoreDataProperties.h */,
+				12440C2F1C73BFFE00F04393 /* NCDBCertMastery+CoreDataProperties.m */,
+				12440C301C73BFFE00F04393 /* NCDBCertMastery.h */,
+				12440C311C73BFFE00F04393 /* NCDBCertMastery.m */,
+				12440C321C73BFFE00F04393 /* NCDBDgmppItemRequirements+CoreDataProperties.h */,
+				12440C331C73BFFE00F04393 /* NCDBDgmppItemRequirements+CoreDataProperties.m */,
+				12440C341C73BFFE00F04393 /* NCDBDgmppItemRequirements.h */,
+				12440C351C73BFFE00F04393 /* NCDBDgmppItemRequirements.m */,
+				12440C361C73BFFE00F04393 /* NCDBInvControlTower+CoreDataProperties.h */,
+				12440C371C73BFFE00F04393 /* NCDBInvControlTower+CoreDataProperties.m */,
+				12440C381C73BFFE00F04393 /* NCDBInvControlTower.h */,
+				12440C391C73BFFE00F04393 /* NCDBInvControlTower.m */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
+		12440C941C73C56C00F04393 /* NCCache */ = {
+			isa = PBXGroup;
+			children = (
+				12440C9E1C73C58500F04393 /* Generated */,
+				12440C951C73C57600F04393 /* NCCache.h */,
+				12440C961C73C57600F04393 /* NCCache.m */,
+				12440C971C73C57600F04393 /* NCCache.xcdatamodeld */,
+				12440C991C73C57600F04393 /* NSManagedObjectContext+NCCache.h */,
+				12440C9A1C73C57600F04393 /* NSManagedObjectContext+NCCache.m */,
+			);
+			name = NCCache;
+			sourceTree = "<group>";
+		};
+		12440C9E1C73C58500F04393 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				12440CA11C73C59700F04393 /* NCCachePrice.h */,
+				12440CA21C73C59700F04393 /* NCCachePrice.m */,
+				12440C9F1C73C59700F04393 /* NCCachePrice+CoreDataProperties.h */,
+				12440CA01C73C59700F04393 /* NCCachePrice+CoreDataProperties.m */,
+				12440CA91C73C59700F04393 /* NCCacheRecord.h */,
+				12440CAA1C73C59700F04393 /* NCCacheRecord.m */,
+				12440CA71C73C59700F04393 /* NCCacheRecord+CoreDataProperties.h */,
+				12440CA81C73C59700F04393 /* NCCacheRecord+CoreDataProperties.m */,
+				12440CA51C73C59700F04393 /* NCCacheRecordData.h */,
+				12440CA61C73C59700F04393 /* NCCacheRecordData.m */,
+				12440CA31C73C59700F04393 /* NCCacheRecordData+CoreDataProperties.h */,
+				12440CA41C73C59700F04393 /* NCCacheRecordData+CoreDataProperties.m */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
+		12440CB21C73C7BD00F04393 /* NCAddAPIKeyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				12440CB31C73C7DF00F04393 /* NCAddAPIKeyViewController.h */,
+				12440CB41C73C7DF00F04393 /* NCAddAPIKeyViewController.m */,
+			);
+			name = NCAddAPIKeyViewController;
+			sourceTree = "<group>";
+		};
 		1268CBC91C73053700319951 = {
 			isa = PBXGroup;
 			children = (
+				12440CF21C73CCAC00F04393 /* EVEAPI.framework */,
+				12440CF01C73CCA100F04393 /* AFNetworking.framework */,
 				1268CBD41C73053800319951 /* Neocom */,
 				1268CBD31C73053800319951 /* Products */,
 			);
@@ -61,6 +786,12 @@
 		1268CBD41C73053800319951 /* Neocom */ = {
 			isa = PBXGroup;
 			children = (
+				12440C941C73C56C00F04393 /* NCCache */,
+				12440B7E1C73BFBA00F04393 /* NCDatabase */,
+				12440B1F1C73BF5200F04393 /* NCStorage */,
+				12440CB21C73C7BD00F04393 /* NCAddAPIKeyViewController */,
+				1268CBEC1C73143A00319951 /* NCAccountsViewController.h */,
+				1268CBED1C73143A00319951 /* NCAccountsViewController.m */,
 				1268CBD51C73053800319951 /* AppDelegate.h */,
 				1268CBD61C73053800319951 /* AppDelegate.m */,
 				1268CBDB1C73053800319951 /* ViewController.h */,
@@ -69,9 +800,9 @@
 				1268CBE31C73053800319951 /* Main.storyboard */,
 				1268CBE61C73053800319951 /* Info.plist */,
 				1268CBDE1C73053800319951 /* Neocom.xcdatamodeld */,
+				12440B161C73BF1800F04393 /* NCDatabase.xcdatamodeld */,
+				12440B1B1C73BF3600F04393 /* NCStorage.xcdatamodeld */,
 				1268CBD81C73053800319951 /* Supporting Files */,
-				1268CBEC1C73143A00319951 /* NCAccountsViewController.h */,
-				1268CBED1C73143A00319951 /* NCAccountsViewController.m */,
 			);
 			path = Neocom;
 			sourceTree = "<group>";
@@ -79,6 +810,7 @@
 		1268CBD81C73053800319951 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				12440B191C73BF2A00F04393 /* NCDatabase.sqlite */,
 				1268CBD91C73053800319951 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -141,6 +873,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12440B1A1C73BF2A00F04393 /* NCDatabase.sqlite in Resources */,
 				1268CBE21C73053800319951 /* Assets.xcassets in Resources */,
 				1268CBE51C73053800319951 /* Main.storyboard in Resources */,
 			);
@@ -153,11 +886,145 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12440B1E1C73BF3600F04393 /* NCStorage.xcdatamodeld in Sources */,
+				12440B701C73BF6800F04393 /* NCDronesSet.m in Sources */,
+				12440C6A1C73BFFE00F04393 /* NCDBChrRace+CoreDataProperties.m in Sources */,
 				1268CBE01C73053800319951 /* Neocom.xcdatamodeld in Sources */,
+				12440B811C73BFC100F04393 /* NSManagedObjectContext+NCDatabase.m in Sources */,
+				12440C561C73BFFE00F04393 /* NCDBEveIcon+CoreDataProperties.m in Sources */,
+				12440C531C73BFFE00F04393 /* NCDBCertSkill.m in Sources */,
+				12440B711C73BF6800F04393 /* NCSetting+CoreDataProperties.m in Sources */,
+				12440CAF1C73C59700F04393 /* NCCacheRecord+CoreDataProperties.m in Sources */,
+				12440C701C73BFFE00F04393 /* NCDBStaStation+CoreDataProperties.m in Sources */,
+				12440B771C73BF7D00F04393 /* NCStorage.m in Sources */,
+				12440C8B1C73BFFE00F04393 /* NCDBInvMetaGroup.m in Sources */,
+				12440C591C73BFFE00F04393 /* NCDBCertMasteryLevel.m in Sources */,
+				12440C671C73BFFE00F04393 /* NCDBMapSolarSystem.m in Sources */,
+				12440C421C73BFFE00F04393 /* NCDBCertCertificate+CoreDataProperties.m in Sources */,
 				1268CBDD1C73053800319951 /* ViewController.m in Sources */,
+				12440C5D1C73BFFE00F04393 /* NCDBDgmppItemDamage.m in Sources */,
+				12440C571C73BFFE00F04393 /* NCDBEveIcon.m in Sources */,
+				12440C5A1C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.m in Sources */,
+				12440B5B1C73BF6800F04393 /* NCMailBox+CoreDataProperties.m in Sources */,
+				12440C4F1C73BFFE00F04393 /* NCDBIndRequiredMaterial.m in Sources */,
+				12440C661C73BFFE00F04393 /* NCDBMapSolarSystem+CoreDataProperties.m in Sources */,
+				12440C3E1C73BFFE00F04393 /* NCDBIndProduct+CoreDataProperties.m in Sources */,
+				12440C4C1C73BFFE00F04393 /* NCDBInvGroup+CoreDataProperties.m in Sources */,
+				12440C511C73BFFE00F04393 /* NCDBIndBlueprintType.m in Sources */,
+				12440C3C1C73BFFE00F04393 /* NCDBDgmEffect+CoreDataProperties.m in Sources */,
+				12440B5E1C73BF6800F04393 /* NCImplantSet.m in Sources */,
+				12440C6E1C73BFFE00F04393 /* NCDBDgmppItemGroup+CoreDataProperties.m in Sources */,
+				12440C631C73BFFE00F04393 /* NCDBTxtDescription.m in Sources */,
+				12440B651C73BF6800F04393 /* NCShoppingItem+CoreDataProperties.m in Sources */,
+				12440C861C73BFFE00F04393 /* NCDBNpcGroup+CoreDataProperties.m in Sources */,
+				12440C6B1C73BFFE00F04393 /* NCDBChrRace.m in Sources */,
+				12440C5C1C73BFFE00F04393 /* NCDBDgmppItemDamage+CoreDataProperties.m in Sources */,
+				12440C871C73BFFE00F04393 /* NCDBNpcGroup.m in Sources */,
+				12440C881C73BFFE00F04393 /* NCDBMapDenormalize+CoreDataProperties.m in Sources */,
+				12440B661C73BF6800F04393 /* NCShoppingItem.m in Sources */,
+				12440C771C73BFFE00F04393 /* NCDBDgmppHullType.m in Sources */,
+				12440C7D1C73BFFE00F04393 /* NCDBDgmppItemCategory.m in Sources */,
+				12440B641C73BF6800F04393 /* NCFitCharacter.m in Sources */,
+				12440C9D1C73C57600F04393 /* NSManagedObjectContext+NCCache.m in Sources */,
+				12440C441C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose+CoreDataProperties.m in Sources */,
+				12440B6C1C73BF6800F04393 /* NCShoppingGroup.m in Sources */,
+				12440B691C73BF6800F04393 /* NCDamagePattern+CoreDataProperties.m in Sources */,
+				12440C821C73BFFE00F04393 /* NCDBMapRegion+CoreDataProperties.m in Sources */,
+				12440B731C73BF6800F04393 /* NCAccount+CoreDataProperties.m in Sources */,
+				12440C551C73BFFE00F04393 /* NCDBInvCategory.m in Sources */,
+				12440C6F1C73BFFE00F04393 /* NCDBDgmppItemGroup.m in Sources */,
+				12440C781C73BFFE00F04393 /* NCDBIndRequiredSkill+CoreDataProperties.m in Sources */,
+				12440C3D1C73BFFE00F04393 /* NCDBDgmEffect.m in Sources */,
+				12440B721C73BF6800F04393 /* NCSetting.m in Sources */,
+				12440C8E1C73BFFE00F04393 /* NCDBCertMastery+CoreDataProperties.m in Sources */,
+				12440C3B1C73BFFE00F04393 /* NCDBDgmppItem.m in Sources */,
+				12440C4A1C73BFFE00F04393 /* NCDBEveIconImage+CoreDataProperties.m in Sources */,
+				12440C481C73BFFE00F04393 /* NCDBEveUnit+CoreDataProperties.m in Sources */,
+				12440C6D1C73BFFE00F04393 /* NCDBIndActivity.m in Sources */,
+				12440C651C73BFFE00F04393 /* NCDBVersion.m in Sources */,
+				12440C3F1C73BFFE00F04393 /* NCDBIndProduct.m in Sources */,
+				12440C4D1C73BFFE00F04393 /* NCDBInvGroup.m in Sources */,
+				12440C8F1C73BFFE00F04393 /* NCDBCertMastery.m in Sources */,
+				12440C721C73BFFE00F04393 /* NCDBRamInstallationTypeContent+CoreDataProperties.m in Sources */,
+				12440C7F1C73BFFE00F04393 /* NCDBDgmAttributeType.m in Sources */,
+				12440B671C73BF6800F04393 /* NCShoppingList+CoreDataProperties.m in Sources */,
+				12440C811C73BFFE00F04393 /* NCDBDgmppItemShipResources.m in Sources */,
+				12440B5A1C73BF6800F04393 /* NCLoadoutData.m in Sources */,
+				12440B681C73BF6800F04393 /* NCShoppingList.m in Sources */,
 				1268CBEE1C73143A00319951 /* NCAccountsViewController.m in Sources */,
+				12440C681C73BFFE00F04393 /* NCDBWhType+CoreDataProperties.m in Sources */,
+				12440B6F1C73BF6800F04393 /* NCDronesSet+CoreDataProperties.m in Sources */,
+				12440B611C73BF6800F04393 /* NCAPIKey+CoreDataProperties.m in Sources */,
+				12440C7B1C73BFFE00F04393 /* NCDBInvTypeRequiredSkill.m in Sources */,
+				12440C501C73BFFE00F04393 /* NCDBIndBlueprintType+CoreDataProperties.m in Sources */,
+				12440B181C73BF1800F04393 /* NCDatabase.xcdatamodeld in Sources */,
+				12440CAD1C73C59700F04393 /* NCCacheRecordData+CoreDataProperties.m in Sources */,
+				12440C851C73BFFE00F04393 /* NCDBRamActivity.m in Sources */,
+				12440C541C73BFFE00F04393 /* NCDBInvCategory+CoreDataProperties.m in Sources */,
+				12440C761C73BFFE00F04393 /* NCDBDgmppHullType+CoreDataProperties.m in Sources */,
+				12440B6A1C73BF6800F04393 /* NCDamagePattern.m in Sources */,
+				12440B5D1C73BF6800F04393 /* NCImplantSet+CoreDataProperties.m in Sources */,
+				12440C931C73BFFE00F04393 /* NCDBInvControlTower.m in Sources */,
+				12440C491C73BFFE00F04393 /* NCDBEveUnit.m in Sources */,
 				1268CBDA1C73053800319951 /* main.m in Sources */,
+				12440B621C73BF6800F04393 /* NCAPIKey.m in Sources */,
+				12440C471C73BFFE00F04393 /* NCDBInvMarketGroup.m in Sources */,
+				12440C5E1C73BFFE00F04393 /* NCDBInvType+CoreDataProperties.m in Sources */,
+				12440C4B1C73BFFE00F04393 /* NCDBEveIconImage.m in Sources */,
+				12440C911C73BFFE00F04393 /* NCDBDgmppItemRequirements.m in Sources */,
+				12440C521C73BFFE00F04393 /* NCDBCertSkill+CoreDataProperties.m in Sources */,
+				12440C7E1C73BFFE00F04393 /* NCDBDgmAttributeType+CoreDataProperties.m in Sources */,
+				12440C921C73BFFE00F04393 /* NCDBInvControlTower+CoreDataProperties.m in Sources */,
+				12440CAC1C73C59700F04393 /* NCCachePrice.m in Sources */,
+				12440C731C73BFFE00F04393 /* NCDBRamInstallationTypeContent.m in Sources */,
+				12440B5F1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.m in Sources */,
+				12440C711C73BFFE00F04393 /* NCDBStaStation.m in Sources */,
+				12440C891C73BFFE00F04393 /* NCDBMapDenormalize.m in Sources */,
+				12440C621C73BFFE00F04393 /* NCDBTxtDescription+CoreDataProperties.m in Sources */,
+				12440C5F1C73BFFE00F04393 /* NCDBInvType.m in Sources */,
+				12440C611C73BFFE00F04393 /* NCDBMapConstellation.m in Sources */,
+				12440C401C73BFFE00F04393 /* NCDBRamAssemblyLineType+CoreDataProperties.m in Sources */,
+				12440B841C73BFCE00F04393 /* NCDatabase.m in Sources */,
+				12440C801C73BFFE00F04393 /* NCDBDgmppItemShipResources+CoreDataProperties.m in Sources */,
+				12440C601C73BFFE00F04393 /* NCDBMapConstellation+CoreDataProperties.m in Sources */,
+				12440C691C73BFFE00F04393 /* NCDBWhType.m in Sources */,
+				12440C751C73BFFE00F04393 /* NCDBDgmAttributeCategory.m in Sources */,
+				12440C9B1C73C57600F04393 /* NCCache.m in Sources */,
+				12440C4E1C73BFFE00F04393 /* NCDBIndRequiredMaterial+CoreDataProperties.m in Sources */,
+				12440C6C1C73BFFE00F04393 /* NCDBIndActivity+CoreDataProperties.m in Sources */,
+				12440B7D1C73BF9F00F04393 /* NSManagedObjectContext+NCStorage.m in Sources */,
+				12440C5B1C73BFFE00F04393 /* NCDBInvControlTowerResource.m in Sources */,
+				12440C581C73BFFE00F04393 /* NCDBCertMasteryLevel+CoreDataProperties.m in Sources */,
+				12440C3A1C73BFFE00F04393 /* NCDBDgmppItem+CoreDataProperties.m in Sources */,
+				12440C841C73BFFE00F04393 /* NCDBRamActivity+CoreDataProperties.m in Sources */,
+				12440B601C73BF6800F04393 /* NCSkillPlan.m in Sources */,
+				12440B741C73BF6800F04393 /* NCAccount.m in Sources */,
+				12440C7C1C73BFFE00F04393 /* NCDBDgmppItemCategory+CoreDataProperties.m in Sources */,
+				12440C8C1C73BFFE00F04393 /* NCDBDgmTypeAttribute+CoreDataProperties.m in Sources */,
+				12440C431C73BFFE00F04393 /* NCDBCertCertificate.m in Sources */,
+				12440C901C73BFFE00F04393 /* NCDBDgmppItemRequirements+CoreDataProperties.m in Sources */,
+				12440C451C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose.m in Sources */,
+				12440B631C73BF6800F04393 /* NCFitCharacter+CoreDataProperties.m in Sources */,
+				12440C741C73BFFE00F04393 /* NCDBDgmAttributeCategory+CoreDataProperties.m in Sources */,
+				12440CB01C73C59700F04393 /* NCCacheRecord.m in Sources */,
+				12440C791C73BFFE00F04393 /* NCDBIndRequiredSkill.m in Sources */,
+				12440CAB1C73C59700F04393 /* NCCachePrice+CoreDataProperties.m in Sources */,
+				12440C8D1C73BFFE00F04393 /* NCDBDgmTypeAttribute.m in Sources */,
+				12440B6B1C73BF6800F04393 /* NCShoppingGroup+CoreDataProperties.m in Sources */,
+				12440C831C73BFFE00F04393 /* NCDBMapRegion.m in Sources */,
+				12440C641C73BFFE00F04393 /* NCDBVersion+CoreDataProperties.m in Sources */,
+				12440C411C73BFFE00F04393 /* NCDBRamAssemblyLineType.m in Sources */,
+				12440C7A1C73BFFE00F04393 /* NCDBInvTypeRequiredSkill+CoreDataProperties.m in Sources */,
+				12440C461C73BFFE00F04393 /* NCDBInvMarketGroup+CoreDataProperties.m in Sources */,
+				12440C9C1C73C57600F04393 /* NCCache.xcdatamodeld in Sources */,
+				12440B6E1C73BF6800F04393 /* NCLoadout.m in Sources */,
+				12440C8A1C73BFFE00F04393 /* NCDBInvMetaGroup+CoreDataProperties.m in Sources */,
 				1268CBD71C73053800319951 /* AppDelegate.m in Sources */,
+				12440CAE1C73C59700F04393 /* NCCacheRecordData.m in Sources */,
+				12440B6D1C73BF6800F04393 /* NCLoadout+CoreDataProperties.m in Sources */,
+				12440CB51C73C7DF00F04393 /* NCAddAPIKeyViewController.m in Sources */,
+				12440B591C73BF6800F04393 /* NCLoadoutData+CoreDataProperties.m in Sources */,
+				12440B5C1C73BF6800F04393 /* NCMailBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +1133,7 @@
 				);
 				INFOPLIST_FILE = Neocom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shimanski.Neocom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -283,6 +1151,7 @@
 				);
 				INFOPLIST_FILE = Neocom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shimanski.Neocom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -312,6 +1181,37 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		12440B161C73BF1800F04393 /* NCDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				12440B171C73BF1800F04393 /* NCDatabase.xcdatamodel */,
+			);
+			currentVersion = 12440B171C73BF1800F04393 /* NCDatabase.xcdatamodel */;
+			path = NCDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		12440B1B1C73BF3600F04393 /* NCStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				12440B1C1C73BF3600F04393 /* NCStorage 2.xcdatamodel */,
+				12440B1D1C73BF3600F04393 /* NCStorage.xcdatamodel */,
+			);
+			currentVersion = 12440B1C1C73BF3600F04393 /* NCStorage 2.xcdatamodel */;
+			path = NCStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		12440C971C73C57600F04393 /* NCCache.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				12440C981C73C57600F04393 /* NCCache.xcdatamodel */,
+			);
+			currentVersion = 12440C981C73C57600F04393 /* NCCache.xcdatamodel */;
+			path = NCCache.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		1268CBDE1C73053800319951 /* Neocom.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
