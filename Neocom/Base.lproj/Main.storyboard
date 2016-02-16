@@ -521,7 +521,7 @@ Gw
                 </viewController>
                 <customObject id="1rZ-Od-tZo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571" y="312.5"/>
+            <point key="canvasLocation" x="763" y="338.5"/>
         </scene>
         <!--Accounts View Controller-->
         <scene sceneID="HFc-CH-9os">
@@ -538,7 +538,7 @@ Gw
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="72" rowSizeStyle="automatic" viewBased="YES" id="VIV-Up-Bt1">
-                                            <rect key="frame" x="0.0" y="0.0" width="153" height="275"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="153" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -626,7 +626,7 @@ Gw
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="g1j-f7-Iw9">
-                                    <rect key="frame" x="1" y="262" width="318" height="16"/>
+                                    <rect key="frame" x="1" y="260" width="153" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="HDr-YR-ibb">
@@ -644,6 +644,9 @@ Gw
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onAdd:" target="3eM-iX-mR6" id="6nf-F8-qw7"/>
+                                </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="dTi-bf-InK">
                                 <rect key="frame" x="23" y="0.0" width="23" height="23"/>
@@ -680,6 +683,24 @@ Gw
             </objects>
             <point key="canvasLocation" x="582" y="735"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="yic-tl-xpm">
+            <objects>
+                <windowController storyboardIdentifier="NCAddAccounts" id="OG0-vY-VUF" sceneMemberID="viewController">
+                    <window key="window" identifier="NCAddAccounts" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="LxD-Fl-SDR">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="AUI-F4-Nw2" kind="relationship" relationship="window.shadowedContentViewController" id="yWk-GA-F4A"/>
+                    </connections>
+                </windowController>
+                <customObject id="JHP-ry-tDp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763" y="-46"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="0TK-rg-zi9">
             <objects>
@@ -708,6 +729,61 @@ Gw
                     </view>
                 </viewController>
                 <customObject id="Li4-0O-09H" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <view id="4Eo-eR-W8W">
+                    <rect key="frame" x="0.0" y="0.0" width="298" height="145"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6oO-73-561">
+                            <rect key="frame" x="88" y="105" width="190" height="22"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="zRt-L2-NFt">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5OS-v0-rG1">
+                            <rect key="frame" x="18" y="108" width="39" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="KeyID" id="Mq2-wE-Xe9">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Et8-z6-jbr">
+                            <rect key="frame" x="18" y="73" width="45" height="17"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="VCode" id="2Ne-1A-tnV">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fn-iw-vY8">
+                            <rect key="frame" x="203" y="13" width="81" height="32"/>
+                            <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QX3-Lb-pY9">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-cN-NbB">
+                            <rect key="frame" x="122" y="13" width="81" height="32"/>
+                            <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6qI-Y1-BOJ">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                                <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                            </buttonCell>
+                        </button>
+                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llP-ML-fwC">
+                            <rect key="frame" x="88" y="70" width="190" height="22"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="PcN-b1-zIL">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </view>
             </objects>
             <point key="canvasLocation" x="571" y="1212"/>
         </scene>

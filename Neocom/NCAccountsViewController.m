@@ -56,4 +56,12 @@
 }
 
 
+- (IBAction)onAdd:(id)sender {
+	NSWindowController* controller = [self.storyboard instantiateControllerWithIdentifier:@"NCAddAccounts"];
+	NSWindow* window = [controller window];
+	[self.view.window beginSheet:window completionHandler:^(NSModalResponse returnCode) {
+	}];
+	[NSApp runModalForWindow:window];
+	[self.view.window endSheet:window];
+}
 @end

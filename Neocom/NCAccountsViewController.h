@@ -11,5 +11,6 @@
 @interface NCAccountsViewController : NSViewController
 @property (strong) IBOutlet NSArrayController *accounts;
 @property (weak) IBOutlet NSTableView *tableView;
+- (IBAction)onAdd:(id)sender;
 
 @end

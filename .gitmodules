@@ -1,0 +1,6 @@
+[submodule "ThirdParty/EVEOnlineAPI"]
+	path = ThirdParty/EVEOnlineAPI
+	url = https://github.com/mrdepth/EVEOnlineAPI.git
+[submodule "ThirdParty/libdgmpp"]
+	path = ThirdParty/libdgmpp
+	url = https://github.com/mrdepth/libdgmpp.git
