@@ -11,9 +11,12 @@
 @interface NCAddAPIKeyViewController : NSViewController
 @property (weak) IBOutlet NSTextField *keyIDTextField;
 @property (weak) IBOutlet NSTextField *vCodeTextField;
+@property (weak) IBOutlet NSTextField *errorTextField;
 @property (weak) IBOutlet NSButton *addButton;
 @property (weak) IBOutlet NSProgressIndicator *progressIndicator;
+@property (strong, nonatomic) NSArray* accounts;
+
 - (IBAction)onAdd:(id)sender;
-- (IBAction)onCancel:(id)sender;
+- (IBAction)onLink:(id)sender;
 
 @end

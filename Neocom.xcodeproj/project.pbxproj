@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120B83DF1C747CAF003A6ED0 /* NCDBImageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 120B83DE1C747CAF003A6ED0 /* NCDBImageValueTransformer.m */; };
+		120B83E21C748838003A6ED0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120B83E11C748838003A6ED0 /* QuartzCore.framework */; };
+		120B83F11C74A455003A6ED0 /* NCRoundRectImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 120B83F01C74A455003A6ED0 /* NCRoundRectImageView.m */; };
+		120B83F41C74A554003A6ED0 /* NCAccountRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 120B83F31C74A554003A6ED0 /* NCAccountRowView.m */; };
+		120B83FA1C74B01A003A6ED0 /* NSString+Neocom.m in Sources */ = {isa = PBXBuildFile; fileRef = 120B83F91C74B01A003A6ED0 /* NSString+Neocom.m */; };
+		120B83FD1C74B026003A6ED0 /* NSNumberFormatter+Neocom.m in Sources */ = {isa = PBXBuildFile; fileRef = 120B83FC1C74B026003A6ED0 /* NSNumberFormatter+Neocom.m */; };
+		120B83FF1C74B331003A6ED0 /* MainMenu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120B83FE1C74B331003A6ED0 /* MainMenu.xcassets */; };
 		12440B181C73BF1800F04393 /* NCDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12440B161C73BF1800F04393 /* NCDatabase.xcdatamodeld */; };
 		12440B1A1C73BF2A00F04393 /* NCDatabase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 12440B191C73BF2A00F04393 /* NCDatabase.sqlite */; };
 		12440B1E1C73BF3600F04393 /* NCStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12440B1B1C73BF3600F04393 /* NCStorage.xcdatamodeld */; };
@@ -151,9 +158,24 @@
 		1268CBE21C73053800319951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1268CBE11C73053800319951 /* Assets.xcassets */; };
 		1268CBE51C73053800319951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1268CBE31C73053800319951 /* Main.storyboard */; };
 		1268CBEE1C73143A00319951 /* NCAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBED1C73143A00319951 /* NCAccountsViewController.m */; };
+		1289460E1C74B90C00839FBE /* NCCharacterSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289460D1C74B90C00839FBE /* NCCharacterSheetViewController.m */; };
+		128946121C74BC0100839FBE /* NCMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946111C74BC0100839FBE /* NCMainWindowController.m */; };
+		128946151C74BD9000839FBE /* NCDetailSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946141C74BD9000839FBE /* NCDetailSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120B83DD1C747CAF003A6ED0 /* NCDBImageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDBImageValueTransformer.h; sourceTree = "<group>"; };
+		120B83DE1C747CAF003A6ED0 /* NCDBImageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDBImageValueTransformer.m; sourceTree = "<group>"; };
+		120B83E11C748838003A6ED0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		120B83EF1C74A455003A6ED0 /* NCRoundRectImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRoundRectImageView.h; sourceTree = "<group>"; };
+		120B83F01C74A455003A6ED0 /* NCRoundRectImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRoundRectImageView.m; sourceTree = "<group>"; };
+		120B83F21C74A554003A6ED0 /* NCAccountRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAccountRowView.h; sourceTree = "<group>"; };
+		120B83F31C74A554003A6ED0 /* NCAccountRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAccountRowView.m; sourceTree = "<group>"; };
+		120B83F81C74B01A003A6ED0 /* NSString+Neocom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Neocom.h"; sourceTree = "<group>"; };
+		120B83F91C74B01A003A6ED0 /* NSString+Neocom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Neocom.m"; sourceTree = "<group>"; };
+		120B83FB1C74B026003A6ED0 /* NSNumberFormatter+Neocom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumberFormatter+Neocom.h"; sourceTree = "<group>"; };
+		120B83FC1C74B026003A6ED0 /* NSNumberFormatter+Neocom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumberFormatter+Neocom.m"; sourceTree = "<group>"; };
+		120B83FE1C74B331003A6ED0 /* MainMenu.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MainMenu.xcassets; sourceTree = "<group>"; };
 		12440B171C73BF1800F04393 /* NCDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NCDatabase.xcdatamodel; sourceTree = "<group>"; };
 		12440B191C73BF2A00F04393 /* NCDatabase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NCDatabase.sqlite; sourceTree = "<group>"; };
 		12440B1C1C73BF3600F04393 /* NCStorage 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "NCStorage 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -435,6 +457,12 @@
 		1268CBE61C73053800319951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1268CBEC1C73143A00319951 /* NCAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAccountsViewController.h; sourceTree = "<group>"; };
 		1268CBED1C73143A00319951 /* NCAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAccountsViewController.m; sourceTree = "<group>"; };
+		1289460C1C74B90C00839FBE /* NCCharacterSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCharacterSheetViewController.h; sourceTree = "<group>"; };
+		1289460D1C74B90C00839FBE /* NCCharacterSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCharacterSheetViewController.m; sourceTree = "<group>"; };
+		128946101C74BC0100839FBE /* NCMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMainWindowController.h; sourceTree = "<group>"; };
+		128946111C74BC0100839FBE /* NCMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMainWindowController.m; sourceTree = "<group>"; };
+		128946131C74BD9000839FBE /* NCDetailSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDetailSegue.h; sourceTree = "<group>"; };
+		128946141C74BD9000839FBE /* NCDetailSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDetailSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -442,6 +470,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120B83E21C748838003A6ED0 /* QuartzCore.framework in Frameworks */,
 				12440CF31C73CCAC00F04393 /* EVEAPI.framework in Frameworks */,
 				12440CF11C73CCA100F04393 /* AFNetworking.framework in Frameworks */,
 			);
@@ -533,6 +562,8 @@
 				12440B801C73BFC100F04393 /* NSManagedObjectContext+NCDatabase.m */,
 				12440B821C73BFCE00F04393 /* NCDatabase.h */,
 				12440B831C73BFCE00F04393 /* NCDatabase.m */,
+				120B83DD1C747CAF003A6ED0 /* NCDBImageValueTransformer.h */,
+				120B83DE1C747CAF003A6ED0 /* NCDBImageValueTransformer.m */,
 			);
 			name = NCDatabase;
 			sourceTree = "<group>";
@@ -768,6 +799,7 @@
 		1268CBC91C73053700319951 = {
 			isa = PBXGroup;
 			children = (
+				120B83E11C748838003A6ED0 /* QuartzCore.framework */,
 				12440CF21C73CCAC00F04393 /* EVEAPI.framework */,
 				12440CF01C73CCA100F04393 /* AFNetworking.framework */,
 				1268CBD41C73053800319951 /* Neocom */,
@@ -789,14 +821,26 @@
 				12440C941C73C56C00F04393 /* NCCache */,
 				12440B7E1C73BFBA00F04393 /* NCDatabase */,
 				12440B1F1C73BF5200F04393 /* NCStorage */,
+				1289460F1C74BBED00839FBE /* NCMainWindowController */,
 				12440CB21C73C7BD00F04393 /* NCAddAPIKeyViewController */,
 				1268CBEC1C73143A00319951 /* NCAccountsViewController.h */,
 				1268CBED1C73143A00319951 /* NCAccountsViewController.m */,
+				1289460C1C74B90C00839FBE /* NCCharacterSheetViewController.h */,
+				1289460D1C74B90C00839FBE /* NCCharacterSheetViewController.m */,
+				120B83F21C74A554003A6ED0 /* NCAccountRowView.h */,
+				120B83F31C74A554003A6ED0 /* NCAccountRowView.m */,
 				1268CBD51C73053800319951 /* AppDelegate.h */,
 				1268CBD61C73053800319951 /* AppDelegate.m */,
 				1268CBDB1C73053800319951 /* ViewController.h */,
 				1268CBDC1C73053800319951 /* ViewController.m */,
+				120B83EF1C74A455003A6ED0 /* NCRoundRectImageView.h */,
+				120B83F01C74A455003A6ED0 /* NCRoundRectImageView.m */,
+				120B83F81C74B01A003A6ED0 /* NSString+Neocom.h */,
+				120B83F91C74B01A003A6ED0 /* NSString+Neocom.m */,
+				120B83FB1C74B026003A6ED0 /* NSNumberFormatter+Neocom.h */,
+				120B83FC1C74B026003A6ED0 /* NSNumberFormatter+Neocom.m */,
 				1268CBE11C73053800319951 /* Assets.xcassets */,
+				120B83FE1C74B331003A6ED0 /* MainMenu.xcassets */,
 				1268CBE31C73053800319951 /* Main.storyboard */,
 				1268CBE61C73053800319951 /* Info.plist */,
 				1268CBDE1C73053800319951 /* Neocom.xcdatamodeld */,
@@ -814,6 +858,17 @@
 				1268CBD91C73053800319951 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1289460F1C74BBED00839FBE /* NCMainWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				128946101C74BC0100839FBE /* NCMainWindowController.h */,
+				128946111C74BC0100839FBE /* NCMainWindowController.m */,
+				128946131C74BD9000839FBE /* NCDetailSegue.h */,
+				128946141C74BD9000839FBE /* NCDetailSegue.m */,
+			);
+			name = NCMainWindowController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -876,6 +931,7 @@
 				12440B1A1C73BF2A00F04393 /* NCDatabase.sqlite in Resources */,
 				1268CBE21C73053800319951 /* Assets.xcassets in Resources */,
 				1268CBE51C73053800319951 /* Main.storyboard in Resources */,
+				120B83FF1C74B331003A6ED0 /* MainMenu.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,7 +962,10 @@
 				12440C571C73BFFE00F04393 /* NCDBEveIcon.m in Sources */,
 				12440C5A1C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.m in Sources */,
 				12440B5B1C73BF6800F04393 /* NCMailBox+CoreDataProperties.m in Sources */,
+				120B83F41C74A554003A6ED0 /* NCAccountRowView.m in Sources */,
+				128946121C74BC0100839FBE /* NCMainWindowController.m in Sources */,
 				12440C4F1C73BFFE00F04393 /* NCDBIndRequiredMaterial.m in Sources */,
+				120B83F11C74A455003A6ED0 /* NCRoundRectImageView.m in Sources */,
 				12440C661C73BFFE00F04393 /* NCDBMapSolarSystem+CoreDataProperties.m in Sources */,
 				12440C3E1C73BFFE00F04393 /* NCDBIndProduct+CoreDataProperties.m in Sources */,
 				12440C4C1C73BFFE00F04393 /* NCDBInvGroup+CoreDataProperties.m in Sources */,
@@ -954,6 +1013,7 @@
 				1268CBEE1C73143A00319951 /* NCAccountsViewController.m in Sources */,
 				12440C681C73BFFE00F04393 /* NCDBWhType+CoreDataProperties.m in Sources */,
 				12440B6F1C73BF6800F04393 /* NCDronesSet+CoreDataProperties.m in Sources */,
+				120B83DF1C747CAF003A6ED0 /* NCDBImageValueTransformer.m in Sources */,
 				12440B611C73BF6800F04393 /* NCAPIKey+CoreDataProperties.m in Sources */,
 				12440C7B1C73BFFE00F04393 /* NCDBInvTypeRequiredSkill.m in Sources */,
 				12440C501C73BFFE00F04393 /* NCDBIndBlueprintType+CoreDataProperties.m in Sources */,
@@ -966,6 +1026,7 @@
 				12440B5D1C73BF6800F04393 /* NCImplantSet+CoreDataProperties.m in Sources */,
 				12440C931C73BFFE00F04393 /* NCDBInvControlTower.m in Sources */,
 				12440C491C73BFFE00F04393 /* NCDBEveUnit.m in Sources */,
+				120B83FA1C74B01A003A6ED0 /* NSString+Neocom.m in Sources */,
 				1268CBDA1C73053800319951 /* main.m in Sources */,
 				12440B621C73BF6800F04393 /* NCAPIKey.m in Sources */,
 				12440C471C73BFFE00F04393 /* NCDBInvMarketGroup.m in Sources */,
@@ -977,6 +1038,7 @@
 				12440C921C73BFFE00F04393 /* NCDBInvControlTower+CoreDataProperties.m in Sources */,
 				12440CAC1C73C59700F04393 /* NCCachePrice.m in Sources */,
 				12440C731C73BFFE00F04393 /* NCDBRamInstallationTypeContent.m in Sources */,
+				120B83FD1C74B026003A6ED0 /* NSNumberFormatter+Neocom.m in Sources */,
 				12440B5F1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.m in Sources */,
 				12440C711C73BFFE00F04393 /* NCDBStaStation.m in Sources */,
 				12440C891C73BFFE00F04393 /* NCDBMapDenormalize.m in Sources */,
@@ -985,6 +1047,7 @@
 				12440C611C73BFFE00F04393 /* NCDBMapConstellation.m in Sources */,
 				12440C401C73BFFE00F04393 /* NCDBRamAssemblyLineType+CoreDataProperties.m in Sources */,
 				12440B841C73BFCE00F04393 /* NCDatabase.m in Sources */,
+				1289460E1C74B90C00839FBE /* NCCharacterSheetViewController.m in Sources */,
 				12440C801C73BFFE00F04393 /* NCDBDgmppItemShipResources+CoreDataProperties.m in Sources */,
 				12440C601C73BFFE00F04393 /* NCDBMapConstellation+CoreDataProperties.m in Sources */,
 				12440C691C73BFFE00F04393 /* NCDBWhType.m in Sources */,
@@ -1015,6 +1078,7 @@
 				12440C641C73BFFE00F04393 /* NCDBVersion+CoreDataProperties.m in Sources */,
 				12440C411C73BFFE00F04393 /* NCDBRamAssemblyLineType.m in Sources */,
 				12440C7A1C73BFFE00F04393 /* NCDBInvTypeRequiredSkill+CoreDataProperties.m in Sources */,
+				128946151C74BD9000839FBE /* NCDetailSegue.m in Sources */,
 				12440C461C73BFFE00F04393 /* NCDBInvMarketGroup+CoreDataProperties.m in Sources */,
 				12440C9C1C73C57600F04393 /* NCCache.xcdatamodeld in Sources */,
 				12440B6E1C73BF6800F04393 /* NCLoadout.m in Sources */,

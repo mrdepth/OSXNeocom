@@ -11,6 +11,8 @@
 
 @implementation NCCacheRecord
 
-// Insert code here to add functionality to your managed object subclass
+- (BOOL) isExpired {
+	return self.expireDate ? [self.expireDate compare:[NSDate date]] == NSOrderedAscending : NO;
+}
 
 @end

@@ -13,9 +13,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class EVEAPIKeyInfo;
 @interface NCAPIKey (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) id apiKeyInfo;
+@property (nullable, nonatomic, retain) EVEAPIKeyInfo* apiKeyInfo;
 @property (nonatomic) int32_t keyID;
 @property (nullable, nonatomic, retain) NSString *vCode;
 @property (nullable, nonatomic, retain) NSSet<NCAccount *> *accounts;

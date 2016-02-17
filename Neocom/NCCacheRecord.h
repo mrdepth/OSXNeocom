@@ -14,6 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NCCacheRecord : NSManagedObject
+@property (readonly, getter = isExpired) BOOL expired;
 
 // Insert code here to declare functionality of your managed object subclass
 

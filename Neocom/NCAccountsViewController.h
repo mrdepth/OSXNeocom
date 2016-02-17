@@ -12,5 +12,6 @@
 @property (strong) IBOutlet NSArrayController *accounts;
 @property (weak) IBOutlet NSTableView *tableView;
 - (IBAction)onAdd:(id)sender;
+- (IBAction)onRemove:(id)sender;
 
 @end

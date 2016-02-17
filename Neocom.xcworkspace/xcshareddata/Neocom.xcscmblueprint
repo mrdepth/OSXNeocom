@@ -6,17 +6,19 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "0F0B6FB3121415B4BFE652B8CA72F270CA803FB0" : 0,
     "10B37E0DD9461EC7E0D6A2948AB6C44D7B680F68" : 0,
+    "CE59D664C95604646A8898B717A20F0AFC1A609F" : 0,
     "6D9709A6DF3DEDD6CB8E68BBA8342CBFDF252195" : 0,
     "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0,
-    "CE59D664C95604646A8898B717A20F0AFC1A609F" : 0
+    "CBD3C72D1EC244FEC895CDE83582355773BC1B4F" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "106E8C49-6780-4E44-8DDB-93F26C12B337",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "0F0B6FB3121415B4BFE652B8CA72F270CA803FB0" : "OSXNeocom\/ThirdParty\/EVEOnlineAPI\/",
     "10B37E0DD9461EC7E0D6A2948AB6C44D7B680F68" : "OSXNeocom\/",
+    "CE59D664C95604646A8898B717A20F0AFC1A609F" : "OSXNeocom\/ThirdParty\/libdgmpp\/",
     "6D9709A6DF3DEDD6CB8E68BBA8342CBFDF252195" : "OSXNeocom\/ThirdParty\/EVEOnlineAPI\/ThirdParty\/tools\/",
     "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "OSXNeocom\/ThirdParty\/EVEOnlineAPI\/ThirdParty\/AFNetworking\/",
-    "CE59D664C95604646A8898B717A20F0AFC1A609F" : "OSXNeocom\/ThirdParty\/libdgmpp\/"
+    "CBD3C72D1EC244FEC895CDE83582355773BC1B4F" : "EVEUniverse\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Neocom",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -36,6 +38,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mrdepth\/tools.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6D9709A6DF3DEDD6CB8E68BBA8342CBFDF252195"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mrdepth\/EVEUniverse.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CBD3C72D1EC244FEC895CDE83582355773BC1B4F"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mrdepth\/libdgmpp.git",

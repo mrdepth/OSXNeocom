@@ -7,40 +7,23 @@
 //
 
 #import "NCAccountsViewController.h"
-
-@interface NCRowView : NSTableRowView
-
-@end
-
-@implementation NCRowView
-
-- (void) awakeFromNib {
-	self.translatesAutoresizingMaskIntoConstraints = YES;
-}
-
-@end
-
-@interface NCCell : NSTableCellView
-@end
-
-@implementation NCCell
-
-@end
+#import "NCStorage.h"
+#import "NCAccount.h"
 
 @interface NCAccountsViewController ()<NSTableViewDelegate, NSTableViewDataSource>
-@property (nonatomic, strong) NSMutableDictionary* heights;
+//@property (nonatomic, strong) NSMutableDictionary* heights;
 @end
 
 @implementation NCAccountsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.heights = [NSMutableDictionary new];
-	for (int i = 0; i < 30; i++)
-		[self.accounts addObject:@{@"title":@"test"}];
+	self.accounts.managedObjectContext = [[NCStorage sharedStorage] managedObjectContext];
+	self.accounts.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES]];
+//	self.heights = [NSMutableDictionary new];
 }
 
-- (void) tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row {
+/*- (void) tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row {
 	NSView* v = [rowView viewAtColumn:0];
 	NSSize s = [v fittingSize];
 	self.heights[@(row)] = @(s.height);
@@ -53,7 +36,7 @@
 		return 17;
 	else
 		return [h floatValue];
-}
+}*/
 
 
 - (IBAction)onAdd:(id)sender {
@@ -63,5 +46,18 @@
 	}];
 	[NSApp runModalForWindow:window];
 	[self.view.window endSheet:window];
+}
+
+- (IBAction)onRemove:(id)sender {
+	NSManagedObjectContext* context = [[NCStorage sharedStorage] managedObjectContext];
+	for (NCAccount* account in [self.accounts selectedObjects]) {
+		[context deleteObject:account];
+	}
+	if ([context hasChanges])
+		[context save:nil];
+}
+
+- (NSManagedObjectContext*) managedObjectContext {
+	return [[NCStorage sharedStorage] managedObjectContext];
 }
 @end

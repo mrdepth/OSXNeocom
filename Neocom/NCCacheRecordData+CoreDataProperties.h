@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NCCacheRecordData (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSData *data;
+@property (nullable, nonatomic, retain) id data;
 @property (nullable, nonatomic, retain) NCCacheRecord *record;
 
 @end

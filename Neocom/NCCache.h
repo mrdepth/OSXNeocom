@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NCCacheRecord.h"
+#import "NCCacheRecordData.h"
 #import "NCCachePrice.h"
 #import "NSManagedObjectContext+NCCache.h"
 
