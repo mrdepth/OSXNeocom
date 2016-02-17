@@ -9,6 +9,7 @@
 #import "NCAccountsViewController.h"
 #import "NCStorage.h"
 #import "NCAccount.h"
+#import "global.h"
 
 @interface NCAccountsViewController ()<NSTableViewDelegate, NSTableViewDataSource>
 //@property (nonatomic, strong) NSMutableDictionary* heights;
@@ -20,7 +21,20 @@
     [super viewDidLoad];
 	self.accounts.managedObjectContext = [[NCStorage sharedStorage] managedObjectContext];
 	self.accounts.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES]];
+	[self.accounts addObserver:self forKeyPath:@"selectionIndex" options:NSKeyValueObservingOptionNew context:nil];
 //	self.heights = [NSMutableDictionary new];
+}
+
+- (void) dealloc {
+	[self.accounts removeObserver:self forKeyPath:@"selectionIndex"];
+}
+
+- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+	if (object == self.accounts && [keyPath isEqualToString:@"selectionIndex"]) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:NCDidChangeAccountNotification object:[self.accounts.selectedObjects lastObject]];
+	}
+	else
+		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 }
 
 /*- (void) tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row {
@@ -60,4 +74,9 @@
 - (NSManagedObjectContext*) managedObjectContext {
 	return [[NCStorage sharedStorage] managedObjectContext];
 }
+
+- (void) tableView:(NSTableView *)tableView didClickTableColumn:(nonnull NSTableColumn *)tableColumn {
+	
+}
+
 @end

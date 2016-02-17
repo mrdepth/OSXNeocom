@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NCCacheRecord* characterImageCacheRecord;
 @property (strong, nonatomic) NCCacheRecord* skillQueueCacheRecord;
 @property (strong, nonatomic) NCCacheRecord* characterSheetCacheRecord;
+@property (nonatomic, assign, getter = isReloading) BOOL reloading;
 - (void) saveCache;
 
 @end
@@ -28,23 +29,23 @@
 @synthesize characterImageCacheRecord = _characterImageCacheRecord;
 @synthesize skillQueueCacheRecord = _skillQueueCacheRecord;
 @synthesize characterSheetCacheRecord = _characterSheetCacheRecord;
-
-- (void) awakeFromFetch {
-	[self reload];
-}
-
-- (void) awakeFromInsert {
-	[self reload];
-}
+@synthesize reloading = _reloading;
 
 - (BOOL) isCorporate {
 	return self.apiKey.apiKeyInfo.key.type == EVEAPIKeyTypeCorporation;
 }
 
 - (void) reload {
+	if (self.reloading)
+		return;
+	
+	self.reloading = YES;
+	dispatch_group_t reloadingDispatchGroup = dispatch_group_create();
+	
 	EVEOnlineAPI* api = [EVEOnlineAPI apiWithAPIKey:[EVEAPIKey apiKeyWithKeyID:self.apiKey.keyID vCode:self.apiKey.vCode characterID:self.characterID corporate:self.corporate] cachePolicy:NSURLRequestUseProtocolCachePolicy];
 
 	if ([self.characterInfoCacheRecord isExpired]) {
+		dispatch_group_enter(reloadingDispatchGroup);
 		[api characterInfoWithCharacterID:self.characterID completionBlock:^(EVECharacterInfo *result, NSError *error) {
 			if (result) {
 				[self willChangeValueForKey:@"characterInfo"];
@@ -54,9 +55,11 @@
 				[self didChangeValueForKey:@"characterInfo"];
 				[self saveCache];
 			}
+			dispatch_group_leave(reloadingDispatchGroup);
 		} progressBlock:nil];
 	}
 	if ([self.characterImageCacheRecord isExpired]) {
+		dispatch_group_enter(reloadingDispatchGroup);
 		NSURL* url = [EVEImage characterPortraitURLWithCharacterID:self.characterID size:EVEImageSizeRetina64 error:nil];
 		AFHTTPRequestOperation* operation = [api.httpRequestOperationManager GET:[url absoluteString] parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
 			if (responseObject) {
@@ -72,8 +75,9 @@
 					[self saveCache];
 				}
 			}
+			dispatch_group_leave(reloadingDispatchGroup);
 		} failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-			
+			dispatch_group_leave(reloadingDispatchGroup);
 		}];
 		operation.responseSerializer = [AFHTTPResponseSerializer serializer];
 	}
@@ -83,19 +87,23 @@
 		__block EVESkillQueue* skillQueue;
 		
 		if ([self.skillQueueCacheRecord isExpired]) {
+			dispatch_group_enter(reloadingDispatchGroup);
 			dispatch_group_enter(finishDispatchGroup);
 			[api skillQueueWithCompletionBlock:^(EVESkillQueue *result, NSError *error) {
 				skillQueue = result;
 				dispatch_group_leave(finishDispatchGroup);
+				dispatch_group_leave(reloadingDispatchGroup);
 			} progressBlock:nil];
 		}
 		
 		__block EVECharacterSheet* characterSheet;
 		if ([self.characterSheetCacheRecord isExpired]) {
+			dispatch_group_enter(reloadingDispatchGroup);
 			dispatch_group_enter(finishDispatchGroup);
 			[api characterSheetWithCompletionBlock:^(EVECharacterSheet *result, NSError *error) {
 				characterSheet = result;
 				dispatch_group_leave(finishDispatchGroup);
+				dispatch_group_leave(reloadingDispatchGroup);
 			} progressBlock:nil];
 		}
 		
@@ -118,6 +126,10 @@
 				[self didChangeValueForKey:@"skillQueueInfo"];
 			}
 		});
+		
+		dispatch_group_notify(reloadingDispatchGroup, dispatch_get_main_queue(), ^{
+			self.reloading = NO;
+		});
 	}
 }
 
@@ -125,6 +137,8 @@
 	if (!_characterInfoCacheRecord) {
 		_characterInfoCacheRecord = [[[NCCache sharedCache] managedObjectContext] cacheRecordWithRecordID:[NSString stringWithFormat:@"%@.characterInfo", self.uuid]];
 	}
+	if ([_characterInfoCacheRecord isExpired])
+		[self reload];
 	return _characterInfoCacheRecord;
 }
 
@@ -132,6 +146,8 @@
 	if (!_characterImageCacheRecord) {
 		_characterImageCacheRecord = [[[NCCache sharedCache] managedObjectContext] cacheRecordWithRecordID:[NSString stringWithFormat:@"%@.characterImage", self.uuid]];
 	}
+	if ([_characterImageCacheRecord isExpired])
+		[self reload];
 	return _characterImageCacheRecord;
 }
 
@@ -139,6 +155,8 @@
 	if (!_skillQueueCacheRecord) {
 		_skillQueueCacheRecord = [[[NCCache sharedCache] managedObjectContext] cacheRecordWithRecordID:[NSString stringWithFormat:@"%@.skillQueueCacheRecord", self.uuid]];
 	}
+	if ([_skillQueueCacheRecord isExpired])
+		[self reload];
 	return _skillQueueCacheRecord;
 }
 
@@ -146,6 +164,8 @@
 	if (!_characterSheetCacheRecord) {
 		_characterSheetCacheRecord = [[[NCCache sharedCache] managedObjectContext] cacheRecordWithRecordID:[NSString stringWithFormat:@"%@.characterSheetCacheRecord", self.uuid]];
 	}
+	if ([_characterSheetCacheRecord isExpired])
+		[self reload];
 	return _characterSheetCacheRecord;
 }
 

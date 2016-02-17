@@ -418,17 +418,21 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="7786F8F8-D01C-4A56-B53B-C6009BCE0441" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="kUD-0y-034">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="280DE61F-FDE2-4C5F-81FD-A387F88A0484" label="Character Sheet" paletteLabel="Character Sheet" tag="-1" image="charactersheet" selectable="YES" id="7dr-dx-gav">
+                                <toolbarItem implicitItemIdentifier="280DE61F-FDE2-4C5F-81FD-A387F88A0484" label="Character Sheet" paletteLabel="Character Sheet" tag="-1" image="charactersheet" id="7dr-dx-gav" customClass="NCToolBarItem">
                                     <connections>
-                                        <binding destination="kL1-AH-GrZ" name="enabled" keyPath="selection.corporate" id="pLC-e6-r0E">
+                                        <binding destination="kL1-AH-GrZ" name="enabled" keyPath="selection.corporate" id="nSG-6H-i1I">
                                             <dictionary key="options">
-                                                <integer key="NSNoSelectionPlaceholder" value="0"/>
+                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
                                             </dictionary>
                                         </binding>
                                         <segue destination="DKz-CE-zO1" kind="custom" customClass="NCDetailSegue" id="R6b-I4-UQO"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="3E235851-FA59-4916-9D4F-4E6CAC4080D9" label="Skills" paletteLabel="Skills" tag="-1" image="skills" selectable="YES" id="05a-mV-8du"/>
+                                <toolbarItem implicitItemIdentifier="3E235851-FA59-4916-9D4F-4E6CAC4080D9" label="Skills" paletteLabel="Skills" tag="-1" image="skills" selectable="YES" id="05a-mV-8du">
+                                    <connections>
+                                        <action selector="onAction:" target="B8D-0N-5wS" id="no5-ka-w4d"/>
+                                    </connections>
+                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="6F4B609E-23D1-4038-A461-94333B9945FC" label="Mail" paletteLabel="Mail" tag="-1" image="evemail" selectable="YES" id="Zcp-Fk-4ij"/>
                                 <toolbarItem implicitItemIdentifier="66730E45-E388-4C0B-ADB5-B663D1AABE87" label="Market" paletteLabel="Market" tag="-1" image="market" selectable="YES" id="mgM-yz-L4M"/>
                                 <toolbarItem implicitItemIdentifier="C7459926-8053-425A-81DC-37800DA65D49" label="Planetaries" paletteLabel="Planetaries" tag="-1" image="planets" selectable="YES" id="eFs-rB-lN3"/>
@@ -442,6 +446,9 @@
                                 <toolbarItem reference="eFs-rB-lN3"/>
                                 <toolbarItem reference="xaJ-Le-kUh"/>
                             </defaultToolbarItems>
+                            <connections>
+                                <outlet property="delegate" destination="B8D-0N-5wS" id="Lxp-IR-1dZ"/>
+                            </connections>
                         </toolbar>
                     </window>
                     <connections>
@@ -681,7 +688,7 @@ Gw
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="76" viewBased="YES" id="VIV-Up-Bt1">
-                                            <rect key="frame" x="0.0" y="0.0" width="318" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="302"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -809,7 +816,7 @@ Gw
                                     <constraint firstAttribute="width" constant="320" id="Iuw-lp-iuF"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="g1j-f7-Iw9">
-                                    <rect key="frame" x="1" y="287" width="318" height="16"/>
+                                    <rect key="frame" x="1" y="288" width="318" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="HDr-YR-ibb">

@@ -10,5 +10,7 @@
 
 @interface NCMainWindowController : NSWindowController
 @property (strong) IBOutlet NSObjectController *account;
+@property (weak) IBOutlet NSToolbarItem *item;
+- (IBAction)onAction:(id)sender;
 
 @end

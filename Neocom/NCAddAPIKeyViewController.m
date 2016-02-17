@@ -57,7 +57,7 @@
 	
 	[api apiKeyInfoWithCompletionBlock:^(EVEAPIKeyInfo *result, NSError *error) {
 		if (result) {
-			int32_t order = [[[context allAccounts] valueForKey:@"@max.order"] intValue];
+			int32_t order = [[[context allAccounts] valueForKeyPath:@"@max.order"] intValue];
 			NSMutableArray* accounts = [NSMutableArray new];
 			apiKey.apiKeyInfo = result;
 			
