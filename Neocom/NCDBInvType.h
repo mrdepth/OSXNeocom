@@ -15,7 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NCDBInvType : NSManagedObject
 
-// Insert code here to declare functionality of your managed object subclass
+@property (nonatomic, readonly) NSString* metaGroupName;
+
+@property (nonatomic, readonly, strong) NSDictionary* attributesDictionary;
+@property (nonatomic, readonly, strong) NSDictionary* effectsDictionary;
+
 
 @end
 

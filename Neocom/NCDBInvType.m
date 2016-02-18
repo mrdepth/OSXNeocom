@@ -30,9 +30,34 @@
 #import "NCDBStaStation.h"
 #import "NCDBTxtDescription.h"
 #import "NCDBWhType.h"
+#import "NCDBDgmAttributeType.h"
 
 @implementation NCDBInvType
+@synthesize attributesDictionary = _attributesDictionary;
+@synthesize effectsDictionary = _effectsDictionary;
 
-// Insert code here to add functionality to your managed object subclass
+- (NSString*) metaGroupName {
+	return self.metaGroup.metaGroupName;
+}
+
+- (NSDictionary*) attributesDictionary {
+	if (!_attributesDictionary) {
+		NSMutableDictionary* dic = [NSMutableDictionary new];
+		for (NCDBDgmTypeAttribute* attribute in self.attributes)
+			dic[@(attribute.attributeType.attributeID)] = attribute;
+		_attributesDictionary = dic;
+	}
+	return _attributesDictionary;
+}
+
+- (NSDictionary*) effectsDictionary {
+	if (!_effectsDictionary) {
+		NSMutableDictionary* dic = [NSMutableDictionary new];
+		for (NCDBDgmEffect* effect in self.effects)
+			dic[@(effect.effectID)] = effect;
+		_effectsDictionary = dic;
+	}
+	return _effectsDictionary;
+}
 
 @end

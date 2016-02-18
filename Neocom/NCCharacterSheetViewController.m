@@ -23,6 +23,10 @@
 	self.account.content = [NCAccount currentAccount];
 }
 
+- (void) dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 #pragma mark - Private
 
