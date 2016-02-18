@@ -31,6 +31,7 @@
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
 	if (object == self.accounts && [keyPath isEqualToString:@"selectionIndex"]) {
+		[NCAccount setCurrentAccount:[self.accounts.selectedObjects lastObject]];
 		[[NSNotificationCenter defaultCenter] postNotificationName:NCDidChangeAccountNotification object:[self.accounts.selectedObjects lastObject]];
 	}
 	else

@@ -8,6 +8,7 @@
 
 #import "NCMainWindowController.h"
 #import "global.h"
+#import "NCAccount.h"
 
 @interface NCToolBarItem : NSToolbarItem
 
@@ -21,6 +22,8 @@
 @end
 
 @interface NCMainWindowController ()
+- (void) didChangeAccount:(NSNotification*) note;
+- (void) onClose:(NSNotification*) note;
 
 @end
 
@@ -28,19 +31,22 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-
-	NSObjectController* account = self.account;
-	[[NSNotificationCenter defaultCenter] addObserverForName:NCDidChangeAccountNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-		[account addObject:note.object];
-	}];
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeAccount:) name:NCDidChangeAccountNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onClose:) name:NSWindowWillCloseNotification object:self.window];
 }
 
 - (void) dealloc {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+#pragma mark - Private
 
-- (IBAction)onAction:(id)sender {
+- (void) didChangeAccount:(NSNotification*) note {
+	self.account.content = note.object;
 }
+
+- (void) onClose:(NSNotification*) note {
+	[NSApp terminate:nil];
+}
+
 @end

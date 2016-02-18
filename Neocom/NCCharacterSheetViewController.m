@@ -7,8 +7,11 @@
 //
 
 #import "NCCharacterSheetViewController.h"
+#import "global.h"
+#import "NCAccount.h"
 
 @interface NCCharacterSheetViewController ()
+- (void) didChangeAccount:(NSNotification*) note;
 
 @end
 
@@ -16,7 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeAccount:) name:NCDidChangeAccountNotification object:nil];
+	self.account.content = [NCAccount currentAccount];
+}
+
+
+#pragma mark - Private
+
+- (void) didChangeAccount:(NSNotification*) note {
+	NCAccount* account = note.object;
+	self.account.content = account && !account.corporate ? account : nil;
 }
 
 @end

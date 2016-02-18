@@ -9,5 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @interface NCCharacterSheetViewController : NSViewController
+@property (strong) IBOutlet NSObjectController *account;
 
 @end
