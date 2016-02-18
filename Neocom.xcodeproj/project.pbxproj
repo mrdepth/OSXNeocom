@@ -169,6 +169,7 @@
 		1289462F1C7603F600839FBE /* NCTimeLeftValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289462E1C7603F600839FBE /* NCTimeLeftValueTransformer.m */; };
 		128946311C76062C00839FBE /* Levels.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 128946301C76062C00839FBE /* Levels.xcassets */; };
 		128946341C7610C300839FBE /* NCPercentageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946331C7610C300839FBE /* NCPercentageValueTransformer.m */; };
+		12D18DA11C762AED00926A2D /* NCMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18D9F1C762AED00926A2D /* NCMarketViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -485,6 +486,8 @@
 		128946301C76062C00839FBE /* Levels.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Levels.xcassets; sourceTree = "<group>"; };
 		128946321C7610C300839FBE /* NCPercentageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPercentageValueTransformer.h; sourceTree = "<group>"; };
 		128946331C7610C300839FBE /* NCPercentageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPercentageValueTransformer.m; sourceTree = "<group>"; };
+		12D18D9E1C762AED00926A2D /* NCMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMarketViewController.h; sourceTree = "<group>"; };
+		12D18D9F1C762AED00926A2D /* NCMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMarketViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -846,6 +849,7 @@
 				128946261C7600BA00839FBE /* NCAccountsViewController */,
 				128946271C7600C100839FBE /* NCCharacterSheetViewController */,
 				128946291C7600E500839FBE /* NCSkillQueueViewController */,
+				12D18D9D1C762AD600926A2D /* NCMarketViewController */,
 				128946281C7600CE00839FBE /* Utils */,
 				1268CBD51C73053800319951 /* AppDelegate.h */,
 				1268CBD61C73053800319951 /* AppDelegate.m */,
@@ -939,6 +943,15 @@
 			name = NCSkillQueueViewController;
 			sourceTree = "<group>";
 		};
+		12D18D9D1C762AD600926A2D /* NCMarketViewController */ = {
+			isa = PBXGroup;
+			children = (
+				12D18D9E1C762AED00926A2D /* NCMarketViewController.h */,
+				12D18D9F1C762AED00926A2D /* NCMarketViewController.m */,
+			);
+			name = NCMarketViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1019,6 +1032,7 @@
 				12440C561C73BFFE00F04393 /* NCDBEveIcon+CoreDataProperties.m in Sources */,
 				12440C531C73BFFE00F04393 /* NCDBCertSkill.m in Sources */,
 				12440B711C73BF6800F04393 /* NCSetting+CoreDataProperties.m in Sources */,
+				12D18DA11C762AED00926A2D /* NCMarketViewController.m in Sources */,
 				12440CAF1C73C59700F04393 /* NCCacheRecord+CoreDataProperties.m in Sources */,
 				12440C701C73BFFE00F04393 /* NCDBStaStation+CoreDataProperties.m in Sources */,
 				12440B771C73BF7D00F04393 /* NCStorage.m in Sources */,
