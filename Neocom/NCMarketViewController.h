@@ -8,7 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class NCDBInvType;
 @interface NCMarketViewController : NSViewController
+@property (weak) IBOutlet NSOutlineView *outlineView;
 @property (strong) IBOutlet NSTreeController *marketTree;
+@property (nonatomic, strong) NSPredicate* searchPredicate;
+@property (nonatomic, strong) NCDBInvType* selectedType;
 
 @end

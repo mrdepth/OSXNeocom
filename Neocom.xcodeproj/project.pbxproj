@@ -169,6 +169,12 @@
 		1289462F1C7603F600839FBE /* NCTimeLeftValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289462E1C7603F600839FBE /* NCTimeLeftValueTransformer.m */; };
 		128946311C76062C00839FBE /* Levels.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 128946301C76062C00839FBE /* Levels.xcassets */; };
 		128946341C7610C300839FBE /* NCPercentageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946331C7610C300839FBE /* NCPercentageValueTransformer.m */; };
+		128946381C7728F000839FBE /* NCMarketContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946371C7728F000839FBE /* NCMarketContainerViewController.m */; };
+		1289463D1C7745E700839FBE /* NCRegionPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289463B1C7745E700839FBE /* NCRegionPickerViewController.m */; };
+		128946431C7750E500839FBE /* NCMarketOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946411C7750E500839FBE /* NCMarketOrdersViewController.m */; };
+		128946471C7762FF00839FBE /* NCNumberFormatterValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946461C7762FF00839FBE /* NCNumberFormatterValueTransformer.m */; };
+		1289464C1C77697500839FBE /* NCBuyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289464B1C77697500839FBE /* NCBuyOrdersViewController.m */; };
+		1289464F1C77699500839FBE /* NCSellOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289464E1C77699500839FBE /* NCSellOrdersViewController.m */; };
 		12D18DA11C762AED00926A2D /* NCMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18D9F1C762AED00926A2D /* NCMarketViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -486,6 +492,18 @@
 		128946301C76062C00839FBE /* Levels.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Levels.xcassets; sourceTree = "<group>"; };
 		128946321C7610C300839FBE /* NCPercentageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPercentageValueTransformer.h; sourceTree = "<group>"; };
 		128946331C7610C300839FBE /* NCPercentageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPercentageValueTransformer.m; sourceTree = "<group>"; };
+		128946361C7728F000839FBE /* NCMarketContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMarketContainerViewController.h; sourceTree = "<group>"; };
+		128946371C7728F000839FBE /* NCMarketContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMarketContainerViewController.m; sourceTree = "<group>"; };
+		1289463A1C7745E700839FBE /* NCRegionPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRegionPickerViewController.h; sourceTree = "<group>"; };
+		1289463B1C7745E700839FBE /* NCRegionPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRegionPickerViewController.m; sourceTree = "<group>"; };
+		128946401C7750E500839FBE /* NCMarketOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMarketOrdersViewController.h; sourceTree = "<group>"; };
+		128946411C7750E500839FBE /* NCMarketOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMarketOrdersViewController.m; sourceTree = "<group>"; };
+		128946451C7762FF00839FBE /* NCNumberFormatterValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNumberFormatterValueTransformer.h; sourceTree = "<group>"; };
+		128946461C7762FF00839FBE /* NCNumberFormatterValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNumberFormatterValueTransformer.m; sourceTree = "<group>"; };
+		1289464A1C77697500839FBE /* NCBuyOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBuyOrdersViewController.h; sourceTree = "<group>"; };
+		1289464B1C77697500839FBE /* NCBuyOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBuyOrdersViewController.m; sourceTree = "<group>"; };
+		1289464D1C77699500839FBE /* NCSellOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSellOrdersViewController.h; sourceTree = "<group>"; };
+		1289464E1C77699500839FBE /* NCSellOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSellOrdersViewController.m; sourceTree = "<group>"; };
 		12D18D9E1C762AED00926A2D /* NCMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMarketViewController.h; sourceTree = "<group>"; };
 		12D18D9F1C762AED00926A2D /* NCMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMarketViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -850,6 +868,9 @@
 				128946271C7600C100839FBE /* NCCharacterSheetViewController */,
 				128946291C7600E500839FBE /* NCSkillQueueViewController */,
 				12D18D9D1C762AD600926A2D /* NCMarketViewController */,
+				128946351C7728DA00839FBE /* NCMarketContainerViewController */,
+				128946391C7745D100839FBE /* NCRegionPickerViewController */,
+				1289463F1C7750D300839FBE /* NCMarketOrdersViewController */,
 				128946281C7600CE00839FBE /* Utils */,
 				1268CBD51C73053800319951 /* AppDelegate.h */,
 				1268CBD61C73053800319951 /* AppDelegate.m */,
@@ -930,6 +951,8 @@
 				120B83DE1C747CAF003A6ED0 /* NCDBImageValueTransformer.m */,
 				128946321C7610C300839FBE /* NCPercentageValueTransformer.h */,
 				128946331C7610C300839FBE /* NCPercentageValueTransformer.m */,
+				128946451C7762FF00839FBE /* NCNumberFormatterValueTransformer.h */,
+				128946461C7762FF00839FBE /* NCNumberFormatterValueTransformer.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -941,6 +964,53 @@
 				1289462B1C7600FD00839FBE /* NCSkillQueueViewController.m */,
 			);
 			name = NCSkillQueueViewController;
+			sourceTree = "<group>";
+		};
+		128946351C7728DA00839FBE /* NCMarketContainerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				128946361C7728F000839FBE /* NCMarketContainerViewController.h */,
+				128946371C7728F000839FBE /* NCMarketContainerViewController.m */,
+			);
+			name = NCMarketContainerViewController;
+			sourceTree = "<group>";
+		};
+		128946391C7745D100839FBE /* NCRegionPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1289463A1C7745E700839FBE /* NCRegionPickerViewController.h */,
+				1289463B1C7745E700839FBE /* NCRegionPickerViewController.m */,
+			);
+			name = NCRegionPickerViewController;
+			sourceTree = "<group>";
+		};
+		1289463F1C7750D300839FBE /* NCMarketOrdersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				128946481C77695200839FBE /* NCBuyOrdersViewController */,
+				128946491C77696100839FBE /* NCSellOrdersViewController */,
+				128946401C7750E500839FBE /* NCMarketOrdersViewController.h */,
+				128946411C7750E500839FBE /* NCMarketOrdersViewController.m */,
+			);
+			name = NCMarketOrdersViewController;
+			sourceTree = "<group>";
+		};
+		128946481C77695200839FBE /* NCBuyOrdersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1289464A1C77697500839FBE /* NCBuyOrdersViewController.h */,
+				1289464B1C77697500839FBE /* NCBuyOrdersViewController.m */,
+			);
+			name = NCBuyOrdersViewController;
+			sourceTree = "<group>";
+		};
+		128946491C77696100839FBE /* NCSellOrdersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1289464D1C77699500839FBE /* NCSellOrdersViewController.h */,
+				1289464E1C77699500839FBE /* NCSellOrdersViewController.m */,
+			);
+			name = NCSellOrdersViewController;
 			sourceTree = "<group>";
 		};
 		12D18D9D1C762AD600926A2D /* NCMarketViewController */ = {
@@ -1058,8 +1128,10 @@
 				12440C3C1C73BFFE00F04393 /* NCDBDgmEffect+CoreDataProperties.m in Sources */,
 				12440B5E1C73BF6800F04393 /* NCImplantSet.m in Sources */,
 				12440C6E1C73BFFE00F04393 /* NCDBDgmppItemGroup+CoreDataProperties.m in Sources */,
+				1289463D1C7745E700839FBE /* NCRegionPickerViewController.m in Sources */,
 				12440C631C73BFFE00F04393 /* NCDBTxtDescription.m in Sources */,
 				12440B651C73BF6800F04393 /* NCShoppingItem+CoreDataProperties.m in Sources */,
+				1289464C1C77697500839FBE /* NCBuyOrdersViewController.m in Sources */,
 				12440C861C73BFFE00F04393 /* NCDBNpcGroup+CoreDataProperties.m in Sources */,
 				12440C6B1C73BFFE00F04393 /* NCDBChrRace.m in Sources */,
 				12440C5C1C73BFFE00F04393 /* NCDBDgmppItemDamage+CoreDataProperties.m in Sources */,
@@ -1075,6 +1147,7 @@
 				12440B6C1C73BF6800F04393 /* NCShoppingGroup.m in Sources */,
 				12440B691C73BF6800F04393 /* NCDamagePattern+CoreDataProperties.m in Sources */,
 				12440C821C73BFFE00F04393 /* NCDBMapRegion+CoreDataProperties.m in Sources */,
+				128946431C7750E500839FBE /* NCMarketOrdersViewController.m in Sources */,
 				12440B731C73BF6800F04393 /* NCAccount+CoreDataProperties.m in Sources */,
 				12440C551C73BFFE00F04393 /* NCDBInvCategory.m in Sources */,
 				12440C6F1C73BFFE00F04393 /* NCDBDgmppItemGroup.m in Sources */,
@@ -1161,6 +1234,8 @@
 				1289462C1C7600FD00839FBE /* NCSkillQueueViewController.m in Sources */,
 				12440CB01C73C59700F04393 /* NCCacheRecord.m in Sources */,
 				12440C791C73BFFE00F04393 /* NCDBIndRequiredSkill.m in Sources */,
+				128946471C7762FF00839FBE /* NCNumberFormatterValueTransformer.m in Sources */,
+				1289464F1C77699500839FBE /* NCSellOrdersViewController.m in Sources */,
 				12440CAB1C73C59700F04393 /* NCCachePrice+CoreDataProperties.m in Sources */,
 				12440C8D1C73BFFE00F04393 /* NCDBDgmTypeAttribute.m in Sources */,
 				12440B6B1C73BF6800F04393 /* NCShoppingGroup+CoreDataProperties.m in Sources */,
@@ -1177,6 +1252,7 @@
 				12440CAE1C73C59700F04393 /* NCCacheRecordData.m in Sources */,
 				12440B6D1C73BF6800F04393 /* NCLoadout+CoreDataProperties.m in Sources */,
 				12440CB51C73C7DF00F04393 /* NCAddAPIKeyViewController.m in Sources */,
+				128946381C7728F000839FBE /* NCMarketContainerViewController.m in Sources */,
 				12440B591C73BF6800F04393 /* NCLoadoutData+CoreDataProperties.m in Sources */,
 				12440B5C1C73BF6800F04393 /* NCMailBox.m in Sources */,
 			);
