@@ -11,7 +11,7 @@
 #import <EVEAPI/EVEAPI.h>
 
 @interface NCMarketOrderNode : NSObject
-@property (strong, readonly) NSString* location;
+@property (strong, readonly) NSAttributedString* location;
 @property (strong, readonly) NSString* price;
 @property (strong) NSMutableArray* orders;
 @property (strong) NCDBMapSolarSystem* solarSystem;

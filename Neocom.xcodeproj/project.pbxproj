@@ -176,6 +176,7 @@
 		1289464C1C77697500839FBE /* NCBuyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289464B1C77697500839FBE /* NCBuyOrdersViewController.m */; };
 		1289464F1C77699500839FBE /* NCSellOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289464E1C77699500839FBE /* NCSellOrdersViewController.m */; };
 		12D18DA11C762AED00926A2D /* NCMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18D9F1C762AED00926A2D /* NCMarketViewController.m */; };
+		12D18DA51C785CED00926A2D /* NSColor+Neocom.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18DA41C785CED00926A2D /* NSColor+Neocom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -506,6 +507,8 @@
 		1289464E1C77699500839FBE /* NCSellOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSellOrdersViewController.m; sourceTree = "<group>"; };
 		12D18D9E1C762AED00926A2D /* NCMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMarketViewController.h; sourceTree = "<group>"; };
 		12D18D9F1C762AED00926A2D /* NCMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMarketViewController.m; sourceTree = "<group>"; };
+		12D18DA31C785CED00926A2D /* NSColor+Neocom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Neocom.h"; sourceTree = "<group>"; };
+		12D18DA41C785CED00926A2D /* NSColor+Neocom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Neocom.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -953,6 +956,8 @@
 				128946331C7610C300839FBE /* NCPercentageValueTransformer.m */,
 				128946451C7762FF00839FBE /* NCNumberFormatterValueTransformer.h */,
 				128946461C7762FF00839FBE /* NCNumberFormatterValueTransformer.m */,
+				12D18DA31C785CED00926A2D /* NSColor+Neocom.h */,
+				12D18DA41C785CED00926A2D /* NSColor+Neocom.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -1115,6 +1120,7 @@
 				12440C571C73BFFE00F04393 /* NCDBEveIcon.m in Sources */,
 				12440C5A1C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.m in Sources */,
 				1289461F1C75FD0500839FBE /* NCSkillData.m in Sources */,
+				12D18DA51C785CED00926A2D /* NSColor+Neocom.m in Sources */,
 				12440B5B1C73BF6800F04393 /* NCMailBox+CoreDataProperties.m in Sources */,
 				120B83F41C74A554003A6ED0 /* NCAccountRowView.m in Sources */,
 				128946341C7610C300839FBE /* NCPercentageValueTransformer.m in Sources */,

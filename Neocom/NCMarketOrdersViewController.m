@@ -10,16 +10,19 @@
 #import "NCMarketContainerViewController.h"
 #import "NCMarketViewController.h"
 #import "NSNumberFormatter+Neocom.h"
-
+#import "NSColor+Neocom.h"
 
 
 @implementation NCMarketOrderNode
 
-- (NSString*) location {
+- (NSAttributedString*) location {
 	if (self.station)
-		return self.station.stationName;
-	else if (self.solarSystem)
-		return self.solarSystem.solarSystemName;
+		return [[NSAttributedString alloc] initWithString:self.station.stationName attributes:nil];
+	else if (self.solarSystem) {
+		NSMutableAttributedString* s = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%.1f ", self.solarSystem.security] attributes:@{NSForegroundColorAttributeName:[NSColor colorWithSecurity:self.solarSystem.security]}];
+		[s appendAttributedString:[[NSAttributedString alloc] initWithString:self.solarSystem.solarSystemName attributes:nil]];
+		return s;
+	}
 	else
 		return nil;
 }
@@ -41,19 +44,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self.region addObserver:self forKeyPath:@"selection" options:NSKeyValueObservingOptionNew context:nil];
+	[self.type addObserver:self forKeyPath:@"selection" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void) dealloc {
+	[self.region removeObserver:self forKeyPath:@"selection"];
+	[self.type removeObserver:self forKeyPath:@"selection"];
 }
 
 - (void) viewWillAppear {
 	[super viewWillAppear];
 	if (!self.binded) {
 		NCMarketContainerViewController* marketContainerViewController = (NCMarketContainerViewController*) [self.parentViewController parentViewController];
-		[self.region bind:NSContentBinding toObject:marketContainerViewController.region withKeyPath:@"content" options:nil];
 		NSSplitViewController* splitViewController = (NSSplitViewController*) [marketContainerViewController parentViewController];
 		NCMarketViewController* marketViewController = (NCMarketViewController*) [splitViewController.splitViewItems[0] viewController];
+
+		[self.region bind:NSContentBinding toObject:marketContainerViewController.region withKeyPath:@"content" options:nil];
 		[self.type bind:NSContentBinding toObject:marketViewController withKeyPath:@"selectedType" options:nil];
 		
-		[self.region addObserver:self forKeyPath:@"selection" options:NSKeyValueObservingOptionNew context:nil];
-		[self.type addObserver:self forKeyPath:@"selection" options:NSKeyValueObservingOptionNew context:nil];
 		self.binded = YES;
 		[self reload];
 	}

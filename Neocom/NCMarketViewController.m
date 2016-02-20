@@ -170,6 +170,10 @@
 //	NCMarketOrdersViewController* buyOrdersViewController = [[marketContainerViewController childViewControllers][0] childViewControllers][0];
 }
 
+- (void) dealloc {
+	[self.marketTree removeObserver:self forKeyPath:@"selection"];
+}
+
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
 	if (object == self.marketTree && [keyPath isEqualToString:@"selection"]) {
 		NCMarketNode* selection = [[self.marketTree selectedObjects] lastObject];
