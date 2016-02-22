@@ -8,7 +8,26 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class NCDBInvType;
+@class NCDBDgmppItemGroup;
+@class NCDBDgmppItem;
+@interface NCDgmItemNode : NSObject
+@property (readonly) NSString* title;
+@property (readonly) NSSet* items;
+@property (readonly) NSImage* image;
+@property (readonly, getter=isLeaf) BOOL leaf;
+@property (strong) NCDBDgmppItemGroup* group;
+@property (strong) NCDBDgmppItem* item;
+@property (nonatomic, strong) NSPredicate* predicate;
+@property (nonatomic, strong) NCDgmItemNode* node;
+
+- (id) initWithGroup:(NCDBDgmppItemGroup*) group;
+- (id) initWithItem:(NCDBDgmppItem*) item;
+- (id) initWithNode:(NCDgmItemNode*) node predicate:(NSPredicate*) predicate;
+
+@end
+
+
+@class NCShipFit;
 @interface NCDgmItemsTreeController : NSTreeController
-@property (strong) NCDBInvType* type;
+@property (nonatomic, strong) NCShipFit* fit;
 @end

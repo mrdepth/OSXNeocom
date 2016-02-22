@@ -10,7 +10,14 @@
 
 @class NCShipFit;
 @class NCDgmItemsTreeController;
+@class NCShipModulesController;
+@class NCShipFitController;
 @interface NCShipFittingViewController : NSViewController
 @property (strong) IBOutlet NCDgmItemsTreeController *dgmItems;
+@property (strong) IBOutlet NCShipModulesController *modules;
+
 @property (strong) NCShipFit* fit;
+@property (strong) IBOutlet NCShipFitController *fitController;
+
+- (IBAction) didSelectItem:(NSArray*) selectedObjects;
 @end

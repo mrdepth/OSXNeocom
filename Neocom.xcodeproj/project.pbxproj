@@ -152,8 +152,10 @@
 		12440CAF1C73C59700F04393 /* NCCacheRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CA81C73C59700F04393 /* NCCacheRecord+CoreDataProperties.m */; };
 		12440CB01C73C59700F04393 /* NCCacheRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CAA1C73C59700F04393 /* NCCacheRecord.m */; };
 		12440CB51C73C7DF00F04393 /* NCAddAPIKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12440CB41C73C7DF00F04393 /* NCAddAPIKeyViewController.m */; };
-		12440CF11C73CCA100F04393 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12440CF01C73CCA100F04393 /* AFNetworking.framework */; };
 		12440CF31C73CCAC00F04393 /* EVEAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12440CF21C73CCAC00F04393 /* EVEAPI.framework */; };
+		1263330B1C7B72B80078F770 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12440CF01C73CCA100F04393 /* AFNetworking.framework */; };
+		1263330E1C7B745F0078F770 /* NCShipModulesController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1263330D1C7B745F0078F770 /* NCShipModulesController.mm */; };
+		126333131C7B81090078F770 /* NCShipFitController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 126333121C7B81090078F770 /* NCShipFitController.mm */; };
 		1268CBD71C73053800319951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBD61C73053800319951 /* AppDelegate.m */; };
 		1268CBDA1C73053800319951 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBD91C73053800319951 /* main.m */; };
 		1268CBDD1C73053800319951 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBDC1C73053800319951 /* ViewController.m */; };
@@ -181,8 +183,8 @@
 		129A71791C7B0641002298CD /* NCTypePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A71771C7B0641002298CD /* NCTypePickerViewController.m */; };
 		129A717F1C7B1CB8002298CD /* NSOutlineView+Neocom.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A717E1C7B1CB8002298CD /* NSOutlineView+Neocom.m */; };
 		129A71811C7B37E0002298CD /* Fitting.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 129A71801C7B37E0002298CD /* Fitting.xcassets */; };
-		129A71841C7B5559002298CD /* NCDgmItemsTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A71831C7B5559002298CD /* NCDgmItemsTreeController.m */; };
-		129A718E1C7B5F03002298CD /* NCShipFittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A718D1C7B5F03002298CD /* NCShipFittingViewController.m */; };
+		129A71841C7B5559002298CD /* NCDgmItemsTreeController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 129A71831C7B5559002298CD /* NCDgmItemsTreeController.mm */; };
+		129A718E1C7B5F03002298CD /* NCShipFittingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 129A718D1C7B5F03002298CD /* NCShipFittingViewController.mm */; };
 		12D18DA11C762AED00926A2D /* NCMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18D9F1C762AED00926A2D /* NCMarketViewController.m */; };
 		12D18DA51C785CED00926A2D /* NSColor+Neocom.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18DA41C785CED00926A2D /* NSColor+Neocom.m */; };
 		12D18DAA1C78620E00926A2D /* NCPlanetariesViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12D18DA81C78620E00926A2D /* NCPlanetariesViewController.mm */; };
@@ -483,6 +485,10 @@
 		12440CB41C73C7DF00F04393 /* NCAddAPIKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAddAPIKeyViewController.m; sourceTree = "<group>"; };
 		12440CF01C73CCA100F04393 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../Library/Developer/Xcode/DerivedData/Neocom-ebjleyayiawwixdpembhfjqwppwl/Build/Products/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		12440CF21C73CCAC00F04393 /* EVEAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EVEAPI.framework; path = ThirdParty/EVEOnlineAPI/build/Debug/EVEAPI.framework; sourceTree = "<group>"; };
+		1263330C1C7B745F0078F770 /* NCShipModulesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCShipModulesController.h; sourceTree = "<group>"; };
+		1263330D1C7B745F0078F770 /* NCShipModulesController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCShipModulesController.mm; sourceTree = "<group>"; };
+		126333111C7B81090078F770 /* NCShipFitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCShipFitController.h; sourceTree = "<group>"; };
+		126333121C7B81090078F770 /* NCShipFitController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCShipFitController.mm; sourceTree = "<group>"; };
 		1268CBD21C73053800319951 /* Neocom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neocom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1268CBD51C73053800319951 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1268CBD61C73053800319951 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -533,9 +539,9 @@
 		129A717E1C7B1CB8002298CD /* NSOutlineView+Neocom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOutlineView+Neocom.m"; sourceTree = "<group>"; };
 		129A71801C7B37E0002298CD /* Fitting.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Fitting.xcassets; sourceTree = "<group>"; };
 		129A71821C7B5559002298CD /* NCDgmItemsTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDgmItemsTreeController.h; sourceTree = "<group>"; };
-		129A71831C7B5559002298CD /* NCDgmItemsTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDgmItemsTreeController.m; sourceTree = "<group>"; };
+		129A71831C7B5559002298CD /* NCDgmItemsTreeController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCDgmItemsTreeController.mm; sourceTree = "<group>"; };
 		129A718C1C7B5F03002298CD /* NCShipFittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCShipFittingViewController.h; sourceTree = "<group>"; };
-		129A718D1C7B5F03002298CD /* NCShipFittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCShipFittingViewController.m; sourceTree = "<group>"; };
+		129A718D1C7B5F03002298CD /* NCShipFittingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCShipFittingViewController.mm; sourceTree = "<group>"; };
 		12D18D9E1C762AED00926A2D /* NCMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMarketViewController.h; sourceTree = "<group>"; };
 		12D18D9F1C762AED00926A2D /* NCMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMarketViewController.m; sourceTree = "<group>"; };
 		12D18DA31C785CED00926A2D /* NSColor+Neocom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Neocom.h"; sourceTree = "<group>"; };
@@ -560,11 +566,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1263330B1C7B72B80078F770 /* AFNetworking.framework in Frameworks */,
 				12D18DBA1C7873D400926A2D /* libsqlite3.tbd in Frameworks */,
 				12D18DB21C78723D00926A2D /* dgmpp.framework in Frameworks */,
 				120B83E21C748838003A6ED0 /* QuartzCore.framework in Frameworks */,
 				12440CF31C73CCAC00F04393 /* EVEAPI.framework in Frameworks */,
-				12440CF11C73CCA100F04393 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1086,9 +1092,13 @@
 				129A71761C7B0641002298CD /* NCTypePickerViewController.h */,
 				129A71771C7B0641002298CD /* NCTypePickerViewController.m */,
 				129A71821C7B5559002298CD /* NCDgmItemsTreeController.h */,
-				129A71831C7B5559002298CD /* NCDgmItemsTreeController.m */,
+				129A71831C7B5559002298CD /* NCDgmItemsTreeController.mm */,
 				129A718C1C7B5F03002298CD /* NCShipFittingViewController.h */,
-				129A718D1C7B5F03002298CD /* NCShipFittingViewController.m */,
+				129A718D1C7B5F03002298CD /* NCShipFittingViewController.mm */,
+				1263330C1C7B745F0078F770 /* NCShipModulesController.h */,
+				1263330D1C7B745F0078F770 /* NCShipModulesController.mm */,
+				126333111C7B81090078F770 /* NCShipFitController.h */,
+				126333121C7B81090078F770 /* NCShipFitController.mm */,
 			);
 			name = Fitting;
 			sourceTree = "<group>";
@@ -1203,6 +1213,7 @@
 				12440CAF1C73C59700F04393 /* NCCacheRecord+CoreDataProperties.m in Sources */,
 				12440C701C73BFFE00F04393 /* NCDBStaStation+CoreDataProperties.m in Sources */,
 				12440B771C73BF7D00F04393 /* NCStorage.m in Sources */,
+				126333131C7B81090078F770 /* NCShipFitController.mm in Sources */,
 				12440C8B1C73BFFE00F04393 /* NCDBInvMetaGroup.m in Sources */,
 				12440C591C73BFFE00F04393 /* NCDBCertMasteryLevel.m in Sources */,
 				12440C671C73BFFE00F04393 /* NCDBMapSolarSystem.m in Sources */,
@@ -1304,11 +1315,11 @@
 				12440CAC1C73C59700F04393 /* NCCachePrice.m in Sources */,
 				12D18DB51C78728E00926A2D /* NCShipFit.mm in Sources */,
 				12440C731C73BFFE00F04393 /* NCDBRamInstallationTypeContent.m in Sources */,
-				129A71841C7B5559002298CD /* NCDgmItemsTreeController.m in Sources */,
+				129A71841C7B5559002298CD /* NCDgmItemsTreeController.mm in Sources */,
 				120B83FD1C74B026003A6ED0 /* NSNumberFormatter+Neocom.m in Sources */,
 				12440B5F1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.m in Sources */,
 				12440C711C73BFFE00F04393 /* NCDBStaStation.m in Sources */,
-				129A718E1C7B5F03002298CD /* NCShipFittingViewController.m in Sources */,
+				129A718E1C7B5F03002298CD /* NCShipFittingViewController.mm in Sources */,
 				12440C891C73BFFE00F04393 /* NCDBMapDenormalize.m in Sources */,
 				12440C621C73BFFE00F04393 /* NCDBTxtDescription+CoreDataProperties.m in Sources */,
 				12440C5F1C73BFFE00F04393 /* NCDBInvType.m in Sources */,
@@ -1348,6 +1359,7 @@
 				12440CAB1C73C59700F04393 /* NCCachePrice+CoreDataProperties.m in Sources */,
 				12440C8D1C73BFFE00F04393 /* NCDBDgmTypeAttribute.m in Sources */,
 				12440B6B1C73BF6800F04393 /* NCShoppingGroup+CoreDataProperties.m in Sources */,
+				1263330E1C7B745F0078F770 /* NCShipModulesController.mm in Sources */,
 				12440C831C73BFFE00F04393 /* NCDBMapRegion.m in Sources */,
 				12440C641C73BFFE00F04393 /* NCDBVersion+CoreDataProperties.m in Sources */,
 				12440C411C73BFFE00F04393 /* NCDBRamAssemblyLineType.m in Sources */,

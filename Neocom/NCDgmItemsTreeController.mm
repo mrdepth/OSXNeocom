@@ -8,22 +8,7 @@
 
 #import "NCDgmItemsTreeController.h"
 #import "NCDatabase.h"
-
-@interface NCDgmItemNode : NSObject
-@property (readonly) NSString* title;
-@property (readonly) NSSet* items;
-@property (readonly) NSImage* image;
-@property (readonly, getter=isLeaf) BOOL leaf;
-@property (strong) NCDBDgmppItemGroup* group;
-@property (strong) NCDBDgmppItem* item;
-@property (nonatomic, strong) NSPredicate* predicate;
-@property (nonatomic, strong) NCDgmItemNode* node;
-
-- (id) initWithGroup:(NCDBDgmppItemGroup*) group;
-- (id) initWithItem:(NCDBDgmppItem*) item;
-- (id) initWithNode:(NCDgmItemNode*) node predicate:(NSPredicate*) predicate;
-
-@end
+#import "NCShipFit.h"
 
 @implementation NCDgmItemNode
 @synthesize items = _items;
@@ -113,17 +98,17 @@
 @interface NCDgmItemRootNode : NCDgmItemNode {
 	NSSet* _rootItems;
 }
-@property (strong) NCDBInvType* type;
+@property (strong) NCShipFit* fit;
 
-- (id) initWithType:(NCDBInvType*) type;
+- (id) initWithFit:(NCShipFit*) fit;
 
 @end
 
 @implementation NCDgmItemRootNode
 
-- (id) initWithType:(NCDBInvType*) type {
+- (id) initWithFit:(NCShipFit*) fit {
 	if (self = [super init]) {
-		self.type = type;
+		self.fit = fit;
 	}
 	return self;
 }
@@ -135,12 +120,15 @@
 		
 		NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"DgmppItemGroup"];
 		request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"groupName" ascending:YES]];
-		NSArray* categories = @[[context categoryWithSlot:NCDBDgmppItemSlotHi size:0 race:nil],
+		
+		NCDBInvType* type = [context invTypeWithTypeID:self.fit.typeID];
+		NSMutableArray* categories = [@[[context categoryWithSlot:NCDBDgmppItemSlotHi size:0 race:nil],
 								[context categoryWithSlot:NCDBDgmppItemSlotMed size:0 race:nil],
 								[context categoryWithSlot:NCDBDgmppItemSlotLow size:0 race:nil],
-								[context categoryWithSlot:NCDBDgmppItemSlotRig size:0 race:nil],
-								[context categoryWithSlot:NCDBDgmppItemSlotSubsystem size:0 race:self.type.race]
-								];
+								[context categoryWithSlot:NCDBDgmppItemSlotRig size:self.fit.pilot->getShip()->getRigSize() race:nil],
+										] mutableCopy];
+		if (self.fit.pilot->getShip()->getNumberOfSlots(dgmpp::Module::SLOT_SUBSYSTEM) > 0)
+			[categories addObject:[context categoryWithSlot:NCDBDgmppItemSlotSubsystem size:0 race:type.race]];
 		
 		request.predicate = [NSPredicate predicateWithFormat:@"category IN %@ AND parentGroup == NULL", categories];
 		NSSet* results = [NSSet setWithArray:[context executeFetchRequest:request error:nil]];
@@ -180,9 +168,9 @@
 	self.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]];
 }
 
-- (void) setType:(NCDBInvType *)type {
-	_type = type;
-	self.dgmItemRootNode = [[NCDgmItemRootNode alloc] initWithType:type];
+- (void) setFit:(NCShipFit *)fit {
+	_fit = fit;
+	self.dgmItemRootNode = [[NCDgmItemRootNode alloc] initWithFit:fit];
 	self.content = self.dgmItemRootNode.items;
 }
 
