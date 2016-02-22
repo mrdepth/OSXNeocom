@@ -177,6 +177,12 @@
 		128946471C7762FF00839FBE /* NCNumberFormatterValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946461C7762FF00839FBE /* NCNumberFormatterValueTransformer.m */; };
 		1289464C1C77697500839FBE /* NCBuyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289464B1C77697500839FBE /* NCBuyOrdersViewController.m */; };
 		1289464F1C77699500839FBE /* NCSellOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289464E1C77699500839FBE /* NCSellOrdersViewController.m */; };
+		129A71751C7B00FC002298CD /* NCLoadoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A71741C7B00FC002298CD /* NCLoadoutsViewController.m */; };
+		129A71791C7B0641002298CD /* NCTypePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A71771C7B0641002298CD /* NCTypePickerViewController.m */; };
+		129A717F1C7B1CB8002298CD /* NSOutlineView+Neocom.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A717E1C7B1CB8002298CD /* NSOutlineView+Neocom.m */; };
+		129A71811C7B37E0002298CD /* Fitting.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 129A71801C7B37E0002298CD /* Fitting.xcassets */; };
+		129A71841C7B5559002298CD /* NCDgmItemsTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A71831C7B5559002298CD /* NCDgmItemsTreeController.m */; };
+		129A718E1C7B5F03002298CD /* NCShipFittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A718D1C7B5F03002298CD /* NCShipFittingViewController.m */; };
 		12D18DA11C762AED00926A2D /* NCMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18D9F1C762AED00926A2D /* NCMarketViewController.m */; };
 		12D18DA51C785CED00926A2D /* NSColor+Neocom.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18DA41C785CED00926A2D /* NSColor+Neocom.m */; };
 		12D18DAA1C78620E00926A2D /* NCPlanetariesViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12D18DA81C78620E00926A2D /* NCPlanetariesViewController.mm */; };
@@ -519,6 +525,17 @@
 		1289464B1C77697500839FBE /* NCBuyOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBuyOrdersViewController.m; sourceTree = "<group>"; };
 		1289464D1C77699500839FBE /* NCSellOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSellOrdersViewController.h; sourceTree = "<group>"; };
 		1289464E1C77699500839FBE /* NCSellOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSellOrdersViewController.m; sourceTree = "<group>"; };
+		129A71731C7B00FC002298CD /* NCLoadoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLoadoutsViewController.h; sourceTree = "<group>"; };
+		129A71741C7B00FC002298CD /* NCLoadoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCLoadoutsViewController.m; sourceTree = "<group>"; };
+		129A71761C7B0641002298CD /* NCTypePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTypePickerViewController.h; sourceTree = "<group>"; };
+		129A71771C7B0641002298CD /* NCTypePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTypePickerViewController.m; sourceTree = "<group>"; };
+		129A717D1C7B1CB8002298CD /* NSOutlineView+Neocom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOutlineView+Neocom.h"; sourceTree = "<group>"; };
+		129A717E1C7B1CB8002298CD /* NSOutlineView+Neocom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOutlineView+Neocom.m"; sourceTree = "<group>"; };
+		129A71801C7B37E0002298CD /* Fitting.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Fitting.xcassets; sourceTree = "<group>"; };
+		129A71821C7B5559002298CD /* NCDgmItemsTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDgmItemsTreeController.h; sourceTree = "<group>"; };
+		129A71831C7B5559002298CD /* NCDgmItemsTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDgmItemsTreeController.m; sourceTree = "<group>"; };
+		129A718C1C7B5F03002298CD /* NCShipFittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCShipFittingViewController.h; sourceTree = "<group>"; };
+		129A718D1C7B5F03002298CD /* NCShipFittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCShipFittingViewController.m; sourceTree = "<group>"; };
 		12D18D9E1C762AED00926A2D /* NCMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMarketViewController.h; sourceTree = "<group>"; };
 		12D18D9F1C762AED00926A2D /* NCMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMarketViewController.m; sourceTree = "<group>"; };
 		12D18DA31C785CED00926A2D /* NSColor+Neocom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Neocom.h"; sourceTree = "<group>"; };
@@ -907,6 +924,7 @@
 				1289463F1C7750D300839FBE /* NCMarketOrdersViewController */,
 				128946281C7600CE00839FBE /* Utils */,
 				12D18DA61C7861F700926A2D /* NCPlanetariesViewController */,
+				129A71721C7B00C3002298CD /* Fitting */,
 				1268CBD51C73053800319951 /* AppDelegate.h */,
 				1268CBD61C73053800319951 /* AppDelegate.m */,
 				1268CBDB1C73053800319951 /* ViewController.h */,
@@ -914,6 +932,7 @@
 				128946301C76062C00839FBE /* Levels.xcassets */,
 				1268CBE11C73053800319951 /* Assets.xcassets */,
 				120B83FE1C74B331003A6ED0 /* MainMenu.xcassets */,
+				129A71801C7B37E0002298CD /* Fitting.xcassets */,
 				1268CBE31C73053800319951 /* Main.storyboard */,
 				1268CBE61C73053800319951 /* Info.plist */,
 				1268CBDE1C73053800319951 /* Neocom.xcdatamodeld */,
@@ -997,6 +1016,8 @@
 				1238801A1C79D347004674BE /* NCCycleTimeValueTransformer.m */,
 				12D18DA31C785CED00926A2D /* NSColor+Neocom.h */,
 				12D18DA41C785CED00926A2D /* NSColor+Neocom.m */,
+				129A717D1C7B1CB8002298CD /* NSOutlineView+Neocom.h */,
+				129A717E1C7B1CB8002298CD /* NSOutlineView+Neocom.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -1055,6 +1076,21 @@
 				1289464E1C77699500839FBE /* NCSellOrdersViewController.m */,
 			);
 			name = NCSellOrdersViewController;
+			sourceTree = "<group>";
+		};
+		129A71721C7B00C3002298CD /* Fitting */ = {
+			isa = PBXGroup;
+			children = (
+				129A71731C7B00FC002298CD /* NCLoadoutsViewController.h */,
+				129A71741C7B00FC002298CD /* NCLoadoutsViewController.m */,
+				129A71761C7B0641002298CD /* NCTypePickerViewController.h */,
+				129A71771C7B0641002298CD /* NCTypePickerViewController.m */,
+				129A71821C7B5559002298CD /* NCDgmItemsTreeController.h */,
+				129A71831C7B5559002298CD /* NCDgmItemsTreeController.m */,
+				129A718C1C7B5F03002298CD /* NCShipFittingViewController.h */,
+				129A718D1C7B5F03002298CD /* NCShipFittingViewController.m */,
+			);
+			name = Fitting;
 			sourceTree = "<group>";
 		};
 		12D18D9D1C762AD600926A2D /* NCMarketViewController */ = {
@@ -1143,6 +1179,7 @@
 				1268CBE21C73053800319951 /* Assets.xcassets in Resources */,
 				1268CBE51C73053800319951 /* Main.storyboard in Resources */,
 				12D18DBF1C79024E00926A2D /* dgm.sqlite in Resources */,
+				129A71811C7B37E0002298CD /* Fitting.xcassets in Resources */,
 				120B83FF1C74B331003A6ED0 /* MainMenu.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1214,6 +1251,7 @@
 				12440B731C73BF6800F04393 /* NCAccount+CoreDataProperties.m in Sources */,
 				12440C551C73BFFE00F04393 /* NCDBInvCategory.m in Sources */,
 				12440C6F1C73BFFE00F04393 /* NCDBDgmppItemGroup.m in Sources */,
+				129A71791C7B0641002298CD /* NCTypePickerViewController.m in Sources */,
 				12440C781C73BFFE00F04393 /* NCDBIndRequiredSkill+CoreDataProperties.m in Sources */,
 				12440C3D1C73BFFE00F04393 /* NCDBDgmEffect.m in Sources */,
 				12440B721C73BF6800F04393 /* NCSetting.m in Sources */,
@@ -1222,6 +1260,7 @@
 				12440C4A1C73BFFE00F04393 /* NCDBEveIconImage+CoreDataProperties.m in Sources */,
 				12440C481C73BFFE00F04393 /* NCDBEveUnit+CoreDataProperties.m in Sources */,
 				128946251C76002000839FBE /* NCTrainingQueue.m in Sources */,
+				129A717F1C7B1CB8002298CD /* NSOutlineView+Neocom.m in Sources */,
 				12440C6D1C73BFFE00F04393 /* NCDBIndActivity.m in Sources */,
 				12440C651C73BFFE00F04393 /* NCDBVersion.m in Sources */,
 				12440C3F1C73BFFE00F04393 /* NCDBIndProduct.m in Sources */,
@@ -1265,9 +1304,11 @@
 				12440CAC1C73C59700F04393 /* NCCachePrice.m in Sources */,
 				12D18DB51C78728E00926A2D /* NCShipFit.mm in Sources */,
 				12440C731C73BFFE00F04393 /* NCDBRamInstallationTypeContent.m in Sources */,
+				129A71841C7B5559002298CD /* NCDgmItemsTreeController.m in Sources */,
 				120B83FD1C74B026003A6ED0 /* NSNumberFormatter+Neocom.m in Sources */,
 				12440B5F1C73BF6800F04393 /* NCSkillPlan+CoreDataProperties.m in Sources */,
 				12440C711C73BFFE00F04393 /* NCDBStaStation.m in Sources */,
+				129A718E1C7B5F03002298CD /* NCShipFittingViewController.m in Sources */,
 				12440C891C73BFFE00F04393 /* NCDBMapDenormalize.m in Sources */,
 				12440C621C73BFFE00F04393 /* NCDBTxtDescription+CoreDataProperties.m in Sources */,
 				12440C5F1C73BFFE00F04393 /* NCDBInvType.m in Sources */,
@@ -1300,6 +1341,7 @@
 				12440C741C73BFFE00F04393 /* NCDBDgmAttributeCategory+CoreDataProperties.m in Sources */,
 				1289462C1C7600FD00839FBE /* NCSkillQueueViewController.m in Sources */,
 				12440CB01C73C59700F04393 /* NCCacheRecord.m in Sources */,
+				129A71751C7B00FC002298CD /* NCLoadoutsViewController.m in Sources */,
 				12440C791C73BFFE00F04393 /* NCDBIndRequiredSkill.m in Sources */,
 				128946471C7762FF00839FBE /* NCNumberFormatterValueTransformer.m in Sources */,
 				1289464F1C77699500839FBE /* NCSellOrdersViewController.m in Sources */,

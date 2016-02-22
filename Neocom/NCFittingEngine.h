@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <dgmpp/dgmpp.h>
 
+#define NCShipCategoryID 6
+#define NCChargeCategoryID 8
+#define NCModuleCategoryID 7
+#define NCSubsystemCategoryID 32
+#define NCDroneCategoryID 18
+
+
 @class NCDBInvType;
 @class NCShipFit;
 @class NCPOSFit;

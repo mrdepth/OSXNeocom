@@ -9,6 +9,7 @@
 #import "NCMarketViewController.h"
 #import "NCDatabase.h"
 #import "NCMarketOrdersViewController.h"
+#import "NSOutlineView+Neocom.h"
 
 @interface NCMarketNode : NSObject
 @property (readonly) NSString* title;
@@ -190,8 +191,9 @@
 		NCMarketNode* node = [[NCMarketNode alloc] initWithMarketNode:self.market predicate:searchPredicate];
 		self.marketTree.content = [node items];
 		[self.outlineView reloadData];
-		for (id item in [self.marketTree.arrangedObjects childNodes])
-			[self.outlineView expandItem:item expandChildren:YES];
+		[self.outlineView expandAll];
+//		for (id item in [self.marketTree.arrangedObjects childNodes])
+//			[self.outlineView expandItem:item expandChildren:YES];
 	}
 	else
 		self.marketTree.content = self.market.items;

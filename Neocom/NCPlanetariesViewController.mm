@@ -20,6 +20,7 @@
 #import "NCPlanetaryExtractorCell.h"
 #import "NCPlanetaryStorageCell.h"
 #import "NSNumberFormatter+Neocom.h"
+#import "NSOutlineView+Neocom.h"
 
 @interface NCPlanetaryNode: NSObject
 @property (readonly) NSArray* children;
@@ -904,8 +905,7 @@
 - (void) reload {
 	NCCacheRecord* cacheRecord = self.coloniesCacheRecord;
 	self.colonies.content = [(NCPlanetaryData*) cacheRecord.data.data colonies];
-	for (id item in [self.colonies.arrangedObjects childNodes])
-		[self.outlineView expandItem:item expandChildren:YES];
+	[self.outlineView expandAll];
 
 	if (self.account && !self.account.corporate && ([cacheRecord isExpired] || !cacheRecord.data.data)) {
 		EVEOnlineAPI* api = [EVEOnlineAPI apiWithAPIKey:[EVEAPIKey apiKeyWithKeyID:self.account.apiKey.keyID vCode:self.account.apiKey.vCode characterID:self.account.characterID corporate:self.account.corporate] cachePolicy:NSURLRequestUseProtocolCachePolicy];
@@ -955,8 +955,7 @@
 					self.colonies.content = array;
 					if ([cacheRecord.managedObjectContext hasChanges])
 						[cacheRecord.managedObjectContext save:nil];
-					for (id item in [self.colonies.arrangedObjects childNodes])
-						[self.outlineView expandItem:item expandChildren:YES];
+					[self.outlineView expandAll];
 					
 				});
 			}

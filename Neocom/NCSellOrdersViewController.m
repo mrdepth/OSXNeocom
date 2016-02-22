@@ -7,6 +7,7 @@
 //
 
 #import "NCSellOrdersViewController.h"
+#import "NSOutlineView+Neocom.h"
 
 @interface NCSellOrdersViewController ()
 
@@ -46,8 +47,7 @@
 			for (NCMarketOrderNode* solarSystem in [solarSystems allValues])
 				[solarSystem.orders sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"order.price" ascending:YES]]];
 			self.marketOrders.content = [[solarSystems allValues] sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"solarSystem.solarSystemName" ascending:YES]]];
-			for (id item in [self.marketOrders.arrangedObjects childNodes])
-				[self.outlineView expandItem:item expandChildren:YES];
+			[self.outlineView expandAll];
 		}];
 	}
 }

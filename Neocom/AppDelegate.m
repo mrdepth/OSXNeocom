@@ -17,6 +17,7 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints"];
 	// Insert code here to initialize your application
 }
 

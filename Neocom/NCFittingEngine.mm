@@ -11,6 +11,8 @@
 #import "NCPOSFit.h"
 #import "NCDatabase.h"
 #import <EVEAPI/EVEAPI.h>
+#import "NCLoadout.h"
+#import "NCLoadoutData.h"
 //#import "NCKillMail.h"
 
 @interface NCShipFit()
@@ -85,81 +87,79 @@
 }
 
 - (void) loadShipFit:(NCShipFit*) fit {
-/*	fit.engine = self;
+	fit.engine = self;
 	NCLoadoutDataShip* loadoutData = [self loadoutDataShipWithFit:fit];
 
 	
-	[self performBlockAndWait:^{
-		NSMutableSet* charges = [NSMutableSet new];
-		dgmpp::TypeID modeID = loadoutData.mode;
-
-		for (NCLoadoutDataShipCargoItem* item in loadoutData.cargo) {
-			NCDBInvType* type = [self.databaseManagedObjectContext invTypeWithTypeID:item.typeID];
-			if (type.group.category.categoryID == NCChargeCategoryID) {
-				[charges addObject:@(item.typeID)];
+	NSMutableSet* charges = [NSMutableSet new];
+	dgmpp::TypeID modeID = loadoutData.mode;
+	
+	for (NCLoadoutDataShipCargoItem* item in loadoutData.cargo) {
+		NCDBInvType* type = [self.databaseManagedObjectContext invTypeWithTypeID:item.typeID];
+		if (type.group.category.categoryID == NCChargeCategoryID) {
+			[charges addObject:@(item.typeID)];
+		}
+	}
+	
+	if (!modeID) {
+		NCDBDgmppItemCategory* category = [self.databaseManagedObjectContext categoryWithSlot:NCDBDgmppItemSlotMode size:fit.typeID race:nil];
+		if (category) {
+			NCDBDgmppItemGroup* group = [category.itemGroups anyObject];
+			NCDBDgmppItem* item = [group.items anyObject];
+			modeID = item.type.typeID;
+		}
+	}
+	
+	
+	//		CFTimeInterval t0 = CACurrentMediaTime();
+	
+	NSAssert(fit.pilot == nullptr, @"NCShipFit already loaded");
+	auto pilot = self.engine->getGang()->addPilot();
+	fit.pilot = pilot;
+	auto ship = pilot->setShip(static_cast<dgmpp::TypeID>(fit.typeID));
+	//		CFTimeInterval t1 = CACurrentMediaTime();
+	//		NSLog(@"Fit loading time %f", t1 - t0);
+	if (ship) {
+		self.engine->beginUpdates();
+		for (NSString* key in @[@"subsystems", @"rigSlots", @"lowSlots", @"medSlots", @"hiSlots"]) {
+			for (NCLoadoutDataShipModule* item in [loadoutData valueForKey:key]) {
+				auto module = ship->addModule(item.typeID, true);
+				if (module) {
+					module->setPreferredState(item.state);
+					if (item.chargeID)
+						module->setCharge(item.chargeID);
+				}
 			}
 		}
 		
-		if (!modeID) {
-			NCDBDgmppItemCategory* category = [self.databaseManagedObjectContext categoryWithSlot:NCDBDgmppItemSlotMode size:fit.typeID race:nil];
-			if (category) {
-				NCDBDgmppItemGroup* group = [category.itemGroups anyObject];
-				NCDBDgmppItem* item = [group.items anyObject];
-				modeID = item.type.typeID;
+		for (NCLoadoutDataShipDrone* item in loadoutData.drones) {
+			for (int n = item.count; n > 0; n--) {
+				auto drone = ship->addDrone(item.typeID);
+				if (!drone)
+					break;
+				drone->setActive(item.active);
 			}
 		}
-
 		
-//		CFTimeInterval t0 = CACurrentMediaTime();
-
-		NSAssert(fit.pilot == nullptr, @"NCShipFit already loaded");
-		auto pilot = self.engine->getGang()->addPilot();
-		fit.pilot = pilot;
-		auto ship = pilot->setShip(static_cast<dgmpp::TypeID>(fit.typeID));
-//		CFTimeInterval t1 = CACurrentMediaTime();
-//		NSLog(@"Fit loading time %f", t1 - t0);
-		if (ship) {
-			self.engine->beginUpdates();
-			for (NSString* key in @[@"subsystems", @"rigSlots", @"lowSlots", @"medSlots", @"hiSlots"]) {
-				for (NCLoadoutDataShipModule* item in [loadoutData valueForKey:key]) {
-					auto module = ship->addModule(item.typeID, true);
-					if (module) {
-						module->setPreferredState(item.state);
-						if (item.chargeID)
-							module->setCharge(item.chargeID);
-					}
-				}
-			}
-			
-			for (NCLoadoutDataShipDrone* item in loadoutData.drones) {
-				for (int n = item.count; n > 0; n--) {
-					auto drone = ship->addDrone(item.typeID);
-					if (!drone)
-						break;
-					drone->setActive(item.active);
-				}
-			}
-
-			for (NCLoadoutDataShipImplant* item in loadoutData.implants)
-				pilot->addImplant(item.typeID);
-			
-			for (NCLoadoutDataShipBooster* item in loadoutData.boosters)
-				pilot->addBooster(item.typeID);
-			
-			for (NSNumber* typeID in charges) {
-				dgmpp::TypeID chargeID = [typeID intValue];
-				for (const auto& module: ship->getModules()) {
-					if (!module->getCharge())
-						module->setCharge(chargeID);
-				}
-			}
-			self.engine->commitUpdates();
-			if (ship->getFreeSlots(dgmpp::Module::SLOT_MODE) > 0) {
-				if (modeID > 0)
-					ship->addModule(modeID);
+		for (NCLoadoutDataShipImplant* item in loadoutData.implants)
+			pilot->addImplant(item.typeID);
+		
+		for (NCLoadoutDataShipBooster* item in loadoutData.boosters)
+			pilot->addBooster(item.typeID);
+		
+		for (NSNumber* typeID in charges) {
+			dgmpp::TypeID chargeID = [typeID intValue];
+			for (const auto& module: ship->getModules()) {
+				if (!module->getCharge())
+					module->setCharge(chargeID);
 			}
 		}
-	}];*/
+		self.engine->commitUpdates();
+		if (ship->getFreeSlots(dgmpp::Module::SLOT_MODE) > 0) {
+			if (modeID > 0)
+				ship->addModule(modeID);
+		}
+	}
 }
 
 - (void) loadPOSFit:(NCPOSFit *)fit {
@@ -194,7 +194,7 @@
 	}];*/
 }
 
-/*- (NCLoadoutDataShip*) loadoutDataShipWithFit:(NCShipFit *)fit {
+- (NCLoadoutDataShip*) loadoutDataShipWithFit:(NCShipFit *)fit {
 	__block NCLoadoutDataShip* loadoutData;
 	if (fit.loadoutID) {
 		[self.storageManagedObjectContext performBlockAndWait:^{
@@ -219,7 +219,7 @@
 #pragma mark - Private
 
 
-- (NCLoadoutDataShip*) loadoutDataShipWithAsset:(EVEAssetListItem*) asset {
+/*- (NCLoadoutDataShip*) loadoutDataShipWithAsset:(EVEAssetListItem*) asset {
 	NCLoadoutDataShip* loadoutData = [NCLoadoutDataShip new];
 	[self.databaseManagedObjectContext performBlockAndWait:^{
 		
