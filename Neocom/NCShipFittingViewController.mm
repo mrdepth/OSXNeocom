@@ -33,10 +33,21 @@
 - (IBAction) didSelectItem:(NSArray*) selectedObjects {
 	NCDgmItemNode* node = [selectedObjects lastObject];
 	if (node.item) {
-		[self.fitController willChangeValueForKey:@"modules"];
+		[self.fitController objectDidBeginEditing:self];
 		self.fit.pilot->getShip()->addModule(node.item.type.typeID);
-		[self.fitController didChangeValueForKey:@"modules"];
+		[self.fitController objectDidEndEditing:self];
 	}
+}
+
+- (void) keyDown:(NSEvent *)theEvent {
+	unichar key = [[theEvent charactersIgnoringModifiers] characterAtIndex:0];
+	if (key == NSBackspaceCharacter || key == NSDeleteCharacter) {
+		id view = [self.view.window firstResponder];
+		if (view == self.modulesTableView) {
+			[self.modules remove:self];
+		}
+	}
+	[super keyDown:theEvent];
 }
 
 

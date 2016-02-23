@@ -164,6 +164,7 @@
 		1268CBE51C73053800319951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1268CBE31C73053800319951 /* Main.storyboard */; };
 		1268CBEE1C73143A00319951 /* NCAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBED1C73143A00319951 /* NCAccountsViewController.m */; };
 		1273DE461C7501240034BDE4 /* global.h in Sources */ = {isa = PBXBuildFile; fileRef = 1273DE451C7501240034BDE4 /* global.h */; };
+		12867FDD1C7C82E900A0D9C3 /* NCProgressTextField.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12867FDC1C7C82E900A0D9C3 /* NCProgressTextField.mm */; };
 		1289460E1C74B90C00839FBE /* NCCharacterSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289460D1C74B90C00839FBE /* NCCharacterSheetViewController.m */; };
 		128946121C74BC0100839FBE /* NCMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946111C74BC0100839FBE /* NCMainWindowController.m */; };
 		128946151C74BD9000839FBE /* NCDetailSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946141C74BD9000839FBE /* NCDetailSegue.m */; };
@@ -502,6 +503,8 @@
 		1268CBEC1C73143A00319951 /* NCAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAccountsViewController.h; sourceTree = "<group>"; };
 		1268CBED1C73143A00319951 /* NCAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAccountsViewController.m; sourceTree = "<group>"; };
 		1273DE451C7501240034BDE4 /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		12867FDB1C7C82E900A0D9C3 /* NCProgressTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCProgressTextField.h; sourceTree = "<group>"; };
+		12867FDC1C7C82E900A0D9C3 /* NCProgressTextField.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCProgressTextField.mm; sourceTree = "<group>"; };
 		1289460C1C74B90C00839FBE /* NCCharacterSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCharacterSheetViewController.h; sourceTree = "<group>"; };
 		1289460D1C74B90C00839FBE /* NCCharacterSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCharacterSheetViewController.m; sourceTree = "<group>"; };
 		128946101C74BC0100839FBE /* NCMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMainWindowController.h; sourceTree = "<group>"; };
@@ -1099,6 +1102,8 @@
 				1263330D1C7B745F0078F770 /* NCShipModulesController.mm */,
 				126333111C7B81090078F770 /* NCShipFitController.h */,
 				126333121C7B81090078F770 /* NCShipFitController.mm */,
+				12867FDB1C7C82E900A0D9C3 /* NCProgressTextField.h */,
+				12867FDC1C7C82E900A0D9C3 /* NCProgressTextField.mm */,
 			);
 			name = Fitting;
 			sourceTree = "<group>";
@@ -1222,6 +1227,7 @@
 				12440C5D1C73BFFE00F04393 /* NCDBDgmppItemDamage.m in Sources */,
 				12440C571C73BFFE00F04393 /* NCDBEveIcon.m in Sources */,
 				12D18DB81C7872A100926A2D /* NCPOSFit.mm in Sources */,
+				12867FDD1C7C82E900A0D9C3 /* NCProgressTextField.mm in Sources */,
 				12440C5A1C73BFFE00F04393 /* NCDBInvControlTowerResource+CoreDataProperties.m in Sources */,
 				1289461F1C75FD0500839FBE /* NCSkillData.m in Sources */,
 				12D18DA51C785CED00926A2D /* NSColor+Neocom.m in Sources */,

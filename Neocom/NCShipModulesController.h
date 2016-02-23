@@ -10,5 +10,5 @@
 
 
 
-@interface NCShipModulesController : NSArrayController
+@interface NCShipModulesController : NSArrayController<NSMenuDelegate>
 @end

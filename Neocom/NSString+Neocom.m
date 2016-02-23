@@ -37,12 +37,12 @@
 	used /= dimension;
 	total /= dimension;
 	NSString* dimensionSuffix = [self dimensionSuffix:dimension];
-	return [NSString stringWithFormat:@"%@%@/%@%@ %@",
-			[NSNumberFormatter neocomLocalizedStringFromNumber:@(used)],
+	return [NSString stringWithFormat:@"%@%@/%@%@%@",
+			dimension == 1 ? [NSNumberFormatter neocomLocalizedStringFromInteger:used] : [NSNumberFormatter neocomLocalizedStringFromNumber:@(used)],
 			dimensionSuffix,
-			[NSNumberFormatter neocomLocalizedStringFromNumber:@(total)],
+			dimension == 1 ? [NSNumberFormatter neocomLocalizedStringFromInteger:total] : [NSNumberFormatter neocomLocalizedStringFromNumber:@(total)],
 			dimensionSuffix,
-			unit ? unit : @""];
+			unit ? [@" " stringByAppendingString:unit] : @""];
 }
 
 + (NSString*) shortStringWithFloat:(float) value unit:(NSString*) unit {
