@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <Dgmpp/Dgmpp.h>
 
+@class NCDBDgmppItem;
 @interface NCShipModule: NSObject
 
 @property (readonly) NSImage* slotImage;
@@ -19,7 +20,7 @@
 @property (readonly) NSString* ammoName;
 @property (assign) dgmpp::Module::Slot slot;
 @property (assign) std::shared_ptr<dgmpp::Module> module;
-
+@property (strong) NCDBDgmppItem* item;
 @end
 
 @interface NCShipStatsResource: NSObject
@@ -112,5 +113,5 @@
 
 @interface NCShipFitController : NSObjectController
 @property (readonly) NSArray* modules;
-@property (readonly, strong) NCShipStats* stats;
+@property (strong) NCShipStats* stats;
 @end

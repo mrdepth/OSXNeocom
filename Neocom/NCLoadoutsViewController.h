@@ -13,5 +13,5 @@
 @property (weak) IBOutlet NSOutlineView *outlineView;
 
 - (IBAction)onRemove:(id)sender;
-
+- (IBAction)didSelectFit:(NSArray*) selectedObjects;
 @end

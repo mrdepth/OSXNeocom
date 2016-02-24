@@ -56,9 +56,7 @@
 
 - (NSImage*) typeImage {
 	if (self.module) {
-		NSManagedObjectContext* context = [[NCDatabase sharedDatabase] managedObjectContext];
-		NCDBInvType* type = [context invTypeWithTypeID:self.module->getTypeID()];
-		return type.icon.image.image ?: [context defaultTypeIcon].image.image;
+		return self.item.type.icon.image.image ?: [[[NCDatabase sharedDatabase] managedObjectContext] defaultTypeIcon].image.image;
 	}
 	else
 		return nil;
@@ -66,9 +64,7 @@
 
 - (NSString*) title {
 	if (self.module) {
-		NSManagedObjectContext* context = [[NCDatabase sharedDatabase] managedObjectContext];
-		NCDBInvType* type = [context invTypeWithTypeID:self.module->getTypeID()];
-		return type.typeName ?: NSLocalizedString(@"Unknown Type", nil);
+		return self.item.type.typeName ?: NSLocalizedString(@"Unknown Type", nil);
 	}
 	else {
 		switch (self.slot) {
@@ -92,10 +88,26 @@
 }
 
 - (NSImage*) ammoImage {
+	if (self.module) {
+		auto charge = self.module->getCharge();
+		if (charge) {
+			NSManagedObjectContext* context = [[NCDatabase sharedDatabase] managedObjectContext];
+			NCDBInvType* type = [context invTypeWithTypeID:charge->getTypeID()];
+			return type.icon.image.image ?: [context defaultTypeIcon].image.image;
+		}
+	}
 	return nil;
 }
 
 - (NSString*) ammoName {
+	if (self.module) {
+		auto charge = self.module->getCharge();
+		if (charge) {
+			NSManagedObjectContext* context = [[NCDatabase sharedDatabase] managedObjectContext];
+			NCDBInvType* type = [context invTypeWithTypeID:charge->getTypeID()];
+			return type.typeName ?: NSLocalizedString(@"Unknown Type", nil);
+		}
+	}
 	return nil;
 }
 
@@ -477,14 +489,32 @@
 @end
 
 @implementation NCShipFitController
-@synthesize stats = _stats;
+//@synthesize stats = _stats;
+
+/*+ (BOOL) automaticallyNotifiesObserversForKey:(NSString*) key {
+	if ([key isEqualToString:@"stats"])
+		return YES;
+	else
+		return [super automaticallyNotifiesObserversForKey:key];
+}*/
 
 - (void) setContent:(id)content {
 	[self willChangeValueForKey:@"modules"];
-	[self willChangeValueForKey:@"stats"];
 	[super setContent:content];
-	[self didChangeValueForKey:@"stats"];
 	[self didChangeValueForKey:@"modules"];
+	
+	NCShipFit* fit = self.content;
+	if (fit.pilot) {
+		NCShipStats* stats = [NCShipStats new];
+		stats.pilot = fit.pilot;
+		self.stats = stats;
+	}
+	else
+		self.stats = nil;
+
+}
+
+- (void) dealloc {
 }
 
 - (NSArray*) modules {
@@ -494,6 +524,7 @@
 		auto ship = fit.pilot->getShip();
 		if (ship) {
 			dgmpp::Module::Slot slots[] = {dgmpp::Module::SLOT_MODE, dgmpp::Module::SLOT_HI, dgmpp::Module::SLOT_MED, dgmpp::Module::SLOT_LOW, dgmpp::Module::SLOT_RIG, dgmpp::Module::SLOT_SUBSYSTEM};
+			NSManagedObjectContext* context = [[NCDatabase sharedDatabase] managedObjectContext];
 			for (auto slot: slots) {
 				dgmpp::ModulesList modules;
 				ship->getModules(slot, std::inserter(modules, modules.begin()));
@@ -503,6 +534,7 @@
 					NCShipModule* m = [NCShipModule new];
 					m.slot = slot;
 					m.module = module;
+					m.item = [context invTypeWithTypeID:module->getTypeID()].dgmppItem;
 					[array addObject:m];
 				}
 				for (; n > 0; n--) {
@@ -518,24 +550,19 @@
 
 - (void) objectDidBeginEditing:(id)editor {
 	[self willChangeValueForKey:@"modules"];
-	[self willChangeValueForKey:@"stats"];
 }
 
 - (void) objectDidEndEditing:(id)editor {
-	_stats = nil;
+	NCShipFit* fit = self.content;
+	if (fit.pilot) {
+		NCShipStats* stats = [NCShipStats new];
+		stats.pilot = fit.pilot;
+		self.stats = stats;
+	}
+	else
+		self.stats = nil;
 	[self didChangeValueForKey:@"modules"];
-	[self didChangeValueForKey:@"stats"];
 }
 
-- (NCShipStats*) stats {
-	if (!_stats) {
-		NCShipFit* fit = self.content;
-		if (fit.pilot) {
-			_stats = [NCShipStats new];
-			_stats.pilot = fit.pilot;
-		}
-	}
-	return _stats;
-}
 
 @end

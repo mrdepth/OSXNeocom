@@ -159,7 +159,6 @@
 		1268CBD71C73053800319951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBD61C73053800319951 /* AppDelegate.m */; };
 		1268CBDA1C73053800319951 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBD91C73053800319951 /* main.m */; };
 		1268CBDD1C73053800319951 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBDC1C73053800319951 /* ViewController.m */; };
-		1268CBE01C73053800319951 /* Neocom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBDE1C73053800319951 /* Neocom.xcdatamodeld */; };
 		1268CBE21C73053800319951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1268CBE11C73053800319951 /* Assets.xcassets */; };
 		1268CBE51C73053800319951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1268CBE31C73053800319951 /* Main.storyboard */; };
 		1268CBEE1C73143A00319951 /* NCAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1268CBED1C73143A00319951 /* NCAccountsViewController.m */; };
@@ -180,7 +179,7 @@
 		128946471C7762FF00839FBE /* NCNumberFormatterValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946461C7762FF00839FBE /* NCNumberFormatterValueTransformer.m */; };
 		1289464C1C77697500839FBE /* NCBuyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289464B1C77697500839FBE /* NCBuyOrdersViewController.m */; };
 		1289464F1C77699500839FBE /* NCSellOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289464E1C77699500839FBE /* NCSellOrdersViewController.m */; };
-		129A71751C7B00FC002298CD /* NCLoadoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A71741C7B00FC002298CD /* NCLoadoutsViewController.m */; };
+		129A71751C7B00FC002298CD /* NCLoadoutsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 129A71741C7B00FC002298CD /* NCLoadoutsViewController.mm */; };
 		129A71791C7B0641002298CD /* NCTypePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A71771C7B0641002298CD /* NCTypePickerViewController.m */; };
 		129A717F1C7B1CB8002298CD /* NSOutlineView+Neocom.m in Sources */ = {isa = PBXBuildFile; fileRef = 129A717E1C7B1CB8002298CD /* NSOutlineView+Neocom.m */; };
 		129A71811C7B37E0002298CD /* Fitting.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 129A71801C7B37E0002298CD /* Fitting.xcassets */; };
@@ -496,7 +495,6 @@
 		1268CBD91C73053800319951 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1268CBDB1C73053800319951 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1268CBDC1C73053800319951 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1268CBDF1C73053800319951 /* Neocom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Neocom.xcdatamodel; sourceTree = "<group>"; };
 		1268CBE11C73053800319951 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1268CBE41C73053800319951 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1268CBE61C73053800319951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -535,7 +533,7 @@
 		1289464D1C77699500839FBE /* NCSellOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSellOrdersViewController.h; sourceTree = "<group>"; };
 		1289464E1C77699500839FBE /* NCSellOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSellOrdersViewController.m; sourceTree = "<group>"; };
 		129A71731C7B00FC002298CD /* NCLoadoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLoadoutsViewController.h; sourceTree = "<group>"; };
-		129A71741C7B00FC002298CD /* NCLoadoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCLoadoutsViewController.m; sourceTree = "<group>"; };
+		129A71741C7B00FC002298CD /* NCLoadoutsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCLoadoutsViewController.mm; sourceTree = "<group>"; };
 		129A71761C7B0641002298CD /* NCTypePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTypePickerViewController.h; sourceTree = "<group>"; };
 		129A71771C7B0641002298CD /* NCTypePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTypePickerViewController.m; sourceTree = "<group>"; };
 		129A717D1C7B1CB8002298CD /* NSOutlineView+Neocom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOutlineView+Neocom.h"; sourceTree = "<group>"; };
@@ -927,10 +925,7 @@
 				128946261C7600BA00839FBE /* NCAccountsViewController */,
 				128946271C7600C100839FBE /* NCCharacterSheetViewController */,
 				128946291C7600E500839FBE /* NCSkillQueueViewController */,
-				12D18D9D1C762AD600926A2D /* NCMarketViewController */,
-				128946351C7728DA00839FBE /* NCMarketContainerViewController */,
-				128946391C7745D100839FBE /* NCRegionPickerViewController */,
-				1289463F1C7750D300839FBE /* NCMarketOrdersViewController */,
+				12867FFB1C7DE95800A0D9C3 /* Market */,
 				128946281C7600CE00839FBE /* Utils */,
 				12D18DA61C7861F700926A2D /* NCPlanetariesViewController */,
 				129A71721C7B00C3002298CD /* Fitting */,
@@ -944,7 +939,6 @@
 				129A71801C7B37E0002298CD /* Fitting.xcassets */,
 				1268CBE31C73053800319951 /* Main.storyboard */,
 				1268CBE61C73053800319951 /* Info.plist */,
-				1268CBDE1C73053800319951 /* Neocom.xcdatamodeld */,
 				12440B161C73BF1800F04393 /* NCDatabase.xcdatamodeld */,
 				12440B1B1C73BF3600F04393 /* NCStorage.xcdatamodeld */,
 				1268CBD81C73053800319951 /* Supporting Files */,
@@ -960,6 +954,17 @@
 				1268CBD91C73053800319951 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12867FFB1C7DE95800A0D9C3 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				12D18D9D1C762AD600926A2D /* NCMarketViewController */,
+				128946351C7728DA00839FBE /* NCMarketContainerViewController */,
+				128946391C7745D100839FBE /* NCRegionPickerViewController */,
+				1289463F1C7750D300839FBE /* NCMarketOrdersViewController */,
+			);
+			name = Market;
 			sourceTree = "<group>";
 		};
 		1289460F1C74BBED00839FBE /* NCMainWindowController */ = {
@@ -1091,7 +1096,7 @@
 			isa = PBXGroup;
 			children = (
 				129A71731C7B00FC002298CD /* NCLoadoutsViewController.h */,
-				129A71741C7B00FC002298CD /* NCLoadoutsViewController.m */,
+				129A71741C7B00FC002298CD /* NCLoadoutsViewController.mm */,
 				129A71761C7B0641002298CD /* NCTypePickerViewController.h */,
 				129A71771C7B0641002298CD /* NCTypePickerViewController.m */,
 				129A71821C7B5559002298CD /* NCDgmItemsTreeController.h */,
@@ -1209,7 +1214,6 @@
 				12440B1E1C73BF3600F04393 /* NCStorage.xcdatamodeld in Sources */,
 				12440B701C73BF6800F04393 /* NCDronesSet.m in Sources */,
 				12440C6A1C73BFFE00F04393 /* NCDBChrRace+CoreDataProperties.m in Sources */,
-				1268CBE01C73053800319951 /* Neocom.xcdatamodeld in Sources */,
 				12440B811C73BFC100F04393 /* NSManagedObjectContext+NCDatabase.m in Sources */,
 				12440C561C73BFFE00F04393 /* NCDBEveIcon+CoreDataProperties.m in Sources */,
 				12440C531C73BFFE00F04393 /* NCDBCertSkill.m in Sources */,
@@ -1358,7 +1362,7 @@
 				12440C741C73BFFE00F04393 /* NCDBDgmAttributeCategory+CoreDataProperties.m in Sources */,
 				1289462C1C7600FD00839FBE /* NCSkillQueueViewController.m in Sources */,
 				12440CB01C73C59700F04393 /* NCCacheRecord.m in Sources */,
-				129A71751C7B00FC002298CD /* NCLoadoutsViewController.m in Sources */,
+				129A71751C7B00FC002298CD /* NCLoadoutsViewController.mm in Sources */,
 				12440C791C73BFFE00F04393 /* NCDBIndRequiredSkill.m in Sources */,
 				128946471C7762FF00839FBE /* NCNumberFormatterValueTransformer.m in Sources */,
 				1289464F1C77699500839FBE /* NCSellOrdersViewController.m in Sources */,
@@ -1569,16 +1573,6 @@
 			);
 			currentVersion = 12440C981C73C57600F04393 /* NCCache.xcdatamodel */;
 			path = NCCache.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		1268CBDE1C73053800319951 /* Neocom.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1268CBDF1C73053800319951 /* Neocom.xcdatamodel */,
-			);
-			currentVersion = 1268CBDF1C73053800319951 /* Neocom.xcdatamodel */;
-			path = Neocom.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

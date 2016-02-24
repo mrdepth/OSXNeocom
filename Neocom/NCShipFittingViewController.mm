@@ -16,18 +16,34 @@
 
 @interface NCShipFittingViewController ()
 @property (strong) NCFittingEngine* engine;
+- (void) applicationWillTerminate:(NSNotification*) notification;
 @end
 
 @implementation NCShipFittingViewController
 
+- (void) dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	self.fit = nil;
+	self.fitController.content = nil;
+	self.dgmItems.content = nil;
+	self.engine = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.engine = [NCFittingEngine new];
-	self.fit = [[NCShipFit alloc] initWithType:[[[NCDatabase sharedDatabase] managedObjectContext] invTypeWithTypeID:645]];
 	[self.engine loadShipFit:self.fit];
 	
-	[self.fitController bind:NSContentBinding toObject:self withKeyPath:@"fit" options:nil];
-	[self.dgmItems bind:@"fit" toObject:self withKeyPath:@"fit" options:nil];
+	self.fitController.content = self.fit;
+	self.dgmItems.fit = self.fit;
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:NSApplicationWillTerminateNotification object:nil];
+	//[self.fitController bind:NSContentBinding toObject:self withKeyPath:@"fit" options:nil];
+	//[self.dgmItems bind:@"fit" toObject:self withKeyPath:@"fit" options:nil];
+}
+
+- (void) viewWillDisappear {
+	[super viewWillDisappear];
+	[self.fit save];
 }
 
 - (IBAction) didSelectItem:(NSArray*) selectedObjects {
@@ -50,5 +66,8 @@
 	[super keyDown:theEvent];
 }
 
+- (void) applicationWillTerminate:(NSNotification *)notification {
+	[self.fit save];
+}
 
 @end

@@ -13,6 +13,8 @@
 #import "NCLoadoutData.h"
 #import "NCTypePickerViewController.h"
 #import "NSOutlineView+Neocom.h"
+#import "NCShipFittingViewController.h"
+#import "NCShipFit.h"
 
 @interface NCLoadoutsNode : NSObject
 @property (readonly) NSString* title;
@@ -90,6 +92,22 @@
 		[self reload];
 	}
 }
+
+- (IBAction)didSelectFit:(NSArray*) selectedObjects {
+	if (selectedObjects.count > 0) {
+		NCLoadoutsNode* node = [selectedObjects lastObject];
+		if (node.loadout) {
+			NSSplitViewController* splitViewController = (NSSplitViewController*) self.parentViewController;
+			if (splitViewController.splitViewItems.count > 1)
+				[splitViewController removeSplitViewItem:[splitViewController.splitViewItems lastObject]];
+			NCShipFittingViewController* controller = [self.storyboard instantiateControllerWithIdentifier:@"NCShipFittingViewController"];
+			controller.fit = [[NCShipFit alloc] initWithLoadout:node.loadout];
+			NSSplitViewItem* item = [NSSplitViewItem splitViewItemWithViewController:controller];
+			[splitViewController addSplitViewItem:item];
+		}
+	}
+}
+
 
 #pragma mark - NCTypePickerViewControllerDelegate
 

@@ -182,7 +182,7 @@
 #pragma mark - Private
 
 + (NSString*) cacheDirectory {
-	return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"com.shimanski.eveuniverse.NCCache"];
+	return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"com.shimanski.neocom/NCCache"];
 }
 
 @end

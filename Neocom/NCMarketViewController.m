@@ -11,6 +11,7 @@
 #import "NCMarketOrdersViewController.h"
 #import "NSOutlineView+Neocom.h"
 
+
 @interface NCMarketNode : NSObject
 @property (readonly) NSString* title;
 @property (readonly) NSSet* items;
@@ -173,6 +174,10 @@
 
 - (void) dealloc {
 	[self.marketTree removeObserver:self forKeyPath:@"selection"];
+}
+
+- (void) viewWillDisappear {
+	[super viewWillDisappear];
 }
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
