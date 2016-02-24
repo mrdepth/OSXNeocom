@@ -9,6 +9,7 @@
 #import "NCDgmItemsTreeController.h"
 #import "NCDatabase.h"
 #import "NCShipFit.h"
+#import "NSOutlineView+Neocom.h"
 
 @implementation NCDgmItemNode
 @synthesize items = _items;
@@ -36,22 +37,21 @@
 }
 
 
-- (NSSet*) items {
+- (NSArray*) items {
 	if (!_items) {
+		NSMutableArray* items;
 		if (self.group.subGroups.count > 0) {
-			NSMutableSet* items = [NSMutableSet new];
+			items = [NSMutableArray new];
 			for (NCDBDgmppItemGroup* subGroup in self.group.subGroups)
 				[items addObject:[[NCDgmItemNode alloc] initWithGroup:subGroup]];
-			_items = items;
 		}
 		else if (self.group.items.count > 0) {
-			NSMutableSet* items = [NSMutableSet new];
+			items = [NSMutableArray new];
 			for (NCDBDgmppItem* item in self.group.items)
 				[items addObject:[[NCDgmItemNode alloc] initWithItem:item]];
-			_items = items;
 		}
 		else if (self.node && self.predicate) {
-			NSMutableSet* items = [NSMutableSet new];
+			items = [NSMutableArray new];
 			for (NCDgmItemNode* node in self.node.items) {
 				if (node.item && [self.predicate evaluateWithObject:node])
 					[items addObject:node];
@@ -61,8 +61,9 @@
 						[items addObject:filteredNode];
 				}
 			}
-			_items = items;
 		}
+		[items sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]]];
+		_items = items;
 	}
 	return _items;
 }
@@ -96,7 +97,7 @@
 @end
 
 @interface NCDgmItemRootNode : NCDgmItemNode {
-	NSSet* _rootItems;
+	NSMutableArray* _rootItems;
 }
 @property (strong) NCShipFit* fit;
 
@@ -113,9 +114,9 @@
 	return self;
 }
 
-- (NSSet*) items {
+- (NSMutableArray*) items {
 	if (!_rootItems) {
-		NSMutableSet* items = [NSMutableSet new];
+		NSMutableArray* items = [NSMutableArray new];
 		NSManagedObjectContext* context = [[NCDatabase sharedDatabase] managedObjectContext];
 		
 		NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"DgmppItemGroup"];
@@ -131,16 +132,11 @@
 			[categories addObject:[context categoryWithSlot:NCDBDgmppItemSlotSubsystem size:0 race:type.race]];
 		
 		request.predicate = [NSPredicate predicateWithFormat:@"category IN %@ AND parentGroup == NULL", categories];
-		NSSet* results = [NSSet setWithArray:[context executeFetchRequest:request error:nil]];
-		while (results.count == 1) {
-			NCDBDgmppItemGroup* group = [results anyObject];
-			if (group.subGroups.count > 0)
-				results = group.subGroups;
-		}
+		request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"category.category" ascending:YES]];
+		NSArray* results = [context executeFetchRequest:request error:nil];
 		
 		for (NCDBDgmppItemGroup* group in results)
 			[items addObject:[[NCDgmItemNode alloc] initWithGroup:group]];
-
 		_rootItems = items;
 	}
 	return _rootItems;
@@ -165,13 +161,24 @@
 @implementation NCDgmItemsTreeController
 
 - (void) awakeFromNib {
-	self.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]];
+	//self.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]];
 }
 
 - (void) setFit:(NCShipFit *)fit {
 	_fit = fit;
 	self.dgmItemRootNode = [[NCDgmItemRootNode alloc] initWithFit:fit];
 	self.content = self.dgmItemRootNode.items;
+}
+
+- (void) setFetchPredicate:(NSPredicate *)fetchPredicate {
+	[super setFetchPredicate:fetchPredicate];
+	if (fetchPredicate) {
+		NCDgmItemNode* node = [[NCDgmItemNode alloc] initWithNode:self.dgmItemRootNode predicate:fetchPredicate];
+		self.content = node.items;
+		[self.outlineView expandAll];
+	}
+	else
+		self.content = self.dgmItemRootNode.items;
 }
 
 @end

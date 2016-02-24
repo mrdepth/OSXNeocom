@@ -31,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.title = self.fit.loadoutName;
 	self.engine = [NCFittingEngine new];
 	[self.engine loadShipFit:self.fit];
 	

@@ -70,6 +70,12 @@
 		controller.category = [[[NCDatabase sharedDatabase] managedObjectContext] categoryWithSlot:NCDBDgmppItemSlotShip size:0 race:nil];
 		controller.delegate = self;
 	}
+	else if ([segue.identifier isEqualToString:@"NCShipFittingViewController"]) {
+		NCLoadoutsNode* node = [self.loadouts.selectedObjects lastObject];
+
+		NCShipFittingViewController* controller = segue.destinationController;
+		controller.fit = [[NCShipFit alloc] initWithLoadout:node.loadout];
+	}
 }
 
 - (IBAction)onRemove:(id)sender {
@@ -97,13 +103,14 @@
 	if (selectedObjects.count > 0) {
 		NCLoadoutsNode* node = [selectedObjects lastObject];
 		if (node.loadout) {
-			NSSplitViewController* splitViewController = (NSSplitViewController*) self.parentViewController;
+			[self performSegueWithIdentifier:@"NCShipFittingViewController" sender:node.loadout];
+//			NCShipFittingViewController* controller = [self.storyboard instantiateControllerWithIdentifier:@"NCShipFittingViewController"];
+//			controller.fit = [[NCShipFit alloc] initWithLoadout:node.loadout];
+			/*NSSplitViewController* splitViewController = (NSSplitViewController*) self.parentViewController;
 			if (splitViewController.splitViewItems.count > 1)
 				[splitViewController removeSplitViewItem:[splitViewController.splitViewItems lastObject]];
-			NCShipFittingViewController* controller = [self.storyboard instantiateControllerWithIdentifier:@"NCShipFittingViewController"];
-			controller.fit = [[NCShipFit alloc] initWithLoadout:node.loadout];
 			NSSplitViewItem* item = [NSSplitViewItem splitViewItemWithViewController:controller];
-			[splitViewController addSplitViewItem:item];
+			[splitViewController addSplitViewItem:item];*/
 		}
 	}
 }

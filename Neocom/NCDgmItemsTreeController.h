@@ -12,7 +12,7 @@
 @class NCDBDgmppItem;
 @interface NCDgmItemNode : NSObject
 @property (readonly) NSString* title;
-@property (readonly) NSSet* items;
+@property (readonly) NSArray* items;
 @property (readonly) NSImage* image;
 @property (readonly, getter=isLeaf) BOOL leaf;
 @property (strong) NCDBDgmppItemGroup* group;
@@ -30,4 +30,5 @@
 @class NCShipFit;
 @interface NCDgmItemsTreeController : NSTreeController
 @property (nonatomic, strong) NCShipFit* fit;
+@property (weak) IBOutlet NSOutlineView *outlineView;
 @end
