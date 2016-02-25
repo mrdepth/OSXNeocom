@@ -103,6 +103,15 @@
 	if (selectedObjects.count > 0) {
 		NCLoadoutsNode* node = [selectedObjects lastObject];
 		if (node.loadout) {
+			for (NSWindow* window in [NSApp windows]) {
+				if ([window.windowController.contentViewController isKindOfClass:[NCShipFittingViewController class]]) {
+					NCShipFittingViewController* shipFittingViewController = (NCShipFittingViewController*) window.windowController.contentViewController;
+					if ([shipFittingViewController.fit.loadoutID isEqualTo:node.loadout.objectID]) {
+						[window makeKeyAndOrderFront:self];
+						return;
+					}
+				}
+			}
 			[self performSegueWithIdentifier:@"NCShipFittingViewController" sender:node.loadout];
 //			NCShipFittingViewController* controller = [self.storyboard instantiateControllerWithIdentifier:@"NCShipFittingViewController"];
 //			controller.fit = [[NCShipFit alloc] initWithLoadout:node.loadout];

@@ -22,11 +22,6 @@
 
 @implementation NCShipModulesController
 
-- (BOOL) canRemove {
-	BOOL b = [super canRemove];
-	return b;
-}
-
 - (void) remove:(id)sender {
 	if ([[self selectedObjects] count] > 0) {
 		NSObjectController* controller = self.contentController;
@@ -86,7 +81,7 @@
 	if (!hasModules)
 		return;
 	
-	[menu addItemWithTitle:NSLocalizedString(@"Delete", nil) action:@selector(remove:) keyEquivalent:@""].target = self;
+	[menu addItemWithTitle:NSLocalizedString(@"Remove", nil) action:@selector(remove:) keyEquivalent:@""].target = self;
 	
 	//[menuItems addObject:@{@"title":NSLocalizedString(@"Delete", nil), @"action":[NSValue valueWithPointer:(void*) @selector(remove:)]}];
 	

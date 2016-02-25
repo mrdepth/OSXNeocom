@@ -12,11 +12,14 @@
 @class NCDgmItemsTreeController;
 @class NCShipModulesController;
 @class NCShipFitController;
+@class NCShipDronesController;
 @interface NCShipFittingViewController : NSViewController
 @property (strong) IBOutlet NCDgmItemsTreeController *dgmItems;
 @property (strong) IBOutlet NCShipModulesController *modules;
+@property (strong) IBOutlet NCShipDronesController *drones;
 @property (weak) IBOutlet NSTableView *modulesTableView;
-@property (strong) IBOutlet NSMenu *modulesMenu;
+@property (weak) IBOutlet NSTableView *dronesTableView;
+@property (strong) IBOutlet NSArrayController *characters;
 
 @property (strong) NCShipFit* fit;
 @property (strong) IBOutlet NCShipFitController *fitController;

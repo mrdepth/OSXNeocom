@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NCAPIKey, NCMailBox, NCSkillPlan;
+@class NCAPIKey, NCMailBox, NCSkillPlan, NCFitCharacter;
 @class EVECharacterInfo, EVECharacterSheet, EVESkillQueue, EVEAccountBalance, EVEAccountStatus;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -33,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSString* skillsInfo;
 @property (readonly) NSString* accountBalanceInfo;
 @property (readonly) NSAttributedString* paidUntil;
+
+@property (readonly) NCFitCharacter* fitCharacter;
 
 
 + (instancetype) currentAccount;

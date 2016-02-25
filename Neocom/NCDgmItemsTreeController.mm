@@ -124,9 +124,11 @@
 		
 		NCDBInvType* type = [context invTypeWithTypeID:self.fit.typeID];
 		NSMutableArray* categories = [@[[context categoryWithSlot:NCDBDgmppItemSlotHi size:0 race:nil],
-								[context categoryWithSlot:NCDBDgmppItemSlotMed size:0 race:nil],
-								[context categoryWithSlot:NCDBDgmppItemSlotLow size:0 race:nil],
-								[context categoryWithSlot:NCDBDgmppItemSlotRig size:self.fit.pilot->getShip()->getRigSize() race:nil],
+										[context categoryWithSlot:NCDBDgmppItemSlotMed size:0 race:nil],
+										[context categoryWithSlot:NCDBDgmppItemSlotLow size:0 race:nil],
+										[context categoryWithSlot:NCDBDgmppItemSlotRig size:self.fit.pilot->getShip()->getRigSize() race:nil],
+										[context categoryWithSlot:NCDBDgmppItemSlotDrone size:0 race:nil],
+										
 										] mutableCopy];
 		if (self.fit.pilot->getShip()->getNumberOfSlots(dgmpp::Module::SLOT_SUBSYSTEM) > 0)
 			[categories addObject:[context categoryWithSlot:NCDBDgmppItemSlotSubsystem size:0 race:type.race]];

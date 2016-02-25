@@ -13,6 +13,7 @@
 #import <EVEAPI/EVEAPI.h>
 #import "NCLoadout.h"
 #import "NCLoadoutData.h"
+#import "NCStorage.h"
 //#import "NCKillMail.h"
 
 @interface NCShipFit()
@@ -197,11 +198,9 @@
 - (NCLoadoutDataShip*) loadoutDataShipWithFit:(NCShipFit *)fit {
 	__block NCLoadoutDataShip* loadoutData;
 	if (fit.loadoutID) {
-		[self.storageManagedObjectContext performBlockAndWait:^{
-			NCLoadout* loadout = [self.storageManagedObjectContext existingObjectWithID:fit.loadoutID error:nil];
-			if ([loadout.data.data isKindOfClass:[NCLoadoutDataShip class]])
-				loadoutData = (NCLoadoutDataShip*) loadout.data.data;
-		}];
+		NCLoadout* loadout = [[[NCStorage sharedStorage] managedObjectContext] existingObjectWithID:fit.loadoutID error:nil];
+		if ([loadout.data.data isKindOfClass:[NCLoadoutDataShip class]])
+			loadoutData = (NCLoadoutDataShip*) loadout.data.data;
 	}
 	else if (fit.apiLadout)
 		loadoutData = [self loadoutDataShipWithAPILoadout:fit.apiLadout];

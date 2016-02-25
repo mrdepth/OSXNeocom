@@ -23,6 +23,18 @@
 @property (strong) NCDBDgmppItem* item;
 @end
 
+@interface NCShipDrone: NSObject {
+	std::list<std::shared_ptr<dgmpp::Drone>> _drones;
+}
+
+@property (readonly) NSImage* typeImage;
+@property (readonly) NSString* title;
+@property (readonly) std::list<std::shared_ptr<dgmpp::Drone>>& drones;
+@property (strong) NCDBDgmppItem* item;
+@property (readonly) NSInteger count;
+@end
+
+
 @interface NCShipStatsResource: NSObject
 @property (assign) float total;
 @property (assign) float used;
@@ -113,5 +125,6 @@
 
 @interface NCShipFitController : NSObjectController
 @property (readonly) NSArray* modules;
+@property (readonly) NSArray* drones;
 @property (strong) NCShipStats* stats;
 @end

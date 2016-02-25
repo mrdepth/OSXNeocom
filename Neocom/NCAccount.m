@@ -14,6 +14,7 @@
 #import <EVEAPI/EVEAPI.h>
 #import "NSString+Neocom.h"
 #import "NSNumberFormatter+Neocom.h"
+#import "NCFitCharacter.h"
 
 static NCAccount* currentAccount;
 
@@ -550,6 +551,23 @@ static NCAccount* currentAccount;
 			color = [NSColor blackColor];
 		return [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:NSLocalizedString(@"%@ (%d days remaining)", nil), [[NSDateFormatter eveDateFormatter] stringFromDate:self.accountStatus.paidUntil], (int32_t) days]
 											   attributes:@{NSForegroundColorAttributeName:color}];
+	}
+	else
+		return nil;
+}
+
+- (NCFitCharacter*) fitCharacter {
+	EVECharacterSheet* characterSheet = self.characterSheet;
+	if (characterSheet) {
+		NCFitCharacter* character = [[NCFitCharacter alloc] initWithEntity:[NSEntityDescription entityForName:@"FitCharacter" inManagedObjectContext:self.managedObjectContext] insertIntoManagedObjectContext:nil];
+		
+		character.name = characterSheet.name;
+		
+		NSMutableDictionary* skills = [NSMutableDictionary new];
+		for (EVECharacterSheetSkill* skill in characterSheet.skills)
+			skills[@(skill.typeID)] = @(skill.level);
+		character.skills = skills;
+		return character;
 	}
 	else
 		return nil;

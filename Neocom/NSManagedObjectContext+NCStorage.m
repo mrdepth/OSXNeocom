@@ -13,6 +13,7 @@
 #import "NCDatabase.h"
 #import "NCSetting.h"
 #import "NCShoppingList.h"
+#import <EVEAPI/EVEAPI.h>
 
 @implementation NSManagedObjectContext (NCStorage)
 
@@ -79,31 +80,6 @@
 	return [self executeFetchRequest:fetchRequest error:nil];
 }
 
-/*- (NCFitCharacter*) characterWithAccount:(NCAccount*) account {
-	if (!account)
-		return nil;
-	
-	if (account.accountType == NCAccountTypeCorporate)
-		return nil;
-	
-	NCFitCharacter* character = [[NCFitCharacter alloc] initWithEntity:[NSEntityDescription entityForName:@"FitCharacter" inManagedObjectContext:self] insertIntoManagedObjectContext:nil];
-	
-	character.name = localAccount.characterSheet.name;
-
-	NSMutableDictionary* skills = [NSMutableDictionary new];
-	for (EVECharacterSheetSkill* skill in localAccount.characterSheet.skills)
-		skills[@(skill.typeID)] = @(skill.level);
-	character.skills = skills;
-	
-	NSMutableArray* implants = [NSMutableArray new];
-	
-	for (EVECharacterSheetImplant* implant in account.characterSheet.implants)
-		[implants addObject:@(implant.typeID)];
-	character.implants = implants;
-	
-	return character;
-}*/
-
 - (NCFitCharacter*) fitCharacterWithSkillsLevel:(NSInteger) skillsLevel {
 	NCFitCharacter* character = [[NCFitCharacter alloc] initWithEntity:[NSEntityDescription entityForName:@"FitCharacter" inManagedObjectContext:self] insertIntoManagedObjectContext:nil];
 	character.name = [NSString stringWithFormat:NSLocalizedString(@"All Skills %d", nil), (int32_t) skillsLevel];
@@ -111,16 +87,14 @@
 	NSManagedObjectContext* databaseManagedObjectContext = [[NCDatabase sharedDatabase] managedObjectContext];
 	NSMutableDictionary* skills = [NSMutableDictionary new];
 
-	[databaseManagedObjectContext performBlockAndWait:^{
-		NSEntityDescription* entity = [NSEntityDescription entityForName:@"InvType" inManagedObjectContext:databaseManagedObjectContext];
-		NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"InvType"];
-		request.predicate = [NSPredicate predicateWithFormat:@"published == TRUE AND group.category.categoryID == 16"];
-		request.resultType = NSDictionaryResultType;
-		request.propertiesToFetch = @[entity.propertiesByName[@"typeID"]];
-		for (NSDictionary* object in [databaseManagedObjectContext executeFetchRequest:request error:nil]) {
-			skills[object[@"typeID"]] = @(skillsLevel);
-		}
-	}];
+	NSEntityDescription* entity = [NSEntityDescription entityForName:@"InvType" inManagedObjectContext:databaseManagedObjectContext];
+	NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"InvType"];
+	request.predicate = [NSPredicate predicateWithFormat:@"published == TRUE AND group.category.categoryID == 16"];
+	request.resultType = NSDictionaryResultType;
+	request.propertiesToFetch = @[entity.propertiesByName[@"typeID"]];
+	for (NSDictionary* object in [databaseManagedObjectContext executeFetchRequest:request error:nil]) {
+		skills[object[@"typeID"]] = @(skillsLevel);
+	}
 	character.skills = skills;
 	
 	return character;

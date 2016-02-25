@@ -283,103 +283,101 @@
 
 - (void) flush {
 	if (self.engine) {
-		[self.engine performBlockAndWait:^{
-			if (!self.pilot)
-				return;
+		if (!self.pilot)
+			return;
+		
+		auto ship = self.pilot->getShip();
+		if (!ship)
+			return;
+		
+		self.loadoutData = [NCLoadoutDataShip new];
+		
+		NSMutableArray* hiSlots = [NSMutableArray new];
+		NSMutableArray* medSlots = [NSMutableArray new];
+		NSMutableArray* lowSlots = [NSMutableArray new];
+		NSMutableArray* rigSlots = [NSMutableArray new];
+		NSMutableArray* subsystems = [NSMutableArray new];
+		NSMutableArray* drones = [NSMutableArray new];
+		NSMutableDictionary* dronesDic = [NSMutableDictionary new];
+		NSMutableArray* cargo = [NSMutableArray new];
+		NSMutableArray* implants = [NSMutableArray new];
+		NSMutableArray* boosters = [NSMutableArray new];
+		dgmpp::TypeID modeID = 0;
+		
+		for(auto i : ship->getModules()) {
+			auto charge = i->getCharge();
+			NCLoadoutDataShipModule* module = [NCLoadoutDataShipModule new];
+			module.typeID = i->getTypeID();
+			module.chargeID = charge ? charge->getTypeID() : 0;
+			module.state = i->getPreferredState();
 			
-			auto ship = self.pilot->getShip();
-			if (!ship)
-				return;
-			
-			self.loadoutData = [NCLoadoutDataShip new];
-			
-			NSMutableArray* hiSlots = [NSMutableArray new];
-			NSMutableArray* medSlots = [NSMutableArray new];
-			NSMutableArray* lowSlots = [NSMutableArray new];
-			NSMutableArray* rigSlots = [NSMutableArray new];
-			NSMutableArray* subsystems = [NSMutableArray new];
-			NSMutableArray* drones = [NSMutableArray new];
-			NSMutableDictionary* dronesDic = [NSMutableDictionary new];
-			NSMutableArray* cargo = [NSMutableArray new];
-			NSMutableArray* implants = [NSMutableArray new];
-			NSMutableArray* boosters = [NSMutableArray new];
-			dgmpp::TypeID modeID = 0;
-			
-			for(auto i : ship->getModules()) {
-				auto charge = i->getCharge();
-				NCLoadoutDataShipModule* module = [NCLoadoutDataShipModule new];
-				module.typeID = i->getTypeID();
-				module.chargeID = charge ? charge->getTypeID() : 0;
-				module.state = i->getPreferredState();
-				
-				switch(i->getSlot()) {
-					case dgmpp::Module::SLOT_HI:
-						[hiSlots addObject:module];
-						break;
-					case dgmpp::Module::SLOT_MED:
-						[medSlots addObject:module];
-						break;
-					case dgmpp::Module::SLOT_LOW:
-						[lowSlots addObject:module];
-						break;
-					case dgmpp::Module::SLOT_RIG:
-						[rigSlots addObject:module];
-						break;
-					case dgmpp::Module::SLOT_SUBSYSTEM:
-						[subsystems addObject:module];
-						break;
-					case dgmpp::Module::SLOT_MODE:
-						modeID = module.typeID;
-						break;
-					default:
-						break;
-				}
+			switch(i->getSlot()) {
+				case dgmpp::Module::SLOT_HI:
+					[hiSlots addObject:module];
+					break;
+				case dgmpp::Module::SLOT_MED:
+					[medSlots addObject:module];
+					break;
+				case dgmpp::Module::SLOT_LOW:
+					[lowSlots addObject:module];
+					break;
+				case dgmpp::Module::SLOT_RIG:
+					[rigSlots addObject:module];
+					break;
+				case dgmpp::Module::SLOT_SUBSYSTEM:
+					[subsystems addObject:module];
+					break;
+				case dgmpp::Module::SLOT_MODE:
+					modeID = module.typeID;
+					break;
+				default:
+					break;
+			}
+		}
+		
+		for (const auto& i : ship->getDrones()) {
+			NSString* key = [NSString stringWithFormat:@"%d:%d", i->getTypeID(), i->isActive()];
+			NSDictionary* record = dronesDic[key];
+			if (!record) {
+				NCLoadoutDataShipDrone* drone = [NCLoadoutDataShipDrone new];
+				drone.typeID = i->getTypeID();
+				drone.active = i->isActive();
+				drone.count = 1;
+				record = @{@"drone": drone, @"order": @(dronesDic.count)};
+				dronesDic[key]= record;
+			}
+			else {
+				NCLoadoutDataShipDrone* drone = record[@"drone"];
+				drone.count++;
 			}
 			
-			for (const auto& i : ship->getDrones()) {
-				NSString* key = [NSString stringWithFormat:@"%d:%d", i->getTypeID(), i->isActive()];
-				NSDictionary* record = dronesDic[key];
-				if (!record) {
-					NCLoadoutDataShipDrone* drone = [NCLoadoutDataShipDrone new];
-					drone.typeID = i->getTypeID();
-					drone.active = i->isActive();
-					drone.count = 1;
-					record = @{@"drone": drone, @"order": @(dronesDic.count)};
-					dronesDic[key]= record;
-				}
-				else {
-					NCLoadoutDataShipDrone* drone = record[@"drone"];
-					drone.count++;
-				}
-				
-			}
-			
-			for (NSDictionary* record in [[dronesDic allValues] sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES]]])
-				[drones addObject:record[@"drone"]];
-			
-			for (const auto& i : self.pilot->getImplants()) {
-				NCLoadoutDataShipImplant* implant = [NCLoadoutDataShipImplant new];
-				implant.typeID = i->getTypeID();
-				[implants addObject:implant];
-			}
-			
-			for (const auto& i : self.pilot->getBoosters()) {
-				NCLoadoutDataShipBooster* booster = [NCLoadoutDataShipBooster new];
-				booster.typeID = i->getTypeID();
-				[boosters addObject:booster];
-			}
-			
-			self.loadoutData.hiSlots = hiSlots;
-			self.loadoutData.medSlots = medSlots;
-			self.loadoutData.lowSlots = lowSlots;
-			self.loadoutData.rigSlots = rigSlots;
-			self.loadoutData.subsystems = subsystems;
-			self.loadoutData.drones = drones;
-			self.loadoutData.cargo = cargo;
-			self.loadoutData.implants = implants;
-			self.loadoutData.boosters = boosters;
-			self.loadoutData.mode = modeID;
-		}];
+		}
+		
+		for (NSDictionary* record in [[dronesDic allValues] sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES]]])
+			[drones addObject:record[@"drone"]];
+		
+		for (const auto& i : self.pilot->getImplants()) {
+			NCLoadoutDataShipImplant* implant = [NCLoadoutDataShipImplant new];
+			implant.typeID = i->getTypeID();
+			[implants addObject:implant];
+		}
+		
+		for (const auto& i : self.pilot->getBoosters()) {
+			NCLoadoutDataShipBooster* booster = [NCLoadoutDataShipBooster new];
+			booster.typeID = i->getTypeID();
+			[boosters addObject:booster];
+		}
+		
+		self.loadoutData.hiSlots = hiSlots;
+		self.loadoutData.medSlots = medSlots;
+		self.loadoutData.lowSlots = lowSlots;
+		self.loadoutData.rigSlots = rigSlots;
+		self.loadoutData.subsystems = subsystems;
+		self.loadoutData.drones = drones;
+		self.loadoutData.cargo = cargo;
+		self.loadoutData.implants = implants;
+		self.loadoutData.boosters = boosters;
+		self.loadoutData.mode = modeID;
 	}
 	else {
 		NCFittingEngine* engine = [NCFittingEngine new];
@@ -422,40 +420,12 @@
 	[self save];
 }
 
-- (void) setCharacter:(NCFitCharacter*) character withCompletionBlock:(void(^)()) completionBlock {
-/*	BOOL loadCharacterImplants = [[NSUserDefaults standardUserDefaults] boolForKey:NCSettingsLoadCharacterImplantsKey];
+- (void) setCharacter:(NCFitCharacter*) character {
 	NSAssert(self.pilot, @"Pilot is nil");
 	_character = character;
 	
-	__block NSDictionary* skills;
-	__block NSArray* implants;
-	__block NSString* characterName;
-	
-	void (^load)() = ^{
-		[self.engine performBlock:^{
-			[self setSkillLevels:skills];
-			if (loadCharacterImplants) {
-				for (NSNumber* implantID in implants)
-					self.pilot->addImplant([implantID intValue]);
-			}
-			self.pilot->setCharacterName([characterName cStringUsingEncoding:NSUTF8StringEncoding]);
-			if (completionBlock)
-				dispatch_async(dispatch_get_main_queue(), completionBlock);
-		}];
-	};
-	if (character.managedObjectContext)
-		[character.managedObjectContext performBlockAndWait:^{
-			skills = character.skills;
-			implants = character.implants;
-			characterName = character.name;
-			load();
-		}];
-	else {
-		skills = character.skills;
-		implants = character.implants;
-		characterName = character.name;
-		load();
-	}*/
+	[self setSkillLevels:character.skills];
+	self.pilot->setCharacterName([character.name cStringUsingEncoding:NSUTF8StringEncoding]);
 }
 
 

@@ -113,6 +113,33 @@
 
 @end
 
+@implementation NCShipDrone
+@synthesize drones = _drones;
+
+- (NSImage*) typeImage {
+	if (self.item) {
+		return self.item.type.icon.image.image ?: [[[NCDatabase sharedDatabase] managedObjectContext] defaultTypeIcon].image.image;
+	}
+	else
+		return nil;
+}
+
+- (NSString*) title {
+	if (self.item) {
+		return self.item.type.typeName ?: NSLocalizedString(@"Unknown Type", nil);
+	}
+	else {
+		return NSLocalizedString(@"Drone", nil);
+	}
+}
+
+- (NSInteger) count {
+	return self.drones.size();
+}
+
+
+@end
+
 @implementation NCShipStatsResource;
 
 - (id) initWithTotal:(float) total used:(float) used unit:(NSString*) unit {
@@ -548,8 +575,32 @@
 	return array;
 }
 
+- (NSArray*) drones {
+	NCShipFit* fit = self.content;
+	NSMutableDictionary* dic = [NSMutableDictionary new];
+	if (fit.pilot) {
+		auto ship = fit.pilot->getShip();
+		if (ship) {
+			NSManagedObjectContext* context = [[NCDatabase sharedDatabase] managedObjectContext];
+			
+			for (const auto& drone: ship->getDrones()) {
+				int32_t typeID = drone->getTypeID();
+				NCShipDrone* obj = dic[@(typeID)];
+				if (!obj) {
+					obj = [NCShipDrone new];
+					obj.item = [context invTypeWithTypeID:typeID].dgmppItem;
+					dic[@(typeID)] = obj;
+				}
+				obj.drones.push_back(drone);
+			}
+		}
+	}
+	return [[dic allValues] sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]]];
+}
+
 - (void) objectDidBeginEditing:(id)editor {
 	[self willChangeValueForKey:@"modules"];
+	[self willChangeValueForKey:@"drones"];
 }
 
 - (void) objectDidEndEditing:(id)editor {
@@ -561,6 +612,7 @@
 	}
 	else
 		self.stats = nil;
+	[self didChangeValueForKey:@"drones"];
 	[self didChangeValueForKey:@"modules"];
 }
 
