@@ -8,10 +8,26 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class NCLoadout, NCDBInvGroup, NCDBInvType, CRFittingItem;
+@interface NCLoadoutsNode : NSObject
+@property (readonly) NSString* title;
+@property (readonly) NSImage* image;
+@property (strong) NSArray* children;
+@property (strong) NCDBInvGroup* group;
+@property (strong) NCDBInvType* type;
+@property (strong) NCLoadout* loadout;
+@property (strong) CRFittingItem* crestLoadout;
+@end
+
+
 @interface NCLoadoutsViewController : NSViewController
 @property (strong) IBOutlet NSTreeController *loadouts;
 @property (weak) IBOutlet NSOutlineView *outlineView;
+@property (strong) IBOutlet NSMenu *shareMenu;
 
 - (IBAction)onRemove:(id)sender;
 - (IBAction)didSelectFit:(NSArray*) selectedObjects;
+- (IBAction)onShareButton:(id)sender;
+- (IBAction)onImport:(id)sender;
+- (IBAction)onExport:(id)sender;
 @end

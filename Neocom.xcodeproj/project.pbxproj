@@ -165,6 +165,8 @@
 		1273DE461C7501240034BDE4 /* global.h in Sources */ = {isa = PBXBuildFile; fileRef = 1273DE451C7501240034BDE4 /* global.h */; };
 		12867FDD1C7C82E900A0D9C3 /* NCProgressTextField.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12867FDC1C7C82E900A0D9C3 /* NCProgressTextField.mm */; };
 		1286819F1C7F4F0B00A0D9C3 /* NCShipDronesController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1286819E1C7F4F0B00A0D9C3 /* NCShipDronesController.mm */; };
+		128681DA1C804EAB00A0D9C3 /* NCCRESTAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128681D91C804EAB00A0D9C3 /* NCCRESTAccountsViewController.m */; };
+		128681E31C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128681E11C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m */; };
 		1289460E1C74B90C00839FBE /* NCCharacterSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289460D1C74B90C00839FBE /* NCCharacterSheetViewController.m */; };
 		128946121C74BC0100839FBE /* NCMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946111C74BC0100839FBE /* NCMainWindowController.m */; };
 		128946151C74BD9000839FBE /* NCDetailSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946141C74BD9000839FBE /* NCDetailSegue.m */; };
@@ -506,6 +508,10 @@
 		12867FDC1C7C82E900A0D9C3 /* NCProgressTextField.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCProgressTextField.mm; sourceTree = "<group>"; };
 		1286819D1C7F4F0B00A0D9C3 /* NCShipDronesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCShipDronesController.h; sourceTree = "<group>"; };
 		1286819E1C7F4F0B00A0D9C3 /* NCShipDronesController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCShipDronesController.mm; sourceTree = "<group>"; };
+		128681D81C804EAB00A0D9C3 /* NCCRESTAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCRESTAccountsViewController.h; sourceTree = "<group>"; };
+		128681D91C804EAB00A0D9C3 /* NCCRESTAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCRESTAccountsViewController.m; sourceTree = "<group>"; };
+		128681E01C80674400A0D9C3 /* NCCRESTLoadoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCRESTLoadoutsViewController.h; sourceTree = "<group>"; };
+		128681E11C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCRESTLoadoutsViewController.m; sourceTree = "<group>"; };
 		1289460C1C74B90C00839FBE /* NCCharacterSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCharacterSheetViewController.h; sourceTree = "<group>"; };
 		1289460D1C74B90C00839FBE /* NCCharacterSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCharacterSheetViewController.m; sourceTree = "<group>"; };
 		128946101C74BC0100839FBE /* NCMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMainWindowController.h; sourceTree = "<group>"; };
@@ -970,6 +976,17 @@
 			name = Market;
 			sourceTree = "<group>";
 		};
+		128681D71C804E8C00A0D9C3 /* CREST */ = {
+			isa = PBXGroup;
+			children = (
+				128681D81C804EAB00A0D9C3 /* NCCRESTAccountsViewController.h */,
+				128681D91C804EAB00A0D9C3 /* NCCRESTAccountsViewController.m */,
+				128681E01C80674400A0D9C3 /* NCCRESTLoadoutsViewController.h */,
+				128681E11C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m */,
+			);
+			name = CREST;
+			sourceTree = "<group>";
+		};
 		1289460F1C74BBED00839FBE /* NCMainWindowController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1098,6 +1115,7 @@
 		129A71721C7B00C3002298CD /* Fitting */ = {
 			isa = PBXGroup;
 			children = (
+				128681D71C804E8C00A0D9C3 /* CREST */,
 				129A71731C7B00FC002298CD /* NCLoadoutsViewController.h */,
 				129A71741C7B00FC002298CD /* NCLoadoutsViewController.mm */,
 				129A71761C7B0641002298CD /* NCTypePickerViewController.h */,
@@ -1241,6 +1259,7 @@
 				1289461F1C75FD0500839FBE /* NCSkillData.m in Sources */,
 				12D18DA51C785CED00926A2D /* NSColor+Neocom.m in Sources */,
 				12440B5B1C73BF6800F04393 /* NCMailBox+CoreDataProperties.m in Sources */,
+				128681E31C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m in Sources */,
 				12D18DBD1C7876E900926A2D /* NCBarChartView.m in Sources */,
 				120B83F41C74A554003A6ED0 /* NCAccountRowView.m in Sources */,
 				128946121C74BC0100839FBE /* NCMainWindowController.m in Sources */,
@@ -1361,6 +1380,7 @@
 				12440C7C1C73BFFE00F04393 /* NCDBDgmppItemCategory+CoreDataProperties.m in Sources */,
 				12440C8C1C73BFFE00F04393 /* NCDBDgmTypeAttribute+CoreDataProperties.m in Sources */,
 				12440C431C73BFFE00F04393 /* NCDBCertCertificate.m in Sources */,
+				128681DA1C804EAB00A0D9C3 /* NCCRESTAccountsViewController.m in Sources */,
 				12440C901C73BFFE00F04393 /* NCDBDgmppItemRequirements+CoreDataProperties.m in Sources */,
 				12440C451C73BFFE00F04393 /* NCDBInvControlTowerResourcePurpose.m in Sources */,
 				12440B631C73BF6800F04393 /* NCFitCharacter+CoreDataProperties.m in Sources */,

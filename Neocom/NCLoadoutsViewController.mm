@@ -16,15 +16,6 @@
 #import "NCShipFittingViewController.h"
 #import "NCShipFit.h"
 
-@interface NCLoadoutsNode : NSObject
-@property (readonly) NSString* title;
-@property (readonly) NSImage* image;
-@property (strong) NSArray* children;
-@property (strong) NCDBInvGroup* group;
-@property (strong) NCDBInvType* type;
-@property (strong) NCLoadout* loadout;
-
-@end
 
 @implementation NCLoadoutsNode
 
@@ -61,6 +52,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self reload];
+	[self.outlineView registerForDraggedTypes:@[@"NCLoadoutsNode"]];
     // Do view setup here.
 }
 
@@ -124,6 +116,25 @@
 	}
 }
 
+- (IBAction)onShareButton:(id)sender {
+	[NSMenu popUpContextMenu:self.shareMenu withEvent:[self.view.window currentEvent] forView:sender];
+}
+
+- (IBAction)onImport:(id)sender {
+	[self performSegueWithIdentifier:@"NCCRESTAccountsViewController" sender:sender];
+}
+
+- (IBAction)onExport:(id)sender {
+}
+
+- (BOOL) validateMenuItem:(NSMenuItem *)menuItem {
+	if (menuItem.action == @selector(onExport:)) {
+		return [self.loadouts canRemove];
+	}
+	else
+		return YES;
+}
+
 
 #pragma mark - NCTypePickerViewControllerDelegate
 
@@ -138,6 +149,35 @@
 	[context save:nil];
 	[self reload];
 	//fit = [[NCShipFit alloc] initWithLoadout:loadout];
+}
+
+- (BOOL)outlineView:(NSOutlineView *)ov shouldTrackCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
+	return YES;
+}
+
+/* In 10.7 multiple drag images are supported by using this delegate method. */
+- (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item {
+	return (id <NSPasteboardWriting>)[item representedObject];
+}
+
+/* Setup a local reorder. */
+- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forItems:(NSArray *)draggedItems {
+	[session.draggingPasteboard setData:[NSData data] forType:@"NCLoadoutsNode"];
+}
+
+- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation {
+}
+
+- (NSDragOperation)outlineView:(NSOutlineView *)ov validateDrop:(id <NSDraggingInfo>)info proposedItem:(id)item proposedChildIndex:(NSInteger)childIndex {
+	if (childIndex == -1)
+		return NSDragOperationNone;
+	NSLog(@"outlineView:validateDrop:proposedItem:%@ proposedChildIndex:%ld", @"", (long)childIndex);
+	NSLog(@"%@", info);
+	return NSDragOperationCopy;
+}
+
+- (BOOL)outlineView:(NSOutlineView *)ov acceptDrop:(id <NSDraggingInfo>)info item:(id)item childIndex:(NSInteger)childIndex {
+	return NO;
 }
 
 #pragma mark - Private
