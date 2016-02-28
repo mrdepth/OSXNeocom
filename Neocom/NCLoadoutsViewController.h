@@ -8,15 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class NCLoadout, NCDBInvGroup, NCDBInvType, CRFittingItem;
-@interface NCLoadoutsNode : NSObject
+@class NCLoadout, NCDBInvGroup, NCDBInvType, CRFitting;
+@interface NCLoadoutsNode : NSObject<NSPasteboardWriting, NSPasteboardReading, NSCoding>
 @property (readonly) NSString* title;
 @property (readonly) NSImage* image;
 @property (strong) NSArray* children;
 @property (strong) NCDBInvGroup* group;
 @property (strong) NCDBInvType* type;
 @property (strong) NCLoadout* loadout;
-@property (strong) CRFittingItem* crestLoadout;
+@property (strong) CRFitting* crestLoadout;
 @end
 
 

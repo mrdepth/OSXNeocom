@@ -13,9 +13,11 @@
 #import "NCSetting.h"
 #import "NCDatabase.h"
 #import "NSOutlineView+Neocom.h"
+#import "NCShipFit.h"
 
 @interface NCCRESTLoadoutsViewController ()
 @property (strong) CRAPI* api;
+- (void) reload;
 @end
 
 @implementation NCCRESTLoadoutsViewController
@@ -41,8 +43,71 @@
 	_token = token;
 	[self didChangeValueForKey:@"token"];
 	
-	self.api = [CRAPI apiWithCachePolicy:NSURLRequestUseProtocolCachePolicy clientID:@"c2cc974798d4485d966fba773a8f7ef8" secretKey:@"GNhSE9GJ6q3QiuPSTIJ8Q1J6on4ClM4v9zvc0Qzu" token:token callbackURL:[NSURL URLWithString:@"neocom://sso"]];
+	self.api = [CRAPI apiWithCachePolicy:NSURLRequestReloadIgnoringLocalCacheData clientID:@"c2cc974798d4485d966fba773a8f7ef8" secretKey:@"GNhSE9GJ6q3QiuPSTIJ8Q1J6on4ClM4v9zvc0Qzu" token:token callbackURL:[NSURL URLWithString:@"neocom://sso"]];
+	[self reload];
+}
+
+- (BOOL)outlineView:(NSOutlineView *)ov shouldTrackCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
+	return YES;
+}
+
+/* In 10.7 multiple drag images are supported by using this delegate method. */
+- (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item {
+	return (id <NSPasteboardWriting>)[item representedObject];
+}
+
+/* Setup a local reorder. */
+- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forItems:(NSArray *)draggedItems {
+	[session.draggingPasteboard setData:[NSData data] forType:@"NCLoadoutsNode"];
+}
+
+- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation {
+}
+
+- (NSDragOperation)outlineView:(NSOutlineView *)ov validateDrop:(id <NSDraggingInfo>)info proposedItem:(id)item proposedChildIndex:(NSInteger)childIndex {
+	if (info.draggingSource == self.outlineView)
+		return NSDragOperationNone;
 	
+	if (childIndex == -1)
+		return NSDragOperationNone;
+	return NSDragOperationCopy;
+}
+
+- (BOOL)outlineView:(NSOutlineView *)ov acceptDrop:(id <NSDraggingInfo>)info item:(id)item childIndex:(NSInteger)childIndex {
+	if (info.draggingSource == self.outlineView || !self.api)
+		return NO;
+	else {
+		NSMutableArray* nodes = [NSMutableArray new];
+		[info enumerateDraggingItemsWithOptions:0 forView:self.outlineView classes:@[[NCLoadoutsNode class]] searchOptions:@{} usingBlock:^(NSDraggingItem * _Nonnull draggingItem, NSInteger idx, BOOL * _Nonnull stop) {
+			[nodes addObject:draggingItem.item];
+		}];
+		dispatch_group_t finishDispatchGroup = dispatch_group_create();
+		
+		while (nodes.count) {
+			NCLoadoutsNode* node = [nodes lastObject];
+			[nodes removeLastObject];
+			if (node.children.count > 0)
+				[nodes addObjectsFromArray:node.children];
+			if (node.loadout) {
+				NCShipFit* fit = [[NCShipFit alloc] initWithLoadout:node.loadout];
+				CRFitting* fitting = [fit crFittingRepresentation];
+				if (fitting) {
+					dispatch_group_enter(finishDispatchGroup);
+					[self.api postFitting:fitting withCompletionBlock:^(BOOL completed, NSError *error) {
+						dispatch_group_leave(finishDispatchGroup);
+					}];
+				}
+			}
+		}
+		dispatch_group_notify(finishDispatchGroup, dispatch_get_main_queue(), ^{
+		});
+		return YES;
+	}
+}
+
+#pragma mark - Private
+
+- (void) reload {
 	[self.api loadFittingsWithCompletionBlock:^(NSArray<CRFitting *> *result, NSError *error) {
 		if (!error && self.api.token != _token && self.api.token) {
 			[self willChangeValueForKey:@"token"];
@@ -90,10 +155,10 @@
 				NSMutableArray* children = [NSMutableArray new];
 				typeNode.children = children;
 				
-				for (NCLoadout* loadout in types) {
+				for (CRFitting* loadout in types) {
 					NCLoadoutsNode* loadoutNode = [NCLoadoutsNode new];
 					[children addObject:loadoutNode];
-					loadoutNode.loadout = loadout;
+					loadoutNode.crestLoadout = loadout;
 				}
 				[children sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]]];
 			}];
@@ -103,35 +168,6 @@
 		self.loadouts.content = content;
 		[self.outlineView expandAll];
 	} progressBlock:nil];
-}
-
-- (BOOL)outlineView:(NSOutlineView *)ov shouldTrackCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
-	return YES;
-}
-
-/* In 10.7 multiple drag images are supported by using this delegate method. */
-- (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item {
-	return (id <NSPasteboardWriting>)[item representedObject];
-}
-
-/* Setup a local reorder. */
-- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forItems:(NSArray *)draggedItems {
-	[session.draggingPasteboard setData:[NSData data] forType:@"NCLoadoutsNode"];
-}
-
-- (void)outlineView:(NSOutlineView *)outlineView draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation {
-}
-
-- (NSDragOperation)outlineView:(NSOutlineView *)ov validateDrop:(id <NSDraggingInfo>)info proposedItem:(id)item proposedChildIndex:(NSInteger)childIndex {
-	if (childIndex == -1)
-		return NSDragOperationNone;
-	NSLog(@"outlineView:validateDrop:proposedItem:%@ proposedChildIndex:%ld", @"", (long)childIndex);
-	NSLog(@"%@", info);
-	return NSDragOperationCopy;
-}
-
-- (BOOL)outlineView:(NSOutlineView *)ov acceptDrop:(id <NSDraggingInfo>)info item:(id)item childIndex:(NSInteger)childIndex {
-	return NO;
 }
 
 @end

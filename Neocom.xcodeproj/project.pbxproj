@@ -166,7 +166,7 @@
 		12867FDD1C7C82E900A0D9C3 /* NCProgressTextField.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12867FDC1C7C82E900A0D9C3 /* NCProgressTextField.mm */; };
 		1286819F1C7F4F0B00A0D9C3 /* NCShipDronesController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1286819E1C7F4F0B00A0D9C3 /* NCShipDronesController.mm */; };
 		128681DA1C804EAB00A0D9C3 /* NCCRESTAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128681D91C804EAB00A0D9C3 /* NCCRESTAccountsViewController.m */; };
-		128681E31C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128681E11C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m */; };
+		128681E31C80674400A0D9C3 /* NCCRESTLoadoutsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 128681E11C80674400A0D9C3 /* NCCRESTLoadoutsViewController.mm */; };
 		1289460E1C74B90C00839FBE /* NCCharacterSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289460D1C74B90C00839FBE /* NCCharacterSheetViewController.m */; };
 		128946121C74BC0100839FBE /* NCMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946111C74BC0100839FBE /* NCMainWindowController.m */; };
 		128946151C74BD9000839FBE /* NCDetailSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 128946141C74BD9000839FBE /* NCDetailSegue.m */; };
@@ -511,7 +511,7 @@
 		128681D81C804EAB00A0D9C3 /* NCCRESTAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCRESTAccountsViewController.h; sourceTree = "<group>"; };
 		128681D91C804EAB00A0D9C3 /* NCCRESTAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCRESTAccountsViewController.m; sourceTree = "<group>"; };
 		128681E01C80674400A0D9C3 /* NCCRESTLoadoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCRESTLoadoutsViewController.h; sourceTree = "<group>"; };
-		128681E11C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCRESTLoadoutsViewController.m; sourceTree = "<group>"; };
+		128681E11C80674400A0D9C3 /* NCCRESTLoadoutsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCCRESTLoadoutsViewController.mm; sourceTree = "<group>"; };
 		1289460C1C74B90C00839FBE /* NCCharacterSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCharacterSheetViewController.h; sourceTree = "<group>"; };
 		1289460D1C74B90C00839FBE /* NCCharacterSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCharacterSheetViewController.m; sourceTree = "<group>"; };
 		128946101C74BC0100839FBE /* NCMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMainWindowController.h; sourceTree = "<group>"; };
@@ -982,7 +982,7 @@
 				128681D81C804EAB00A0D9C3 /* NCCRESTAccountsViewController.h */,
 				128681D91C804EAB00A0D9C3 /* NCCRESTAccountsViewController.m */,
 				128681E01C80674400A0D9C3 /* NCCRESTLoadoutsViewController.h */,
-				128681E11C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m */,
+				128681E11C80674400A0D9C3 /* NCCRESTLoadoutsViewController.mm */,
 			);
 			name = CREST;
 			sourceTree = "<group>";
@@ -1259,7 +1259,7 @@
 				1289461F1C75FD0500839FBE /* NCSkillData.m in Sources */,
 				12D18DA51C785CED00926A2D /* NSColor+Neocom.m in Sources */,
 				12440B5B1C73BF6800F04393 /* NCMailBox+CoreDataProperties.m in Sources */,
-				128681E31C80674400A0D9C3 /* NCCRESTLoadoutsViewController.m in Sources */,
+				128681E31C80674400A0D9C3 /* NCCRESTLoadoutsViewController.mm in Sources */,
 				12D18DBD1C7876E900926A2D /* NCBarChartView.m in Sources */,
 				120B83F41C74A554003A6ED0 /* NCAccountRowView.m in Sources */,
 				128946121C74BC0100839FBE /* NCMainWindowController.m in Sources */,

@@ -601,46 +601,43 @@
 	[self flush];
 	CRFitting* fitting = [CRFitting new];
 	
-	[self.databaseManagedObjectContext performBlockAndWait:^{
-		NCDBInvType* type = [self.databaseManagedObjectContext invTypeWithTypeID:self.typeID];
-		fitting.ship = [CRFittingType new];
-		fitting.ship.typeID = self.typeID;
-		fitting.ship.name = type.typeName ?: @"Unknown";
-		fitting.name = self.loadoutName ?: fitting.ship.name;
-		fitting.fittingDescription = NSLocalizedString(@"Created with Neocom on iOS", nil);
-		
-		int flags[] = {EVEInventoryFlagLoSlot0, EVEInventoryFlagMedSlot0, EVEInventoryFlagHiSlot0, EVEInventoryFlagRigSlot0, EVEInventoryFlagSubSystem0};
-		int n = 0;
-		NSMutableArray* items = [NSMutableArray new];
-		for (NSString* key in @[@"lowSlots", @"medSlots", @"hiSlots", @"rigSlots", @"subsystems"]) {
-			int flag = flags[n++];
-			NSArray* array = [self.loadoutData valueForKey:key];
-			if (array.count == 0)
-				continue;
-			for (NCLoadoutDataShipModule* module in array) {
-				NCDBInvType* type = [self.databaseManagedObjectContext invTypeWithTypeID:module.typeID];
-				CRFittingItem* item = [CRFittingItem new];
-				item.quantity = 1;
-				item.flag = flag++;
-				item.type = [CRFittingType new];
-				item.type.typeID = module.typeID;
-				item.type.name = type.typeName ?: @"Unknown";
-				[items addObject:item];
-			}
-		}
-		for (NCLoadoutDataShipDrone* drone in self.loadoutData.drones) {
-			NCDBInvType* type = [self.databaseManagedObjectContext invTypeWithTypeID:drone.typeID];
+	NCDBInvType* type = [self.databaseManagedObjectContext invTypeWithTypeID:self.typeID];
+	fitting.ship = [CRFittingType new];
+	fitting.ship.typeID = self.typeID;
+	fitting.ship.name = type.typeName ?: @"Unknown";
+	fitting.name = self.loadoutName ?: fitting.ship.name;
+	fitting.fittingDescription = NSLocalizedString(@"Created with Neocom on iOS", nil);
+	
+	int flags[] = {EVEInventoryFlagLoSlot0, EVEInventoryFlagMedSlot0, EVEInventoryFlagHiSlot0, EVEInventoryFlagRigSlot0, EVEInventoryFlagSubSystem0};
+	int n = 0;
+	NSMutableArray* items = [NSMutableArray new];
+	for (NSString* key in @[@"lowSlots", @"medSlots", @"hiSlots", @"rigSlots", @"subsystems"]) {
+		int flag = flags[n++];
+		NSArray* array = [self.loadoutData valueForKey:key];
+		if (array.count == 0)
+			continue;
+		for (NCLoadoutDataShipModule* module in array) {
+			NCDBInvType* type = [self.databaseManagedObjectContext invTypeWithTypeID:module.typeID];
 			CRFittingItem* item = [CRFittingItem new];
-			item.quantity = drone.count;
-			item.flag = EVEInventoryFlagDroneBay;
+			item.quantity = 1;
+			item.flag = flag++;
 			item.type = [CRFittingType new];
-			item.type.typeID = drone.typeID;
+			item.type.typeID = module.typeID;
 			item.type.name = type.typeName ?: @"Unknown";
 			[items addObject:item];
 		}
-		fitting.items = items;
-	}];
-
+	}
+	for (NCLoadoutDataShipDrone* drone in self.loadoutData.drones) {
+		NCDBInvType* type = [self.databaseManagedObjectContext invTypeWithTypeID:drone.typeID];
+		CRFittingItem* item = [CRFittingItem new];
+		item.quantity = drone.count;
+		item.flag = EVEInventoryFlagDroneBay;
+		item.type = [CRFittingType new];
+		item.type.typeID = drone.typeID;
+		item.type.name = type.typeName ?: @"Unknown";
+		[items addObject:item];
+	}
+	fitting.items = items;
 	
 	return fitting;
 }

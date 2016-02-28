@@ -15,7 +15,7 @@
 #import "NSOutlineView+Neocom.h"
 #import "NCShipFittingViewController.h"
 #import "NCShipFit.h"
-
+#import <EVEAPI/EVEAPI.h>
 
 @implementation NCLoadoutsNode
 
@@ -26,6 +26,8 @@
 		return self.type.typeName;
 	else if (self.loadout)
 		return self.loadout.name;
+	else if (self.crestLoadout)
+		return self.crestLoadout.name;
 	else
 		return nil;
 }
@@ -39,6 +41,49 @@
 		return [NSImage imageNamed:@"fitting"];
 }
 
+#pragma mark - NSCoding
+
+- (id) initWithCoder:(NSCoder *)aDecoder {
+	if (self = [super init]) {
+		self.children = [aDecoder decodeObjectForKey:@"children"];
+		self.crestLoadout = [aDecoder decodeObjectForKey:@"crestLoadout"];
+		NSURL* url = [aDecoder decodeObjectForKey:@"loadout"];
+		if (url)
+			self.loadout = [[[NCStorage sharedStorage] managedObjectContext] existingObjectWithID:[[[NCStorage sharedStorage] persistentStoreCoordinator] managedObjectIDForURIRepresentation:url] error:nil];
+	}
+	return self;
+}
+
+- (void) encodeWithCoder:(NSCoder *)aCoder {
+	[aCoder encodeObject:self.children forKey:@"children"];
+	[aCoder encodeObject:self.crestLoadout forKey:@"crestLoadout"];
+	if (self.loadout.objectID)
+		[aCoder encodeObject:[self.loadout.objectID URIRepresentation] forKey:@"loadout"];
+}
+
+#pragma mark - NSPasteboardWriting
+
+- (NSArray<NSString *> *)writableTypesForPasteboard:(NSPasteboard *)pasteboard {
+	return @[NSPasteboardTypeString];
+}
+
+- (nullable id)pasteboardPropertyListForType:(NSString *)type {
+	return [NSPropertyListSerialization dataWithPropertyList:[NSKeyedArchiver archivedDataWithRootObject:self] format:NSPropertyListXMLFormat_v1_0 options:0 error:nil];
+}
+
+#pragma mark - NSPasteboardReading
+
++ (NSArray<NSString *> *)readableTypesForPasteboard:(NSPasteboard *)pasteboard {
+	return @[NSPasteboardTypeString];
+}
+
+- (nullable id)initWithPasteboardPropertyList:(id)propertyList ofType:(NSString *)type {
+	if (self = [super init]) {
+		NSData* data = [NSPropertyListSerialization propertyListWithData:propertyList options:0 format:0 error:nil];
+		self = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+	}
+	return self;
+}
 
 @end
 
@@ -169,15 +214,35 @@
 }
 
 - (NSDragOperation)outlineView:(NSOutlineView *)ov validateDrop:(id <NSDraggingInfo>)info proposedItem:(id)item proposedChildIndex:(NSInteger)childIndex {
+	if (info.draggingSource == self.outlineView)
+		return NSDragOperationNone;
+	
 	if (childIndex == -1)
 		return NSDragOperationNone;
-	NSLog(@"outlineView:validateDrop:proposedItem:%@ proposedChildIndex:%ld", @"", (long)childIndex);
-	NSLog(@"%@", info);
 	return NSDragOperationCopy;
 }
 
 - (BOOL)outlineView:(NSOutlineView *)ov acceptDrop:(id <NSDraggingInfo>)info item:(id)item childIndex:(NSInteger)childIndex {
-	return NO;
+	if (info.draggingSource == self.outlineView)
+		return NO;
+	else {
+		NSMutableArray* nodes = [NSMutableArray new];
+		[info enumerateDraggingItemsWithOptions:0 forView:self.outlineView classes:@[[NCLoadoutsNode class]] searchOptions:@{} usingBlock:^(NSDraggingItem * _Nonnull draggingItem, NSInteger idx, BOOL * _Nonnull stop) {
+			[nodes addObject:draggingItem.item];
+		}];
+		while (nodes.count) {
+			NCLoadoutsNode* node = [nodes lastObject];
+			[nodes removeLastObject];
+			if (node.children.count > 0)
+				[nodes addObjectsFromArray:node.children];
+			if (node.crestLoadout) {
+				NCShipFit* fit = [[NCShipFit alloc] initWithCRFitting:node.crestLoadout];
+				[fit save];
+			}
+		}
+		[self reload];
+		return YES;
+	}
 }
 
 #pragma mark - Private
