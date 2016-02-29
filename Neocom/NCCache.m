@@ -2,8 +2,8 @@
 //  NCCache.m
 //  Neocom
 //
-//  Created by Artem Shimanski on 12.12.13.
-//  Copyright (c) 2013 Artem Shimanski. All rights reserved.
+//  Created by Артем Шиманский on 26.02.16.
+//  Copyright © 2016 Shimanski Artem. All rights reserved.
 //
 
 #import "NCCache.h"
@@ -182,7 +182,7 @@
 #pragma mark - Private
 
 + (NSString*) cacheDirectory {
-	return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"com.shimanski.neocom/NCCache"];
+	return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"Neocom/NCCache"];
 }
 
 @end

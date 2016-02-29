@@ -2,8 +2,8 @@
 //  NCFittingEngine.m
 //  Neocom
 //
-//  Created by Artem Shimanski on 18.09.15.
-//  Copyright © 2015 Artem Shimanski. All rights reserved.
+//  Created by Артем Шиманский on 26.02.16.
+//  Copyright © 2016 Shimanski Artem. All rights reserved.
 //
 
 #import "NCFittingEngine.h"

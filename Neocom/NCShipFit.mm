@@ -2,8 +2,8 @@
 //  NCShipFit.m
 //  Neocom
 //
-//  Created by Артем Шиманский on 31.01.14.
-//  Copyright (c) 2014 Artem Shimanski. All rights reserved.
+//  Created by Артем Шиманский on 26.02.16.
+//  Copyright © 2016 Shimanski Artem. All rights reserved.
 //
 
 #import "NCShipFit.h"
@@ -223,36 +223,6 @@
 	}
 	return self;
 }
-
-- (id) initWithAPILoadout:(NAPISearchItem *)apiLoadout {
-	if (self = [super init]) {
-		self.apiLadout = apiLoadout;
-		self.loadoutName = apiLoadout.typeName;
-		self.typeID = apiLoadout.typeID;
-	}
-	return self;
-}
-
-- (id) initWithAsset:(EVEAssetListItem *)asset {
-	if (self = [super init]) {
-		self.asset = asset;
-		self.typeID = asset.typeID;
-		//self.loadoutName = asset.location.itemName ?: asset.typeName;
-	}
-	return self;
-}
-
-/*- (id) initWithKillMail:(NCKillMail*) killMail {
-	if (self = [super init]) {
-		self.killMail = killMail;
-		self.typeID = killMail.victim.shipTypeID;
-		[self.databaseManagedObjectContext performBlockAndWait:^{
-			NCDBInvType* type = [self.databaseManagedObjectContext invTypeWithTypeID:killMail.victim.shipTypeID];
-			self.loadoutName = [NSString stringWithFormat:@"%@ - %@", type.typeName , killMail.victim.characterName];
-		}];
-	}
-	return self;
-}*/
 
 - (id) initWithDNA:(NSString *)dna {
 	if (self = [super init]) {

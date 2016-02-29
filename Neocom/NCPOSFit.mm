@@ -2,8 +2,8 @@
 //  NCPOSFit.m
 //  Neocom
 //
-//  Created by Артем Шиманский on 11.02.14.
-//  Copyright (c) 2014 Artem Shimanski. All rights reserved.
+//  Created by Артем Шиманский on 26.02.16.
+//  Copyright © 2016 Shimanski Artem. All rights reserved.
 //
 
 #import "NCPOSFit.h"

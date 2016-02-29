@@ -2,8 +2,8 @@
 //  NSManagedObjectContext+NCStorage.m
 //  Neocom
 //
-//  Created by Артем Шиманский on 14.08.15.
-//  Copyright (c) 2015 Artem Shimanski. All rights reserved.
+//  Created by Артем Шиманский on 26.02.16.
+//  Copyright © 2016 Shimanski Artem. All rights reserved.
 //
 
 #import "NSManagedObjectContext+NCStorage.h"

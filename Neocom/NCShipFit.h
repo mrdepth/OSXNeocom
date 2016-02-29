@@ -2,8 +2,8 @@
 //  NCShipFit.h
 //  Neocom
 //
-//  Created by Артем Шиманский on 31.01.14.
-//  Copyright (c) 2014 Artem Shimanski. All rights reserved.
+//  Created by Артем Шиманский on 26.02.16.
+//  Copyright © 2016 Shimanski Artem. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -83,9 +83,6 @@
 
 - (id) initWithLoadout:(NCLoadout*) loadout;
 - (id) initWithType:(NCDBInvType*) type;
-- (id) initWithAPILoadout:(NAPISearchItem*) apiLoadout;
-- (id) initWithAsset:(EVEAssetListItem*) asset;
-- (id) initWithKillMail:(NCKillMail*) killMail;
 - (id) initWithDNA:(NSString*) dna;
 - (id) initWithCRFitting:(CRFitting*) fitting;
 - (void) setCharacter:(NCFitCharacter*) character;

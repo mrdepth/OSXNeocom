@@ -125,7 +125,7 @@ static NCStorage* sharedStorage;
 	@synchronized(self) {
 		NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
 
-		NSURL* directory = [appSupportURL URLByAppendingPathComponent:@"com.shimanski.neocom.store"];
+		NSURL* directory = [appSupportURL URLByAppendingPathComponent:@"Neocom"];
 		[[NSFileManager defaultManager] createDirectoryAtURL:directory withIntermediateDirectories:YES attributes:nil error:nil];
 		
 		_persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

@@ -43,7 +43,7 @@
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "com.shimanski.Neocom" in the user's Application Support directory.
     NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    return [appSupportURL URLByAppendingPathComponent:@"com.shimanski.Neocom"];
+    return [appSupportURL URLByAppendingPathComponent:@"Neocom"];
 }
 
 - (NSManagedObjectModel *)managedObjectModel {
