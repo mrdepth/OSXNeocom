@@ -17,6 +17,7 @@
 @property (strong) NCDBInvType* type;
 @property (strong) NCLoadout* loadout;
 @property (strong) CRFitting* crestLoadout;
+@property (weak) NCLoadoutsNode* parent;
 @end
 
 

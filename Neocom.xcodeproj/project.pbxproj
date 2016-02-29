@@ -188,6 +188,8 @@
 		129A71811C7B37E0002298CD /* Fitting.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 129A71801C7B37E0002298CD /* Fitting.xcassets */; };
 		129A71841C7B5559002298CD /* NCDgmItemsTreeController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 129A71831C7B5559002298CD /* NCDgmItemsTreeController.mm */; };
 		129A718E1C7B5F03002298CD /* NCShipFittingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 129A718D1C7B5F03002298CD /* NCShipFittingViewController.mm */; };
+		12CBD6101C843920003E4DF4 /* NCIsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CBD60F1C843920003E4DF4 /* NCIsEmpty.m */; };
+		12CBD6131C8439B8003E4DF4 /* NCIsNotEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CBD6121C8439B8003E4DF4 /* NCIsNotEmpty.m */; };
 		12D18DA11C762AED00926A2D /* NCMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18D9F1C762AED00926A2D /* NCMarketViewController.m */; };
 		12D18DA51C785CED00926A2D /* NSColor+Neocom.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D18DA41C785CED00926A2D /* NSColor+Neocom.m */; };
 		12D18DAA1C78620E00926A2D /* NCPlanetariesViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12D18DA81C78620E00926A2D /* NCPlanetariesViewController.mm */; };
@@ -552,6 +554,10 @@
 		129A71831C7B5559002298CD /* NCDgmItemsTreeController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCDgmItemsTreeController.mm; sourceTree = "<group>"; };
 		129A718C1C7B5F03002298CD /* NCShipFittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCShipFittingViewController.h; sourceTree = "<group>"; };
 		129A718D1C7B5F03002298CD /* NCShipFittingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCShipFittingViewController.mm; sourceTree = "<group>"; };
+		12CBD60E1C843920003E4DF4 /* NCIsEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCIsEmpty.h; sourceTree = "<group>"; };
+		12CBD60F1C843920003E4DF4 /* NCIsEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCIsEmpty.m; sourceTree = "<group>"; };
+		12CBD6111C8439B8003E4DF4 /* NCIsNotEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCIsNotEmpty.h; sourceTree = "<group>"; };
+		12CBD6121C8439B8003E4DF4 /* NCIsNotEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCIsNotEmpty.m; sourceTree = "<group>"; };
 		12D18D9E1C762AED00926A2D /* NCMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMarketViewController.h; sourceTree = "<group>"; };
 		12D18D9F1C762AED00926A2D /* NCMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMarketViewController.m; sourceTree = "<group>"; };
 		12D18DA31C785CED00926A2D /* NSColor+Neocom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Neocom.h"; sourceTree = "<group>"; };
@@ -1052,6 +1058,10 @@
 				12D18DA41C785CED00926A2D /* NSColor+Neocom.m */,
 				129A717D1C7B1CB8002298CD /* NSOutlineView+Neocom.h */,
 				129A717E1C7B1CB8002298CD /* NSOutlineView+Neocom.m */,
+				12CBD60E1C843920003E4DF4 /* NCIsEmpty.h */,
+				12CBD60F1C843920003E4DF4 /* NCIsEmpty.m */,
+				12CBD6111C8439B8003E4DF4 /* NCIsNotEmpty.h */,
+				12CBD6121C8439B8003E4DF4 /* NCIsNotEmpty.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -1265,6 +1275,7 @@
 				128946121C74BC0100839FBE /* NCMainWindowController.m in Sources */,
 				12440C4F1C73BFFE00F04393 /* NCDBIndRequiredMaterial.m in Sources */,
 				120B83F11C74A455003A6ED0 /* NCRoundRectImageView.m in Sources */,
+				12CBD6131C8439B8003E4DF4 /* NCIsNotEmpty.m in Sources */,
 				12440C661C73BFFE00F04393 /* NCDBMapSolarSystem+CoreDataProperties.m in Sources */,
 				12440C3E1C73BFFE00F04393 /* NCDBIndProduct+CoreDataProperties.m in Sources */,
 				12440C4C1C73BFFE00F04393 /* NCDBInvGroup+CoreDataProperties.m in Sources */,
@@ -1284,6 +1295,7 @@
 				12440B661C73BF6800F04393 /* NCShoppingItem.m in Sources */,
 				12440C771C73BFFE00F04393 /* NCDBDgmppHullType.m in Sources */,
 				12440C7D1C73BFFE00F04393 /* NCDBDgmppItemCategory.m in Sources */,
+				12CBD6101C843920003E4DF4 /* NCIsEmpty.m in Sources */,
 				1238801B1C79D347004674BE /* NCCycleTimeValueTransformer.m in Sources */,
 				12440B641C73BF6800F04393 /* NCFitCharacter.m in Sources */,
 				12440C9D1C73C57600F04393 /* NSManagedObjectContext+NCCache.m in Sources */,

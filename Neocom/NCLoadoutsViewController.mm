@@ -16,6 +16,8 @@
 #import "NCShipFittingViewController.h"
 #import "NCShipFit.h"
 #import <EVEAPI/EVEAPI.h>
+#import "NCCRESTAccountsViewController.h"
+#import "NCCRESTLoadoutsViewController.h"
 
 @implementation NCLoadoutsNode
 
@@ -87,7 +89,7 @@
 
 @end
 
-@interface NCLoadoutsViewController ()<NCTypePickerViewControllerDelegate, NSOutlineViewDelegate>
+@interface NCLoadoutsViewController ()<NCTypePickerViewControllerDelegate, NSOutlineViewDelegate, NCCRESTAccountsViewControllerDelegate>
 - (void) reload;
 
 @end
@@ -112,6 +114,10 @@
 
 		NCShipFittingViewController* controller = segue.destinationController;
 		controller.fit = [[NCShipFit alloc] initWithLoadout:node.loadout];
+	}
+	else if ([segue.identifier isEqualToString:@"NCCRESTAccountsViewController"]) {
+		NCCRESTAccountsViewController* controller = segue.destinationController;
+		controller.delegate = self;
 	}
 }
 
@@ -150,13 +156,6 @@
 				}
 			}
 			[self performSegueWithIdentifier:@"NCShipFittingViewController" sender:node.loadout];
-//			NCShipFittingViewController* controller = [self.storyboard instantiateControllerWithIdentifier:@"NCShipFittingViewController"];
-//			controller.fit = [[NCShipFit alloc] initWithLoadout:node.loadout];
-			/*NSSplitViewController* splitViewController = (NSSplitViewController*) self.parentViewController;
-			if (splitViewController.splitViewItems.count > 1)
-				[splitViewController removeSplitViewItem:[splitViewController.splitViewItems lastObject]];
-			NSSplitViewItem* item = [NSSplitViewItem splitViewItemWithViewController:controller];
-			[splitViewController addSplitViewItem:item];*/
 		}
 	}
 }
@@ -195,6 +194,25 @@
 	[self reload];
 	//fit = [[NCShipFit alloc] initWithLoadout:loadout];
 }
+
+#pragma mark - NCCRESTAccountsViewControllerDelegate
+
+- (void) crestAccountsViewController:(NCCRESTAccountsViewController*)controller didSelectAccountWithToken:(CRToken*) token {
+	NSSplitViewController* splitViewController = (NSSplitViewController*) self.parentViewController;
+	if (splitViewController.splitViewItems.count == 1) {
+		NCCRESTLoadoutsViewController* controller = [self.storyboard instantiateControllerWithIdentifier:@"NCCRESTLoadoutsViewController"];
+		controller.token = token;
+		[splitViewController addSplitViewItem:[NSSplitViewItem splitViewItemWithViewController:controller]];
+	}
+	else {
+		NCCRESTLoadoutsViewController* controller = (NCCRESTLoadoutsViewController*) [splitViewController.splitViewItems[1] viewController];
+		controller.token = token;
+	}
+}
+
+#pragma mark - NSOutlineViewDelegate
+
+
 
 - (BOOL)outlineView:(NSOutlineView *)ov shouldTrackCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item {
 	return YES;

@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.region.content = [[[NCDatabase sharedDatabase] managedObjectContext] mapRegionWithRegionID:10000002];
 	NCMarketOrdersViewController* buyOrdersViewController = [self.childViewControllers[0] childViewControllers][0];
 	[buyOrdersViewController.region bind:NSContentBinding toObject:self.region withKeyPath:@"content" options:nil];
 }

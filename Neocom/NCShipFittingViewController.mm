@@ -84,7 +84,8 @@
 
 - (void) viewWillDisappear {
 	[super viewWillDisappear];
-	[self.fit save];
+	if (self.fit.loadoutID)
+		[self.fit save];
 }
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {

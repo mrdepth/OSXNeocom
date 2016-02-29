@@ -14,4 +14,7 @@
 @property (strong) IBOutlet NSTreeController *loadouts;
 @property (weak) IBOutlet NSOutlineView *outlineView;
 
+- (IBAction)didSelectFit:(NSArray*) selectedObjects;
+- (IBAction)onRemove:(id)sender;
+
 @end

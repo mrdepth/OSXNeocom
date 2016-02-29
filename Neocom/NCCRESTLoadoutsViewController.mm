@@ -14,6 +14,7 @@
 #import "NCDatabase.h"
 #import "NSOutlineView+Neocom.h"
 #import "NCShipFit.h"
+#import "NCShipFittingViewController.h"
 
 @interface NCCRESTLoadoutsViewController ()
 @property (strong) CRAPI* api;
@@ -34,8 +35,59 @@
 	NSManagedObjectContext* context = [[NCStorage sharedStorage] managedObjectContext];
 	NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Setting"];
 	request.predicate = [NSPredicate predicateWithFormat:@"key BEGINSWITH \"sso\""];
-	self.token = [(NCSetting*) [[context executeFetchRequest:request error:nil] lastObject] value];
 	[self.outlineView registerForDraggedTypes:@[@"NCLoadoutsNode"]];
+}
+
+- (void) prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"NCShipFittingViewController"]) {
+		NCLoadoutsNode* node = [self.loadouts.selectedObjects lastObject];
+		
+		NCShipFittingViewController* controller = segue.destinationController;
+		controller.fit = [[NCShipFit alloc] initWithCRFitting:node.crestLoadout];
+	}
+}
+
+- (IBAction)didSelectFit:(NSArray*) selectedObjects {
+	if (selectedObjects.count > 0) {
+		NCLoadoutsNode* node = [selectedObjects lastObject];
+		if (node.crestLoadout) {
+			[self performSegueWithIdentifier:@"NCShipFittingViewController" sender:node.crestLoadout];
+		}
+	}
+}
+
+
+- (IBAction)onRemove:(id)sender {
+	__weak __block void (^weakRemove)(NCLoadoutsNode*);
+	void (^remove)(NCLoadoutsNode*) = ^(NCLoadoutsNode* node) {
+		if (node.crestLoadout.fittingID) {
+			[self.api deleteFittingWithID:node.crestLoadout.fittingID completionBlock:^(BOOL completed, NSError *error) {
+				if (completed) {
+					NCLoadoutsNode* n = node;
+					while (n) {
+						NCLoadoutsNode* parent = n.parent;
+						NSMutableArray* a = [parent.children mutableCopy] ?: self.loadouts.content;
+						[a removeObject:n];
+						if (parent)
+							parent.children = a;
+						else
+							self.loadouts.content = a;
+						
+						n = n.parent;
+						if (n.children.count > 0)
+							return;
+					}
+				}
+			}];
+		}
+		for (NCLoadoutsNode* item in node.children)
+			weakRemove(item);
+	};
+	weakRemove = remove;
+	
+	for (NCLoadoutsNode* node in [self.loadouts selectedObjects]) {
+		remove(node);
+	}
 }
 
 - (void) setToken:(CRToken *)token {
@@ -82,7 +134,9 @@
 			[nodes addObject:draggingItem.item];
 		}];
 		dispatch_group_t finishDispatchGroup = dispatch_group_create();
+		NSManagedObjectContext* context = [[NCDatabase sharedDatabase] managedObjectContext];
 		
+		__block NSError* gError = nil;
 		while (nodes.count) {
 			NCLoadoutsNode* node = [nodes lastObject];
 			[nodes removeLastObject];
@@ -90,16 +144,56 @@
 				[nodes addObjectsFromArray:node.children];
 			if (node.loadout) {
 				NCShipFit* fit = [[NCShipFit alloc] initWithLoadout:node.loadout];
+				NCDBInvType* type = [context invTypeWithTypeID:node.loadout.typeID];
+				
 				CRFitting* fitting = [fit crFittingRepresentation];
 				if (fitting) {
 					dispatch_group_enter(finishDispatchGroup);
 					[self.api postFitting:fitting withCompletionBlock:^(BOOL completed, NSError *error) {
+						if (completed) {
+							NCLoadoutsNode* groupNode;
+							for (groupNode in self.loadouts.content) {
+								if (groupNode.group.groupID == type.group.groupID)
+									break;
+							}
+							if (!groupNode) {
+								groupNode = [NCLoadoutsNode new];
+								groupNode.group = type.group;
+								NSMutableArray* array = [self.loadouts.content mutableCopy] ?: [NSMutableArray new];
+								[array addObject:groupNode];
+								self.loadouts.content = array;
+							}
+							NCLoadoutsNode* typeNode;
+							for (typeNode in groupNode.children) {
+								if (typeNode.type.typeID == type.typeID)
+									break;
+							}
+							if (!typeNode) {
+								typeNode = [NCLoadoutsNode new];
+								typeNode.parent = groupNode;
+								typeNode.type = type;
+								NSMutableArray* array = [groupNode.children mutableCopy] ?: [NSMutableArray new];
+								[array addObject:typeNode];
+								groupNode.children = array;
+							}
+							NCLoadoutsNode* node = [NCLoadoutsNode new];
+							node.parent = typeNode;
+							node.crestLoadout = fitting;
+							
+							NSMutableArray* array = [typeNode.children mutableCopy] ?: [NSMutableArray new];
+							[array addObject:node];
+							typeNode.children = array;
+						}
+						if (error)
+							gError = error;
 						dispatch_group_leave(finishDispatchGroup);
 					}];
 				}
 			}
 		}
 		dispatch_group_notify(finishDispatchGroup, dispatch_get_main_queue(), ^{
+			if (gError)
+				[[NSAlert alertWithError:gError] runModal];
 		});
 		return YES;
 	}
@@ -149,14 +243,15 @@
 			[group enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, NSArray*  _Nonnull types, BOOL * _Nonnull stop) {
 				NCDBInvType* invType = [databaseManagedObjectContext invTypeWithTypeID:[key intValue]];
 				NCLoadoutsNode* typeNode = [NCLoadoutsNode new];
+				typeNode.parent = groupNode;
 				[children addObject:typeNode];
 				
 				typeNode.type = invType;
 				NSMutableArray* children = [NSMutableArray new];
 				typeNode.children = children;
-				
 				for (CRFitting* loadout in types) {
 					NCLoadoutsNode* loadoutNode = [NCLoadoutsNode new];
+					loadoutNode.parent = typeNode;
 					[children addObject:loadoutNode];
 					loadoutNode.crestLoadout = loadout;
 				}

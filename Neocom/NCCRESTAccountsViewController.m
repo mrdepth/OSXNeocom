@@ -96,6 +96,11 @@
 }
 
 - (IBAction)onSelect:(id)sender {
+	NCSetting* token = [self.accounts.selectedObjects lastObject];
+	if (token.value) {
+		[self.delegate crestAccountsViewController:self didSelectAccountWithToken:token.value];
+		[self dismissController:sender];
+	}
 }
 
 @end

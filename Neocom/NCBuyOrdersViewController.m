@@ -48,6 +48,9 @@
 				[solarSystem.orders sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"order.price" ascending:NO]]];
 			self.marketOrders.content = [[solarSystems allValues] sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"solarSystem.solarSystemName" ascending:YES]]];
 			[self.outlineView expandAll];
+			
+			if (error)
+				[[NSAlert alertWithError:error] runModal];
 		}];
 	}
 }
